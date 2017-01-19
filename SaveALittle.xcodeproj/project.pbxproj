@@ -14,6 +14,8 @@
 		02493FF11E2F64A3002FC473 /* SaveALittleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02493FF01E2F64A3002FC473 /* SaveALittleTests.swift */; };
 		02493FFC1E2F64A3002FC473 /* SaveALittleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02493FFB1E2F64A3002FC473 /* SaveALittleUITests.swift */; };
 		024940101E2F650C002FC473 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0249400F1E2F650C002FC473 /* LoginViewController.swift */; };
+		024CE3C21E30948700586D1F /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024CE3C11E30948700586D1F /* UIViewExtensions.swift */; };
+		024CE3C31E30948700586D1F /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024CE3C11E30948700586D1F /* UIViewExtensions.swift */; };
 		026050501E2F685F00026F5B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0249400F1E2F650C002FC473 /* LoginViewController.swift */; };
 		026050511E2F685F00026F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02493FD81E2F64A3002FC473 /* AppDelegate.swift */; };
 		026050521E2F685F00026F5B /* SaveALittle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02493FDF1E2F64A3002FC473 /* SaveALittle.xcdatamodeld */; };
@@ -54,6 +56,7 @@
 		02493FFB1E2F64A3002FC473 /* SaveALittleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveALittleUITests.swift; sourceTree = "<group>"; };
 		02493FFD1E2F64A3002FC473 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0249400F1E2F650C002FC473 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		024CE3C11E30948700586D1F /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		0260505B1E2F685F00026F5B /* SaveALittleDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveALittleDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0260505D1E2F69CB00026F5B /* Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dev-Info.plist"; sourceTree = "<group>"; };
 		02F202E31E2F669700566B88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,9 +150,7 @@
 		024940091E2F64F1002FC473 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				024CE3BD1E3093CB00586D1F /* Helpers */,
-				024CE3BE1E3093CB00586D1F /* Models */,
-				024CE3BF1E3093CB00586D1F /* Views */,
+				024CE3C01E30945C00586D1F /* Helpers */,
 				0249400A1E2F64F1002FC473 /* Controllers */,
 				02493FD81E2F64A3002FC473 /* AppDelegate.swift */,
 			);
@@ -164,25 +165,12 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		024CE3BD1E3093CB00586D1F /* Helpers */ = {
+		024CE3C01E30945C00586D1F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				024CE3C11E30948700586D1F /* UIViewExtensions.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		024CE3BE1E3093CB00586D1F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		024CE3BF1E3093CB00586D1F /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		02F202E21E2F668100566B88 /* Resources */ = {
@@ -357,6 +345,7 @@
 			files = (
 				024940101E2F650C002FC473 /* LoginViewController.swift in Sources */,
 				02493FD91E2F64A3002FC473 /* AppDelegate.swift in Sources */,
+				024CE3C21E30948700586D1F /* UIViewExtensions.swift in Sources */,
 				02493FE11E2F64A3002FC473 /* SaveALittle.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +372,7 @@
 			files = (
 				026050501E2F685F00026F5B /* LoginViewController.swift in Sources */,
 				026050511E2F685F00026F5B /* AppDelegate.swift in Sources */,
+				024CE3C31E30948700586D1F /* UIViewExtensions.swift in Sources */,
 				026050521E2F685F00026F5B /* SaveALittle.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
