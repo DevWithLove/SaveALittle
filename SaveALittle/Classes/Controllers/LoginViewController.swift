@@ -54,7 +54,7 @@ class LoginViewController: UIViewController {
     }()
     
     let pages:[Page] = {
-        
+        // TODO: Add to localization
         let firstPage = Page(title: "Share a great listen", message: "It's free to send your books to the people in your life. Every recepient's first book is on us.", imageName: "page1")
         
         let secondPage = Page(title: "Send from your library", message: "It's free to send your books to the people in your life. Every recepient's first book is on us.", imageName: "page1")
@@ -74,6 +74,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        observeNotification()
     }
     
     override func didReceiveMemoryWarning() {
@@ -165,6 +166,12 @@ class LoginViewController: UIViewController {
     
     
     // MARK: Additional Helpers
+    
+    private func observeNotification(){
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardShow), name:.UIKeyboardWillShow, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardHide), name:.UIKeyboardWillHide, object: nil)
+    }
     
     fileprivate func moveControlConstraintsOffScreen() {
         pageControllBottomAnchor?.constant = 40
