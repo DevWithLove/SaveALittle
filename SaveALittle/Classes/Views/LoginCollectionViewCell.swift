@@ -10,6 +10,8 @@ import UIKit
 
 class LoginCollectionViewCell: UICollectionViewCell {
     
+    weak var delegate: LoginViewControllerDelegate?
+    
     //   weak var delegate: LoginControllerDelegate?
     
     let logoImageView: UIImageView = {
@@ -46,8 +48,6 @@ class LoginCollectionViewCell: UICollectionViewCell {
     }()
     
     
-    
-    
     // MARK: Lifecycle
     
     override init(frame: CGRect) {
@@ -74,10 +74,11 @@ class LoginCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    
     // MARK: User Interaction
     
     func handleLogin() {
-        //delegate?.finishLoggingIn()
+        delegate?.finishLoggingIn()
     }
     
     

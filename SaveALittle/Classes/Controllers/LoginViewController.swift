@@ -8,7 +8,11 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+protocol LoginViewControllerDelegate: class {
+    func finishLoggingIn()
+}
+
+class LoginViewController: UIViewController, LoginViewControllerDelegate {
     
     let pageCellId = "pageCellId"
     let loginCellId = "loginCellId"
@@ -126,7 +130,6 @@ class LoginViewController: UIViewController {
     }
     
     func nextPage() {
-        
         guard pageControl.currentPage < pages.count else {
             return
         }
@@ -163,6 +166,10 @@ class LoginViewController: UIViewController {
         }, completion: nil)
     }
     
+    func finishLoggingIn() {
+        UserDefaults.standard.setIsUserLoggedIn(value: true)
+        dismiss(animated: true, completion: nil)
+    }
     
     
     // MARK: Additional Helpers
@@ -201,7 +208,7 @@ extension LoginViewController: UICollectionViewDelegate, UICollectionViewDataSou
         
         if indexPath.item == pages.count {
             let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath) as! LoginCollectionViewCell
-           //loginCell.delegate = self
+            loginCell.delegate = self
             return loginCell
         }
         

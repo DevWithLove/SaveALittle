@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		023215F51E31F7580025D065 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F41E31F7580025D065 /* HomeViewController.swift */; };
+		023215F61E31F7580025D065 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F41E31F7580025D065 /* HomeViewController.swift */; };
+		023215F81E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */; };
+		023215F91E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */; };
 		02493FD91E2F64A3002FC473 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02493FD81E2F64A3002FC473 /* AppDelegate.swift */; };
 		02493FDE1E2F64A3002FC473 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02493FDC1E2F64A3002FC473 /* Main.storyboard */; };
 		02493FE11E2F64A3002FC473 /* SaveALittle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02493FDF1E2F64A3002FC473 /* SaveALittle.xcdatamodeld */; };
@@ -53,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		023215F41E31F7580025D065 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		02493FD51E2F64A3002FC473 /* SaveALittle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveALittle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02493FD81E2F64A3002FC473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		02493FDD1E2F64A3002FC473 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -178,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				0249400F1E2F650C002FC473 /* LoginViewController.swift */,
+				023215F41E31F7580025D065 /* HomeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -187,6 +194,7 @@
 			children = (
 				024CE3C11E30948700586D1F /* UIViewExtensions.swift */,
 				024CE3C41E30988B00586D1F /* Color.swift */,
+				023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -384,6 +392,8 @@
 				029FA0D61E30ABD30065E1E5 /* LeftPaddedTextField.swift in Sources */,
 				029FA0D81E30AC1F0065E1E5 /* LoginCollectionViewCell.swift in Sources */,
 				024CE3C21E30948700586D1F /* UIViewExtensions.swift in Sources */,
+				023215F81E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */,
+				023215F51E31F7580025D065 /* HomeViewController.swift in Sources */,
 				024CE3C51E30988B00586D1F /* Color.swift in Sources */,
 				024CE3CD1E30A26F00586D1F /* Page.swift in Sources */,
 				02493FE11E2F64A3002FC473 /* SaveALittle.xcdatamodeld in Sources */,
@@ -416,6 +426,8 @@
 				026050511E2F685F00026F5B /* AppDelegate.swift in Sources */,
 				024CE3C31E30948700586D1F /* UIViewExtensions.swift in Sources */,
 				024CE3C61E30988B00586D1F /* Color.swift in Sources */,
+				023215F91E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */,
+				023215F61E31F7580025D065 /* HomeViewController.swift in Sources */,
 				029FA0DA1E30AC260065E1E5 /* LeftPaddedTextField.swift in Sources */,
 				024CE3CE1E30A26F00586D1F /* Page.swift in Sources */,
 				026050521E2F685F00026F5B /* SaveALittle.xcdatamodeld in Sources */,
