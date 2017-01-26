@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="523" id="fE4-Ht-PIc" customClass="DailyTableViewCell" customModule="SaveALittle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="523"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fE4-Ht-PIc" id="Yqo-dq-RSj">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="522"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Sh-jx-TkW" userLabel="ForegroundView" customClass="RotatedView" customModule="FoldingCell">
+                        <rect key="frame" x="8" y="8" width="359" height="130"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="130" id="tAE-66-eNl"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YwW-SU-Wjt" userLabel="ContainerView">
+                        <rect key="frame" x="8" y="145" width="359" height="360"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="360" id="axm-4N-swD"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="9Sh-jx-TkW" secondAttribute="trailing" constant="8" id="8Yo-og-ONc"/>
+                    <constraint firstItem="YwW-SU-Wjt" firstAttribute="leading" secondItem="Yqo-dq-RSj" secondAttribute="leading" constant="8" id="F61-bI-7nG"/>
+                    <constraint firstAttribute="trailing" secondItem="YwW-SU-Wjt" secondAttribute="trailing" constant="8" id="XCK-gS-drc"/>
+                    <constraint firstItem="9Sh-jx-TkW" firstAttribute="leading" secondItem="Yqo-dq-RSj" secondAttribute="leading" constant="8" id="Xu6-ZK-Pql"/>
+                    <constraint firstItem="9Sh-jx-TkW" firstAttribute="top" secondItem="Yqo-dq-RSj" secondAttribute="top" constant="8" identifier="ForegroundViewTop" id="ej5-PQ-m2Y"/>
+                    <constraint firstItem="YwW-SU-Wjt" firstAttribute="top" secondItem="Yqo-dq-RSj" secondAttribute="top" constant="145" identifier="ContainerViewTop" id="gRb-MM-IQf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="itemCount">
+                    <integer key="value" value="4"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="containerView" destination="YwW-SU-Wjt" id="Yaf-MX-1Fl"/>
+                <outlet property="containerViewTop" destination="gRb-MM-IQf" id="gFQ-Ml-rEB"/>
+                <outlet property="foregroundView" destination="9Sh-jx-TkW" id="Ven-tP-5uY"/>
+                <outlet property="foregroundViewTop" destination="ej5-PQ-m2Y" id="9pW-w0-kml"/>
+            </connections>
+            <point key="canvasLocation" x="-47.5" y="95.5"/>
+        </tableViewCell>
+    </objects>
+</document>

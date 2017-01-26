@@ -9,6 +9,7 @@
 import UIKit
 
 struct Color {
+    
     static let whiteColor = UIColor.white
     static let orangeColor = UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1)
     

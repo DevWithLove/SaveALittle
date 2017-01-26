@@ -7,14 +7,51 @@
 //
 
 import UIKit
+import FoldingCell
+
+fileprivate struct C {
+    struct CellHeight {
+        static let close: CGFloat = 130 // equal or greater foregroundView height
+        static let open: CGFloat = 370 // equal or greater containerView height
+    }
+}
 
 class HomeViewController: UIViewController {
+    
+    let kCloseCellHeight: CGFloat = 130
+    let kOpenCellHeight: CGFloat = 370
+    
+    var cellHeights = (0..<100).map { _ in C.CellHeight.close }
+    
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 0
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.backgroundColor = .red
+        cv.dataSource = self
+        cv.delegate = self
+        cv.register(MonthHeaderCell.self, forCellWithReuseIdentifier: MonthHeaderCell.monthHeaderCellId)
+        return cv
+    }()
+    
+    lazy var tableView: UITableView = {
+        let tv = UITableView(frame: .zero, style: .plain)
+        tv.backgroundColor = .yellow
+        tv.dataSource = self
+        tv.delegate = self
+        let nib = UINib(nibName: "DailyTableViewCellView", bundle: nil)
+        tv.register(nib, forCellReuseIdentifier: DailyTableViewCell.cellId)
+        tv.separatorStyle = .none
+        return tv
+    }()
+    
     
     // MARK: View Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupViews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -23,15 +60,106 @@ class HomeViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: Layout
+    
+    private func setupViews() {
+        view.addSubview(collectionView)
+        view.addSubview(tableView)
+        
+        addViewConstraints()
+    }
+    
+    private func addViewConstraints() {
+        _ = collectionView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 64, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 150)
+        
+        _ = tableView.anchor(collectionView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+    }
+    
     
     // MARK: Additional Helpers
     
-    func showLoginView() {
+    private func showLoginView() {
         guard !UserDefaults.standard.isLoggedIn() else {
             return
         }
         performSegue(withIdentifier: "LoginView", sender: self)
     }
 }
+
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MonthHeaderCell.monthHeaderCellId, for: indexPath)
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: view.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsetsMake(0, 0, 0, 0)
+    }
+}
+
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cellHeights.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return cellHeights[indexPath.item]
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       let cell = tableView.dequeueReusableCell(withIdentifier: DailyTableViewCell.cellId, for: indexPath)
+       return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard case let cell as FoldingCell = tableView.cellForRow(at: indexPath) else {
+            return
+        }
+        
+        var duration = 0.0
+        if cellHeights[indexPath.row] == kCloseCellHeight { // open cell
+            cellHeights[indexPath.row] = kOpenCellHeight
+            cell.selectedAnimation(true, animated: true, completion: nil)
+            duration = 0.5
+        } else {// close cell
+            cellHeights[indexPath.row] = kCloseCellHeight
+            cell.selectedAnimation(false, animated: true, completion: nil)
+            duration = 1.1
+        }
+        
+        UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: { _ in
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }, completion: nil)
+    }
+    
+//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+//        
+//        if case let cell as FoldingCell = cell {
+//            if cellHeights[indexPath.row] == C.CellHeight.close {
+//                foldingCell.selectedAnimation(false, animated: false, completion:nil)
+//            } else {
+//                foldingCell.selectedAnimation(true, animated: false, completion: nil)
+//            }
+//        }
+//    }
+}
+
+
+
+

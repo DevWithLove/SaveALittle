@@ -60,10 +60,10 @@ class PageCollectionViewCell: UICollectionViewCell {
         addSubview(textView)
         addSubview(lineSeparatorView)
         
-        makeViewConstraints()
+        addViewConstraints()
     }
     
-    private func makeViewConstraints() {
+    private func addViewConstraints() {
         
         imageView.anchorToTop(topAnchor, left: leftAnchor, bottom: textView.topAnchor, right: rightAnchor)
         
