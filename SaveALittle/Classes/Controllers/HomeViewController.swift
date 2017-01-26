@@ -16,19 +16,25 @@ fileprivate struct C {
     }
 }
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
     
     let kCloseCellHeight: CGFloat = 130
     let kOpenCellHeight: CGFloat = 370
     
-    var cellHeights = (0..<100).map { _ in C.CellHeight.close }
+    var cellHeights = (0..<31).map { _ in C.CellHeight.close }
+    
+    let separatorLineView: UIView = {
+        let lineView = UIView()
+        lineView.backgroundColor = Color.darkLine
+        return lineView
+    }()
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 0
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = .red
+        cv.backgroundColor = Color.darkBackground
         cv.dataSource = self
         cv.delegate = self
         cv.register(MonthHeaderCell.self, forCellWithReuseIdentifier: MonthHeaderCell.monthHeaderCellId)
@@ -37,7 +43,7 @@ class HomeViewController: UIViewController {
     
     lazy var tableView: UITableView = {
         let tv = UITableView(frame: .zero, style: .plain)
-        tv.backgroundColor = .yellow
+        tv.backgroundColor = .clear
         tv.dataSource = self
         tv.delegate = self
         let nib = UINib(nibName: "DailyTableViewCellView", bundle: nil)
@@ -51,6 +57,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         setupViews()
     }
     
@@ -65,16 +72,20 @@ class HomeViewController: UIViewController {
     // MARK: Layout
     
     private func setupViews() {
+        view.backgroundColor = Color.darkBackground
         view.addSubview(collectionView)
+        view.addSubview(separatorLineView)
         view.addSubview(tableView)
         
         addViewConstraints()
     }
     
     private func addViewConstraints() {
-        _ = collectionView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 64, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 150)
+        _ = collectionView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 64, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 130)
         
-        _ = tableView.anchor(collectionView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        _ = separatorLineView.anchor(collectionView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0.5)
+        
+        _ = tableView.anchor(separatorLineView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     }
     
     

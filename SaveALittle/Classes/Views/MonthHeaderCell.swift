@@ -26,7 +26,7 @@ class MonthHeaderCell: UICollectionViewCell {
     // MARK: Layout
     
     private func setupViews(){
-        backgroundColor = .black
+        backgroundColor = .clear
     }
     
 }
