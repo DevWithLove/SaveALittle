@@ -11,14 +11,14 @@ import FoldingCell
 
 fileprivate struct C {
     struct CellHeight {
-        static let close: CGFloat = 130 // equal or greater foregroundView height
+        static let close: CGFloat = 140 // equal or greater foregroundView height
         static let open: CGFloat = 370 // equal or greater containerView height
     }
 }
 
 class HomeViewController: BaseViewController {
     
-    let kCloseCellHeight: CGFloat = 130
+    let kCloseCellHeight: CGFloat = 140
     let kOpenCellHeight: CGFloat = 370
     
     var cellHeights = (0..<31).map { _ in C.CellHeight.close }
