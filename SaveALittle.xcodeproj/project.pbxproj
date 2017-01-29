@@ -32,6 +32,8 @@
 		026050551E2F685F00026F5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02493FE41E2F64A3002FC473 /* LaunchScreen.storyboard */; };
 		026050561E2F685F00026F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F202E31E2F669700566B88 /* Assets.xcassets */; };
 		026050571E2F685F00026F5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02493FDC1E2F64A3002FC473 /* Main.storyboard */; };
+		027EF4841E3D86E6008318DB /* MonthHeaderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027EF4831E3D86E6008318DB /* MonthHeaderCellView.xib */; };
+		027EF4851E3D86E6008318DB /* MonthHeaderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027EF4831E3D86E6008318DB /* MonthHeaderCellView.xib */; };
 		029266A51E39CEEB00668A1A /* MonthHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029266A41E39CEEB00668A1A /* MonthHeaderCell.swift */; };
 		029266A61E39CEEB00668A1A /* MonthHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029266A41E39CEEB00668A1A /* MonthHeaderCell.swift */; };
 		029266A81E39D03500668A1A /* DailyTableViewCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029266A71E39D03500668A1A /* DailyTableViewCellView.xib */; };
@@ -112,6 +114,7 @@
 		024CE3CC1E30A26F00586D1F /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		0260505B1E2F685F00026F5B /* SaveALittleDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveALittleDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0260505D1E2F69CB00026F5B /* Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dev-Info.plist"; sourceTree = "<group>"; };
+		027EF4831E3D86E6008318DB /* MonthHeaderCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthHeaderCellView.xib; sourceTree = "<group>"; };
 		029266A41E39CEEB00668A1A /* MonthHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthHeaderCell.swift; sourceTree = "<group>"; };
 		029266A71E39D03500668A1A /* DailyTableViewCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailyTableViewCellView.xib; sourceTree = "<group>"; };
 		029266AA1E39D98E00668A1A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -277,6 +280,7 @@
 				02CB043E1E38A4000029D37D /* DailyTableViewCell.swift */,
 				029266A41E39CEEB00668A1A /* MonthHeaderCell.swift */,
 				029266A71E39D03500668A1A /* DailyTableViewCellView.xib */,
+				027EF4831E3D86E6008318DB /* MonthHeaderCellView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -490,6 +494,7 @@
 				02493FE61E2F64A3002FC473 /* LaunchScreen.storyboard in Resources */,
 				029266C51E39F20600668A1A /* OpenSans-LightItalic.ttf in Resources */,
 				02F202E41E2F669700566B88 /* Assets.xcassets in Resources */,
+				027EF4841E3D86E6008318DB /* MonthHeaderCellView.xib in Resources */,
 				029266B91E39F20600668A1A /* OpenSans-Bold.ttf in Resources */,
 				02493FDE1E2F64A3002FC473 /* Main.storyboard in Resources */,
 				029266CB1E39F20600668A1A /* OpenSans-SemiboldItalic.ttf in Resources */,
@@ -525,6 +530,7 @@
 				026050551E2F685F00026F5B /* LaunchScreen.storyboard in Resources */,
 				029266C61E39F20600668A1A /* OpenSans-LightItalic.ttf in Resources */,
 				026050561E2F685F00026F5B /* Assets.xcassets in Resources */,
+				027EF4851E3D86E6008318DB /* MonthHeaderCellView.xib in Resources */,
 				029266BA1E39F20600668A1A /* OpenSans-Bold.ttf in Resources */,
 				026050571E2F685F00026F5B /* Main.storyboard in Resources */,
 				029266CC1E39F20600668A1A /* OpenSans-SemiboldItalic.ttf in Resources */,

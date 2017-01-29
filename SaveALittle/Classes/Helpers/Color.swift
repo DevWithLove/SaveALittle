@@ -18,6 +18,7 @@ struct Color {
     
     // MARK: Background
     static let darkBackground = UIColor(r:50 ,g:60, b:70)
+    static let darkerBackground = UIColor(r:38 ,g:47, b:56)
     
     // MARK: Line
     static let darkLine = UIColor(r:91 ,g:99, b:107)

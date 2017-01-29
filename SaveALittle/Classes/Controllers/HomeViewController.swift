@@ -34,10 +34,12 @@ class HomeViewController: BaseViewController {
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 0
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        cv.backgroundColor = Color.darkBackground
+        cv.backgroundColor = .clear
         cv.dataSource = self
         cv.delegate = self
-        cv.register(MonthHeaderCell.self, forCellWithReuseIdentifier: MonthHeaderCell.monthHeaderCellId)
+        cv.isPagingEnabled = true
+        let nib = UINib(nibName: "MonthHeaderCellView", bundle: nil)
+        cv.register(nib, forCellWithReuseIdentifier: MonthHeaderCell.cellId)
         return cv
     }()
     
@@ -72,6 +74,7 @@ class HomeViewController: BaseViewController {
     // MARK: Layout
     
     private func setupViews() {
+        self.automaticallyAdjustsScrollViewInsets = false
         view.backgroundColor = Color.darkBackground
         view.addSubview(collectionView)
         view.addSubview(separatorLineView)
@@ -81,11 +84,11 @@ class HomeViewController: BaseViewController {
     }
     
     private func addViewConstraints() {
-        _ = collectionView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 64, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 130)
+        _ = collectionView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 64, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 180)
         
         _ = separatorLineView.anchor(collectionView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0.5)
         
-        _ = tableView.anchor(separatorLineView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        _ = tableView.anchor(separatorLineView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     }
     
     
@@ -108,17 +111,17 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MonthHeaderCell.monthHeaderCellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MonthHeaderCell.cellId, for: indexPath)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: view.frame.height)
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(0, 0, 0, 0)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsetsMake(0, 0, 0, 0)
+//    }
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
