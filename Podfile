@@ -3,6 +3,7 @@ use_frameworks!
 
 def savealittle_shared_pods
   pod 'FoldingCell'
+  pod 'Charts'
 end
 
 target 'SaveALittle' do

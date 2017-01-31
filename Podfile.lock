@@ -1,12 +1,17 @@
 PODS:
+  - Charts (3.0.1):
+    - Charts/Core (= 3.0.1)
+  - Charts/Core (3.0.1)
   - FoldingCell (2.0.3)
 
 DEPENDENCIES:
+  - Charts
   - FoldingCell
 
 SPEC CHECKSUMS:
+  Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   FoldingCell: 2f3113051609167776743415fc00ed877ac6d62c
 
-PODFILE CHECKSUM: 9516b2695631ee1ca2dfd7ac92eaacb53b95d6e6
+PODFILE CHECKSUM: c75543af10717e2bf1e13143e65e84fc8e835aaf
 
 COCOAPODS: 1.1.1

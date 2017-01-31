@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,7 +29,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="370" height="200"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="December" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXv-yi-6DU">
-                                <rect key="frame" x="148" y="10" width="75" height="18"/>
+                                <rect key="frame" x="147.5" y="10" width="75" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="xBy-jW-RXd"/>
                                 </constraints>
@@ -38,13 +38,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DL5-jV-e9F">
-                                <rect key="frame" x="171" y="30" width="28" height="17"/>
+                                <rect key="frame" x="171.5" y="30" width="27" height="16.5"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="12"/>
                                 <color key="textColor" red="0.72156862749999995" green="0.7725490196" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ns1-Py-a04">
-                                <rect key="frame" x="170" y="55" width="30" height="2"/>
+                                <rect key="frame" x="170" y="54.5" width="30" height="2"/>
                                 <color key="backgroundColor" red="0.90588235289999997" green="0.48627450979999998" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="OYc-5W-G4Q"/>
@@ -66,15 +66,15 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$65430.12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQN-cd-EKZ">
-                                <rect key="frame" x="20" y="49" width="63" height="18"/>
+                                <rect key="frame" x="20.5" y="49" width="63" height="18"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$5430.12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j4g-mz-6xb">
-                                <rect key="frame" x="290" y="49" width="56" height="18"/>
+                                <rect key="frame" x="290.5" y="49" width="56" height="18"/>
                                 <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="13"/>
-                                <color key="textColor" red="0.90588235289999997" green="0.48627450979999998" blue="0.43137254899999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.87804496288299561" green="0.5852351188659668" blue="0.52160477638244629" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHX-yW-WPL">
@@ -99,18 +99,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sample_line_chart" translatesAutoresizingMaskIntoConstraints="NO" id="b8C-vb-UOZ">
-                                <rect key="frame" x="20" y="75" width="326" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v1J-lR-aWk" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="8" y="72" width="354" height="93"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.1960784314" green="0.23493997750000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ns1-Py-a04" firstAttribute="centerX" secondItem="wwJ-HF-SiV" secondAttribute="centerX" id="32p-gR-8Mh"/>
+                            <constraint firstItem="v1J-lR-aWk" firstAttribute="leading" secondItem="wwJ-HF-SiV" secondAttribute="leading" constant="8" id="7Dh-1J-aQc"/>
+                            <constraint firstItem="RlH-JZ-Bs9" firstAttribute="top" secondItem="v1J-lR-aWk" secondAttribute="bottom" constant="2" id="9oy-3m-bgt"/>
                             <constraint firstItem="Rxg-FD-xEd" firstAttribute="centerX" secondItem="j4g-mz-6xb" secondAttribute="centerX" id="Abs-Hl-Anp"/>
                             <constraint firstItem="DL5-jV-e9F" firstAttribute="top" secondItem="SXv-yi-6DU" secondAttribute="bottom" constant="2" id="Aza-Xx-Vlf"/>
                             <constraint firstItem="SXv-yi-6DU" firstAttribute="centerX" secondItem="wwJ-HF-SiV" secondAttribute="centerX" id="BtZ-bc-IfS"/>
                             <constraint firstItem="j4g-mz-6xb" firstAttribute="top" secondItem="Rxg-FD-xEd" secondAttribute="bottom" constant="6" id="Eki-gO-c0z"/>
+                            <constraint firstAttribute="trailing" secondItem="v1J-lR-aWk" secondAttribute="trailing" constant="8" id="HDc-UD-ajO"/>
                             <constraint firstItem="eQN-cd-EKZ" firstAttribute="top" secondItem="b6S-Za-GsI" secondAttribute="bottom" constant="6" id="IUh-tY-4Zn"/>
                             <constraint firstAttribute="trailing" secondItem="RlH-JZ-Bs9" secondAttribute="trailing" constant="10" id="Jeo-IZ-Wd9"/>
                             <constraint firstItem="eQN-cd-EKZ" firstAttribute="centerX" secondItem="b6S-Za-GsI" secondAttribute="centerX" id="Jiu-2y-qva"/>
@@ -120,6 +123,7 @@
                             <constraint firstAttribute="bottom" secondItem="RlH-JZ-Bs9" secondAttribute="bottom" constant="13" id="ZnE-iC-62J"/>
                             <constraint firstAttribute="bottom" secondItem="OHX-yW-WPL" secondAttribute="bottom" constant="13" id="cas-PP-SbD"/>
                             <constraint firstAttribute="trailing" secondItem="Rxg-FD-xEd" secondAttribute="trailing" constant="40" id="kKb-m4-fcT"/>
+                            <constraint firstItem="v1J-lR-aWk" firstAttribute="top" secondItem="j4g-mz-6xb" secondAttribute="bottom" constant="5" id="kcV-3R-nQ6"/>
                             <constraint firstItem="OHX-yW-WPL" firstAttribute="leading" secondItem="wwJ-HF-SiV" secondAttribute="leading" constant="10" id="oix-U6-0NC"/>
                             <constraint firstItem="Rxg-FD-xEd" firstAttribute="top" secondItem="wwJ-HF-SiV" secondAttribute="top" constant="20" id="rl8-ys-mLN"/>
                             <constraint firstItem="SXv-yi-6DU" firstAttribute="top" secondItem="wwJ-HF-SiV" secondAttribute="top" constant="10" id="yhI-P1-U7I"/>
@@ -140,6 +144,7 @@
                 <outlet property="firstDayLabel" destination="OHX-yW-WPL" id="w1t-Ow-tIu"/>
                 <outlet property="incomeValueLabel" destination="eQN-cd-EKZ" id="IDw-xU-hjt"/>
                 <outlet property="lastDayLabel" destination="RlH-JZ-Bs9" id="uJl-WH-ysc"/>
+                <outlet property="lineChartView" destination="v1J-lR-aWk" id="PO6-eP-4yF"/>
                 <outlet property="monthLabel" destination="SXv-yi-6DU" id="19M-nT-jyu"/>
                 <outlet property="yearLabel" destination="DL5-jV-e9F" id="lcz-NS-W0a"/>
             </connections>
@@ -149,6 +154,5 @@
     <resources>
         <image name="expense" width="50" height="50"/>
         <image name="income" width="50" height="50"/>
-        <image name="sample_line_chart" width="349" height="125"/>
     </resources>
 </document>
