@@ -162,16 +162,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         }, completion: nil)
     }
     
-//    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-//        
-//        if case let cell as FoldingCell = cell {
-//            if cellHeights[indexPath.row] == C.CellHeight.close {
-//                foldingCell.selectedAnimation(false, animated: false, completion:nil)
-//            } else {
-//                foldingCell.selectedAnimation(true, animated: false, completion: nil)
-//            }
-//        }
-//    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard case let cell as DailyTableViewCell = cell  else {
+            return
+        }
+        
+        if cellHeights[indexPath.item] == kCloseCellHeight
+        {
+            cell.selectedAnimation(false, animated: false, completion: nil)
+        } else {
+            cell.selectedAnimation(true, animated: false, completion: nil)
+        }
+    }
 }
 
 
