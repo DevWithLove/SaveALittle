@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #else
             debugPrint("SaveALittle")
         #endif
+        
+        let navViewController = self.window!.rootViewController! as! UINavigationController
+        let homeViewController = navViewController.viewControllers.first as! HomeViewController
+        
+        UINavigationBar.appearance().tintColor = Color.whiteColor
+        
+        let leftViewController = LeftViewController()
+        leftViewController.homeViewController = navViewController
+        
+        let slideMenuController = SlideMenuController(mainViewController: navViewController, leftMenuViewController: leftViewController)
+        slideMenuController.automaticallyAdjustsScrollViewInsets = true
+        slideMenuController.delegate = homeViewController
+        
+        self.window?.rootViewController = slideMenuController
+        self.window?.makeKeyAndVisible()
         
         return true
     }

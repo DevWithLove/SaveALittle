@@ -4,6 +4,7 @@ use_frameworks!
 def savealittle_shared_pods
   pod 'FoldingCell'
   pod 'Charts'
+  pod 'SlideMenuControllerSwift'
 end
 
 target 'SaveALittle' do

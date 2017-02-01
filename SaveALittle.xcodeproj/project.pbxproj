@@ -32,6 +32,16 @@
 		026050551E2F685F00026F5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02493FE41E2F64A3002FC473 /* LaunchScreen.storyboard */; };
 		026050561E2F685F00026F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02F202E31E2F669700566B88 /* Assets.xcassets */; };
 		026050571E2F685F00026F5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02493FDC1E2F64A3002FC473 /* Main.storyboard */; };
+		027033231E41B63E00BD5272 /* MonthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027033221E41B63E00BD5272 /* MonthViewController.swift */; };
+		027033241E41B63E00BD5272 /* MonthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027033221E41B63E00BD5272 /* MonthViewController.swift */; };
+		027033261E41B8AB00BD5272 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027033251E41B8AB00BD5272 /* LeftViewController.swift */; };
+		027033271E41B8AB00BD5272 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027033251E41B8AB00BD5272 /* LeftViewController.swift */; };
+		027033291E41BBF600BD5272 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027033281E41BBF600BD5272 /* BaseTableViewCell.swift */; };
+		0270332A1E41BBF600BD5272 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027033281E41BBF600BD5272 /* BaseTableViewCell.swift */; };
+		0270332C1E41BCBF00BD5272 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0270332B1E41BCBF00BD5272 /* String.swift */; };
+		0270332D1E41BCBF00BD5272 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0270332B1E41BCBF00BD5272 /* String.swift */; };
+		0270332F1E41C3FF00BD5272 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0270332E1E41C3FF00BD5272 /* UIViewController.swift */; };
+		027033301E41C3FF00BD5272 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0270332E1E41C3FF00BD5272 /* UIViewController.swift */; };
 		027EF4841E3D86E6008318DB /* MonthHeaderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027EF4831E3D86E6008318DB /* MonthHeaderCellView.xib */; };
 		027EF4851E3D86E6008318DB /* MonthHeaderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027EF4831E3D86E6008318DB /* MonthHeaderCellView.xib */; };
 		029266A51E39CEEB00668A1A /* MonthHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029266A41E39CEEB00668A1A /* MonthHeaderCell.swift */; };
@@ -114,6 +124,11 @@
 		024CE3CC1E30A26F00586D1F /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		0260505B1E2F685F00026F5B /* SaveALittleDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveALittleDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0260505D1E2F69CB00026F5B /* Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dev-Info.plist"; sourceTree = "<group>"; };
+		027033221E41B63E00BD5272 /* MonthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthViewController.swift; sourceTree = "<group>"; };
+		027033251E41B8AB00BD5272 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
+		027033281E41BBF600BD5272 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		0270332B1E41BCBF00BD5272 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		0270332E1E41C3FF00BD5272 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		027EF4831E3D86E6008318DB /* MonthHeaderCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthHeaderCellView.xib; sourceTree = "<group>"; };
 		029266A41E39CEEB00668A1A /* MonthHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthHeaderCell.swift; sourceTree = "<group>"; };
 		029266A71E39D03500668A1A /* DailyTableViewCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailyTableViewCellView.xib; sourceTree = "<group>"; };
@@ -256,6 +271,8 @@
 				0249400F1E2F650C002FC473 /* LoginViewController.swift */,
 				023215F41E31F7580025D065 /* HomeViewController.swift */,
 				029266AA1E39D98E00668A1A /* BaseViewController.swift */,
+				027033221E41B63E00BD5272 /* MonthViewController.swift */,
+				027033251E41B8AB00BD5272 /* LeftViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -263,6 +280,8 @@
 		024CE3C01E30945C00586D1F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0270332E1E41C3FF00BD5272 /* UIViewController.swift */,
+				0270332B1E41BCBF00BD5272 /* String.swift */,
 				024CE3C11E30948700586D1F /* UIViewExtensions.swift */,
 				024CE3C41E30988B00586D1F /* Color.swift */,
 				023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */,
@@ -274,6 +293,7 @@
 		024CE3C71E30A11B00586D1F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				027033281E41BBF600BD5272 /* BaseTableViewCell.swift */,
 				024CE3C81E30A16700586D1F /* PageCollectionViewCell.swift */,
 				029FA0D51E30ABD30065E1E5 /* LeftPaddedTextField.swift */,
 				029FA0D71E30AC1F0065E1E5 /* LoginCollectionViewCell.swift */,
@@ -730,16 +750,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0270332C1E41BCBF00BD5272 /* String.swift in Sources */,
 				024940101E2F650C002FC473 /* LoginViewController.swift in Sources */,
 				02493FD91E2F64A3002FC473 /* AppDelegate.swift in Sources */,
 				029FA0D61E30ABD30065E1E5 /* LeftPaddedTextField.swift in Sources */,
 				02CB04341E3883990029D37D /* UIColorExtensions.swift in Sources */,
+				027033291E41BBF600BD5272 /* BaseTableViewCell.swift in Sources */,
 				029266A51E39CEEB00668A1A /* MonthHeaderCell.swift in Sources */,
 				029266AB1E39D98E00668A1A /* BaseViewController.swift in Sources */,
 				029FA0D81E30AC1F0065E1E5 /* LoginCollectionViewCell.swift in Sources */,
 				024CE3C21E30948700586D1F /* UIViewExtensions.swift in Sources */,
 				023215F81E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */,
+				027033231E41B63E00BD5272 /* MonthViewController.swift in Sources */,
+				027033261E41B8AB00BD5272 /* LeftViewController.swift in Sources */,
 				023215F51E31F7580025D065 /* HomeViewController.swift in Sources */,
+				0270332F1E41C3FF00BD5272 /* UIViewController.swift in Sources */,
 				02CB043F1E38A4000029D37D /* DailyTableViewCell.swift in Sources */,
 				024CE3C51E30988B00586D1F /* Color.swift in Sources */,
 				024CE3CD1E30A26F00586D1F /* Page.swift in Sources */,
@@ -768,16 +793,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0270332D1E41BCBF00BD5272 /* String.swift in Sources */,
 				029FA0D91E30AC1F0065E1E5 /* LoginCollectionViewCell.swift in Sources */,
 				026050501E2F685F00026F5B /* LoginViewController.swift in Sources */,
 				026050511E2F685F00026F5B /* AppDelegate.swift in Sources */,
 				024CE3C31E30948700586D1F /* UIViewExtensions.swift in Sources */,
+				0270332A1E41BBF600BD5272 /* BaseTableViewCell.swift in Sources */,
 				024CE3C61E30988B00586D1F /* Color.swift in Sources */,
 				029266AC1E39D98E00668A1A /* BaseViewController.swift in Sources */,
 				023215F91E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */,
 				023215F61E31F7580025D065 /* HomeViewController.swift in Sources */,
 				029FA0DA1E30AC260065E1E5 /* LeftPaddedTextField.swift in Sources */,
+				027033241E41B63E00BD5272 /* MonthViewController.swift in Sources */,
+				027033271E41B8AB00BD5272 /* LeftViewController.swift in Sources */,
 				029266AD1E39E24000668A1A /* UIColorExtensions.swift in Sources */,
+				027033301E41C3FF00BD5272 /* UIViewController.swift in Sources */,
 				024CE3CE1E30A26F00586D1F /* Page.swift in Sources */,
 				02CB04401E38A4000029D37D /* DailyTableViewCell.swift in Sources */,
 				029266A61E39CEEB00668A1A /* MonthHeaderCell.swift in Sources */,
