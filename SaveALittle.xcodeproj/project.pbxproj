@@ -26,6 +26,14 @@
 		024CE3CA1E30A16700586D1F /* PageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024CE3C81E30A16700586D1F /* PageCollectionViewCell.swift */; };
 		024CE3CD1E30A26F00586D1F /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024CE3CC1E30A26F00586D1F /* Page.swift */; };
 		024CE3CE1E30A26F00586D1F /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024CE3CC1E30A26F00586D1F /* Page.swift */; };
+		025389281E451BFB00A4ED48 /* UsageProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025389271E451BFB00A4ED48 /* UsageProgressView.xib */; };
+		025389291E451BFB00A4ED48 /* UsageProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025389271E451BFB00A4ED48 /* UsageProgressView.xib */; };
+		0253892B1E451E6100A4ED48 /* UsageProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0253892A1E451E6100A4ED48 /* UsageProgressView.swift */; };
+		0253892C1E451E6100A4ED48 /* UsageProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0253892A1E451E6100A4ED48 /* UsageProgressView.swift */; };
+		025E442B1E43165300A20809 /* WeekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025E442A1E43165300A20809 /* WeekHeaderView.swift */; };
+		025E442C1E43165300A20809 /* WeekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025E442A1E43165300A20809 /* WeekHeaderView.swift */; };
+		025E442E1E43210500A20809 /* WeekHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025E442D1E43210500A20809 /* WeekHeaderView.xib */; };
+		025E442F1E43210500A20809 /* WeekHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025E442D1E43210500A20809 /* WeekHeaderView.xib */; };
 		026050501E2F685F00026F5B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0249400F1E2F650C002FC473 /* LoginViewController.swift */; };
 		026050511E2F685F00026F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02493FD81E2F64A3002FC473 /* AppDelegate.swift */; };
 		026050521E2F685F00026F5B /* SaveALittle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 02493FDF1E2F64A3002FC473 /* SaveALittle.xcdatamodeld */; };
@@ -122,6 +130,10 @@
 		024CE3C41E30988B00586D1F /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		024CE3C81E30A16700586D1F /* PageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCollectionViewCell.swift; sourceTree = "<group>"; };
 		024CE3CC1E30A26F00586D1F /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		025389271E451BFB00A4ED48 /* UsageProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsageProgressView.xib; sourceTree = "<group>"; };
+		0253892A1E451E6100A4ED48 /* UsageProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsageProgressView.swift; sourceTree = "<group>"; };
+		025E442A1E43165300A20809 /* WeekHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekHeaderView.swift; sourceTree = "<group>"; };
+		025E442D1E43210500A20809 /* WeekHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekHeaderView.xib; sourceTree = "<group>"; };
 		0260505B1E2F685F00026F5B /* SaveALittleDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveALittleDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0260505D1E2F69CB00026F5B /* Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dev-Info.plist"; sourceTree = "<group>"; };
 		027033221E41B63E00BD5272 /* MonthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthViewController.swift; sourceTree = "<group>"; };
@@ -301,6 +313,10 @@
 				029266A41E39CEEB00668A1A /* MonthHeaderCell.swift */,
 				029266A71E39D03500668A1A /* DailyTableViewCellView.xib */,
 				027EF4831E3D86E6008318DB /* MonthHeaderCellView.xib */,
+				025E442A1E43165300A20809 /* WeekHeaderView.swift */,
+				025E442D1E43210500A20809 /* WeekHeaderView.xib */,
+				025389271E451BFB00A4ED48 /* UsageProgressView.xib */,
+				0253892A1E451E6100A4ED48 /* UsageProgressView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -509,6 +525,7 @@
 				029266C11E39F20600668A1A /* OpenSans-Italic.ttf in Resources */,
 				029266BB1E39F20600668A1A /* OpenSans-BoldItalic.ttf in Resources */,
 				029266A81E39D03500668A1A /* DailyTableViewCellView.xib in Resources */,
+				025E442E1E43210500A20809 /* WeekHeaderView.xib in Resources */,
 				029266C91E39F20600668A1A /* OpenSans-Semibold.ttf in Resources */,
 				029266BD1E39F20600668A1A /* OpenSans-ExtraBold.ttf in Resources */,
 				02493FE61E2F64A3002FC473 /* LaunchScreen.storyboard in Resources */,
@@ -519,6 +536,7 @@
 				02493FDE1E2F64A3002FC473 /* Main.storyboard in Resources */,
 				029266CB1E39F20600668A1A /* OpenSans-SemiboldItalic.ttf in Resources */,
 				029266C31E39F20600668A1A /* OpenSans-Light.ttf in Resources */,
+				025389281E451BFB00A4ED48 /* UsageProgressView.xib in Resources */,
 				029266C71E39F20600668A1A /* OpenSans-Regular.ttf in Resources */,
 				029266BF1E39F20600668A1A /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 			);
@@ -545,6 +563,7 @@
 				029266C21E39F20600668A1A /* OpenSans-Italic.ttf in Resources */,
 				029266BC1E39F20600668A1A /* OpenSans-BoldItalic.ttf in Resources */,
 				029266A91E39D03500668A1A /* DailyTableViewCellView.xib in Resources */,
+				025E442F1E43210500A20809 /* WeekHeaderView.xib in Resources */,
 				029266CA1E39F20600668A1A /* OpenSans-Semibold.ttf in Resources */,
 				029266BE1E39F20600668A1A /* OpenSans-ExtraBold.ttf in Resources */,
 				026050551E2F685F00026F5B /* LaunchScreen.storyboard in Resources */,
@@ -555,6 +574,7 @@
 				026050571E2F685F00026F5B /* Main.storyboard in Resources */,
 				029266CC1E39F20600668A1A /* OpenSans-SemiboldItalic.ttf in Resources */,
 				029266C41E39F20600668A1A /* OpenSans-Light.ttf in Resources */,
+				025389291E451BFB00A4ED48 /* UsageProgressView.xib in Resources */,
 				029266C81E39F20600668A1A /* OpenSans-Regular.ttf in Resources */,
 				029266C01E39F20600668A1A /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 			);
@@ -757,6 +777,7 @@
 				02CB04341E3883990029D37D /* UIColorExtensions.swift in Sources */,
 				027033291E41BBF600BD5272 /* BaseTableViewCell.swift in Sources */,
 				029266A51E39CEEB00668A1A /* MonthHeaderCell.swift in Sources */,
+				0253892B1E451E6100A4ED48 /* UsageProgressView.swift in Sources */,
 				029266AB1E39D98E00668A1A /* BaseViewController.swift in Sources */,
 				029FA0D81E30AC1F0065E1E5 /* LoginCollectionViewCell.swift in Sources */,
 				024CE3C21E30948700586D1F /* UIViewExtensions.swift in Sources */,
@@ -764,6 +785,7 @@
 				027033231E41B63E00BD5272 /* MonthViewController.swift in Sources */,
 				027033261E41B8AB00BD5272 /* LeftViewController.swift in Sources */,
 				023215F51E31F7580025D065 /* HomeViewController.swift in Sources */,
+				025E442B1E43165300A20809 /* WeekHeaderView.swift in Sources */,
 				0270332F1E41C3FF00BD5272 /* UIViewController.swift in Sources */,
 				02CB043F1E38A4000029D37D /* DailyTableViewCell.swift in Sources */,
 				024CE3C51E30988B00586D1F /* Color.swift in Sources */,
@@ -800,6 +822,7 @@
 				024CE3C31E30948700586D1F /* UIViewExtensions.swift in Sources */,
 				0270332A1E41BBF600BD5272 /* BaseTableViewCell.swift in Sources */,
 				024CE3C61E30988B00586D1F /* Color.swift in Sources */,
+				0253892C1E451E6100A4ED48 /* UsageProgressView.swift in Sources */,
 				029266AC1E39D98E00668A1A /* BaseViewController.swift in Sources */,
 				023215F91E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */,
 				023215F61E31F7580025D065 /* HomeViewController.swift in Sources */,
@@ -807,6 +830,7 @@
 				027033241E41B63E00BD5272 /* MonthViewController.swift in Sources */,
 				027033271E41B8AB00BD5272 /* LeftViewController.swift in Sources */,
 				029266AD1E39E24000668A1A /* UIColorExtensions.swift in Sources */,
+				025E442C1E43165300A20809 /* WeekHeaderView.swift in Sources */,
 				027033301E41C3FF00BD5272 /* UIViewController.swift in Sources */,
 				024CE3CE1E30A26F00586D1F /* Page.swift in Sources */,
 				02CB04401E38A4000029D37D /* DailyTableViewCell.swift in Sources */,

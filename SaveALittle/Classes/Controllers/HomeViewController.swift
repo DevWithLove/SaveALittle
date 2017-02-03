@@ -11,10 +11,41 @@ import SlideMenuControllerSwift
 
 class HomeViewController: BaseViewController {
     
+    let borderColor = Color.darkLine
+    let borderWidth: CGFloat = 0.5
+    let usageViewTopConstant: CGFloat = 20.0
+    
+    private var usageViewleftConstant: CGFloat {
+        return self.view.bounds.width / 4.3
+    }
+    
+    let headerLeftView: WeekHeaderView = {
+        let nib = UINib(nibName: "WeekHeaderView", bundle: nil)
+        let view = nib.instantiate(withOwner: self, options: nil)[0] as! WeekHeaderView
+        return view
+    }()
+    
+    let headerMeddileView: WeekHeaderView = {
+        let nib = UINib(nibName: "WeekHeaderView", bundle: nil)
+        let view = nib.instantiate(withOwner: self, options: nil)[0] as! WeekHeaderView
+        return view
+    }()
+    
+    let headerRightView: WeekHeaderView = {
+        let nib = UINib(nibName: "WeekHeaderView", bundle: nil)
+        let view = nib.instantiate(withOwner: self, options: nil)[0] as! WeekHeaderView
+        return view
+    }()
+    
+    let usageProgressView: UsageProgressView = {
+        let nib = UINib(nibName: "UsageProgressView", bundle: nil)
+        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UsageProgressView
+        return view
+    }()
+    
     // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
         setupViews()
     }
     
@@ -25,6 +56,7 @@ class HomeViewController: BaseViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         showLoginView()
+        usageProgressView.refresh(usage: 80)
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,8 +66,36 @@ class HomeViewController: BaseViewController {
     // MARK: Layout
     
     private func setupViews() {
+        self.automaticallyAdjustsScrollViewInsets = false
+        view.addSubview(headerLeftView)
+        view.addSubview(headerRightView)
+        view.addSubview(headerMeddileView)
+        view.addSubview(usageProgressView)
+        
+        addViewConstraints()
+        
+        headerLeftView.setBottomBorder(color: borderColor, borderWidth: borderWidth)
+        headerLeftView.setRightBorder(color: borderColor, borderWidth: borderWidth)
+        headerMeddileView.setBottomBorder(color: borderColor, borderWidth: borderWidth)
+        headerRightView.setBottomBorder(color: borderColor, borderWidth: borderWidth)
+        headerRightView.setLeftBorder(color: borderColor, borderWidth: borderWidth)
+        
     }
-
+    
+    private func addViewConstraints() {
+        let headerViewHeight = view.bounds.size.width / 3
+        let usageViewHeight = view.bounds.size.width - (usageViewleftConstant * 2)
+        
+        _ = headerLeftView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 64, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: headerViewHeight , heightConstant: headerViewHeight)
+        
+        _ = headerRightView.anchor(view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 64, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: headerViewHeight , heightConstant: headerViewHeight)
+        
+        _ = headerMeddileView.anchor(view.topAnchor, left: headerLeftView.rightAnchor, bottom: nil, right: headerRightView.leftAnchor, topConstant: 64, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: headerViewHeight)
+        
+        _ = usageProgressView.anchor(headerMeddileView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: usageViewTopConstant, leftConstant: usageViewleftConstant, bottomConstant: 0, rightConstant: usageViewleftConstant, widthConstant: 0, heightConstant: usageViewHeight)
+    }
+    
+    
     
     // MARK: Additional Helpers
     

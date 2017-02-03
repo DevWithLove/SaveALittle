@@ -55,4 +55,35 @@ extension UIView {
     }
     
     
+    func setTopBorder(color:UIColor, borderWidth: CGFloat) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.autoresizingMask = [.flexibleWidth, .flexibleBottomMargin]
+        border.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: borderWidth)
+        self.addSubview(border)
+    }
+    
+    func setBottomBorder(color:UIColor, borderWidth: CGFloat) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+        border.frame = CGRect(x: 0, y: self.frame.size.height - borderWidth, width: self.frame.size.width, height: borderWidth)
+        self.addSubview(border)
+    }
+    
+    func setLeftBorder(color:UIColor, borderWidth: CGFloat) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.autoresizingMask = [.flexibleHeight, .flexibleRightMargin]
+        border.frame = CGRect(x: 0, y: 0, width: borderWidth, height: self.frame.size.height)
+        self.addSubview(border)
+    }
+    
+    func setRightBorder(color:UIColor, borderWidth: CGFloat) {
+        let border = UIView()
+        border.backgroundColor = color
+        border.autoresizingMask = [.flexibleHeight, .flexibleLeftMargin]
+        border.frame = CGRect(x: self.frame.size.width - borderWidth, y: 0, width: borderWidth, height: self.frame.size.height)
+        self.addSubview(border)
+    }
 }

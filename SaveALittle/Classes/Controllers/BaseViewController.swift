@@ -10,6 +10,12 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = Color.darkBackground
+        setupNavigationBar()
+    }
+    
     func setupNavigationBar() {
         // to remove the nav bar bottom line
         navigationController?.navigationBar.shadowImage = UIImage()

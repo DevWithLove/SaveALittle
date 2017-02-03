@@ -5,6 +5,7 @@ def savealittle_shared_pods
   pod 'FoldingCell'
   pod 'Charts'
   pod 'SlideMenuControllerSwift'
+  pod 'UICircularProgressRing'
 end
 
 target 'SaveALittle' do

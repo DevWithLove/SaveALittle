@@ -59,7 +59,6 @@ class MonthViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
         setupViews()
     }
     
@@ -80,7 +79,6 @@ class MonthViewController: BaseViewController {
     
     private func setupViews() {
         self.automaticallyAdjustsScrollViewInsets = false
-        view.backgroundColor = Color.darkBackground
         view.addSubview(collectionView)
         view.addSubview(separatorLineView)
         view.addSubview(tableView)

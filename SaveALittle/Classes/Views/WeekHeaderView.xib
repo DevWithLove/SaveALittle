@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Bold.ttf">
+            <string>OpenSans-Bold</string>
+        </array>
+        <array key="OpenSans-Light.ttf">
+            <string>OpenSans-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WeekHeaderView" customModule="SaveALittle" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="226" height="224"/>
+            <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BLp-Kf-bRs">
+                    <rect key="frame" x="98" y="111" width="30" height="2"/>
+                    <color key="backgroundColor" red="0.8780449629" green="0.58523511890000002" blue="0.52160477640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="A3b-nJ-fbw"/>
+                        <constraint firstAttribute="width" constant="30" id="uWf-eT-uID"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$2102" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fvB-uX-9RU">
+                    <rect key="frame" x="5" y="84" width="216" height="22"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Bold" family="Open Sans" pointSize="16"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Income" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxW-t2-WDq">
+                    <rect key="frame" x="5" y="118" width="216" height="16.5"/>
+                    <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="12"/>
+                    <color key="textColor" red="0.38431372549999998" green="0.4549019608" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.1960784314" green="0.23493997750000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="BLp-Kf-bRs" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1sj-lx-dzt"/>
+                <constraint firstAttribute="trailing" secondItem="fvB-uX-9RU" secondAttribute="trailing" constant="5" id="6ac-Xp-U67"/>
+                <constraint firstItem="fvB-uX-9RU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="PZy-k7-egw"/>
+                <constraint firstItem="hxW-t2-WDq" firstAttribute="top" secondItem="BLp-Kf-bRs" secondAttribute="bottom" constant="5" id="UoW-nK-8Qc"/>
+                <constraint firstItem="BLp-Kf-bRs" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YPI-Sd-V9s"/>
+                <constraint firstItem="BLp-Kf-bRs" firstAttribute="top" secondItem="fvB-uX-9RU" secondAttribute="bottom" constant="5" id="nC2-DX-xTf"/>
+                <constraint firstItem="hxW-t2-WDq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="5" id="x0g-dR-Wfb"/>
+                <constraint firstAttribute="trailing" secondItem="hxW-t2-WDq" secondAttribute="trailing" constant="5" id="xub-7H-r4K"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lineView" destination="BLp-Kf-bRs" id="Td6-Uk-UQz"/>
+                <outlet property="titleLabel" destination="hxW-t2-WDq" id="J3a-Sa-JLk"/>
+                <outlet property="valueLabel" destination="fvB-uX-9RU" id="1gE-tq-JTh"/>
+            </connections>
+            <point key="canvasLocation" x="-398" y="196"/>
+        </view>
+    </objects>
+</document>
