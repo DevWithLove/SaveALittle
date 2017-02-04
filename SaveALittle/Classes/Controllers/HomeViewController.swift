@@ -43,6 +43,17 @@ class HomeViewController: BaseViewController {
         return view
     }()
     
+    lazy var tableView: UITableView = {
+        let tv = UITableView(frame: .zero, style: .plain)
+        let nib = UINib(nibName: "TransactionTableViewCell", bundle: nil)
+        tv.register(nib, forCellReuseIdentifier: TransactionTableViewCell.cellId)
+        tv.separatorStyle = .none
+        tv.delegate = self
+        tv.dataSource = self
+        tv.backgroundColor = .clear
+        return tv
+    }()
+    
     // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,6 +82,7 @@ class HomeViewController: BaseViewController {
         view.addSubview(headerRightView)
         view.addSubview(headerMeddileView)
         view.addSubview(usageProgressView)
+        view.addSubview(tableView)
         
         addViewConstraints()
         
@@ -93,6 +105,9 @@ class HomeViewController: BaseViewController {
         _ = headerMeddileView.anchor(view.topAnchor, left: headerLeftView.rightAnchor, bottom: nil, right: headerRightView.leftAnchor, topConstant: 64, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: headerViewHeight)
         
         _ = usageProgressView.anchor(headerMeddileView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: usageViewTopConstant, leftConstant: usageViewleftConstant, bottomConstant: 0, rightConstant: usageViewleftConstant, widthConstant: 0, heightConstant: usageViewHeight)
+        
+        _ = tableView.anchor(usageProgressView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 20
+            , leftConstant: 10, bottomConstant: 50, rightConstant: 10, widthConstant: 0, heightConstant: 0)
     }
     
     
@@ -105,6 +120,24 @@ class HomeViewController: BaseViewController {
         }
         performSegue(withIdentifier: "LoginView", sender: self)
     }
+}
+
+
+extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: TransactionTableViewCell.cellId, for: indexPath)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 70
+    }
+
 }
 
 

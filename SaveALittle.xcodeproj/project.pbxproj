@@ -30,6 +30,10 @@
 		025389291E451BFB00A4ED48 /* UsageProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025389271E451BFB00A4ED48 /* UsageProgressView.xib */; };
 		0253892B1E451E6100A4ED48 /* UsageProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0253892A1E451E6100A4ED48 /* UsageProgressView.swift */; };
 		0253892C1E451E6100A4ED48 /* UsageProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0253892A1E451E6100A4ED48 /* UsageProgressView.swift */; };
+		0253892E1E453C0700A4ED48 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0253892D1E453C0700A4ED48 /* TransactionTableViewCell.swift */; };
+		0253892F1E453C0700A4ED48 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0253892D1E453C0700A4ED48 /* TransactionTableViewCell.swift */; };
+		025389311E453E6B00A4ED48 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025389301E453E6B00A4ED48 /* TransactionTableViewCell.xib */; };
+		025389321E453E6B00A4ED48 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025389301E453E6B00A4ED48 /* TransactionTableViewCell.xib */; };
 		025E442B1E43165300A20809 /* WeekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025E442A1E43165300A20809 /* WeekHeaderView.swift */; };
 		025E442C1E43165300A20809 /* WeekHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025E442A1E43165300A20809 /* WeekHeaderView.swift */; };
 		025E442E1E43210500A20809 /* WeekHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025E442D1E43210500A20809 /* WeekHeaderView.xib */; };
@@ -132,6 +136,8 @@
 		024CE3CC1E30A26F00586D1F /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		025389271E451BFB00A4ED48 /* UsageProgressView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UsageProgressView.xib; sourceTree = "<group>"; };
 		0253892A1E451E6100A4ED48 /* UsageProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsageProgressView.swift; sourceTree = "<group>"; };
+		0253892D1E453C0700A4ED48 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		025389301E453E6B00A4ED48 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		025E442A1E43165300A20809 /* WeekHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeekHeaderView.swift; sourceTree = "<group>"; };
 		025E442D1E43210500A20809 /* WeekHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeekHeaderView.xib; sourceTree = "<group>"; };
 		0260505B1E2F685F00026F5B /* SaveALittleDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveALittleDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,6 +323,8 @@
 				025E442D1E43210500A20809 /* WeekHeaderView.xib */,
 				025389271E451BFB00A4ED48 /* UsageProgressView.xib */,
 				0253892A1E451E6100A4ED48 /* UsageProgressView.swift */,
+				0253892D1E453C0700A4ED48 /* TransactionTableViewCell.swift */,
+				025389301E453E6B00A4ED48 /* TransactionTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -526,6 +534,7 @@
 				029266BB1E39F20600668A1A /* OpenSans-BoldItalic.ttf in Resources */,
 				029266A81E39D03500668A1A /* DailyTableViewCellView.xib in Resources */,
 				025E442E1E43210500A20809 /* WeekHeaderView.xib in Resources */,
+				025389311E453E6B00A4ED48 /* TransactionTableViewCell.xib in Resources */,
 				029266C91E39F20600668A1A /* OpenSans-Semibold.ttf in Resources */,
 				029266BD1E39F20600668A1A /* OpenSans-ExtraBold.ttf in Resources */,
 				02493FE61E2F64A3002FC473 /* LaunchScreen.storyboard in Resources */,
@@ -564,6 +573,7 @@
 				029266BC1E39F20600668A1A /* OpenSans-BoldItalic.ttf in Resources */,
 				029266A91E39D03500668A1A /* DailyTableViewCellView.xib in Resources */,
 				025E442F1E43210500A20809 /* WeekHeaderView.xib in Resources */,
+				025389321E453E6B00A4ED48 /* TransactionTableViewCell.xib in Resources */,
 				029266CA1E39F20600668A1A /* OpenSans-Semibold.ttf in Resources */,
 				029266BE1E39F20600668A1A /* OpenSans-ExtraBold.ttf in Resources */,
 				026050551E2F685F00026F5B /* LaunchScreen.storyboard in Resources */,
@@ -785,6 +795,7 @@
 				027033231E41B63E00BD5272 /* MonthViewController.swift in Sources */,
 				027033261E41B8AB00BD5272 /* LeftViewController.swift in Sources */,
 				023215F51E31F7580025D065 /* HomeViewController.swift in Sources */,
+				0253892E1E453C0700A4ED48 /* TransactionTableViewCell.swift in Sources */,
 				025E442B1E43165300A20809 /* WeekHeaderView.swift in Sources */,
 				0270332F1E41C3FF00BD5272 /* UIViewController.swift in Sources */,
 				02CB043F1E38A4000029D37D /* DailyTableViewCell.swift in Sources */,
@@ -830,6 +841,7 @@
 				027033241E41B63E00BD5272 /* MonthViewController.swift in Sources */,
 				027033271E41B8AB00BD5272 /* LeftViewController.swift in Sources */,
 				029266AD1E39E24000668A1A /* UIColorExtensions.swift in Sources */,
+				0253892F1E453C0700A4ED48 /* TransactionTableViewCell.swift in Sources */,
 				025E442C1E43165300A20809 /* WeekHeaderView.swift in Sources */,
 				027033301E41C3FF00BD5272 /* UIViewController.swift in Sources */,
 				024CE3CE1E30A26F00586D1F /* Page.swift in Sources */,
