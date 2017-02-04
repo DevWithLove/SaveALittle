@@ -33,6 +33,7 @@ class TransactionTableViewCell: UITableViewCell {
     // MARK: Layout
     private func setupViews(){
         backgroundColor = .clear
+        selectionStyle = .none
         
         timeLabel.layer.cornerRadius = 15
         timeLabel.layer.masksToBounds = true
