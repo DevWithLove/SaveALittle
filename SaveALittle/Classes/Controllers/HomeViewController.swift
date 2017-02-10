@@ -8,12 +8,21 @@
 
 import UIKit
 import SlideMenuControllerSwift
+import SwiftDate
 
 class HomeViewController: BaseViewController {
     
     let borderColor = Color.darkLine
     let borderWidth: CGFloat = 0.5
     let usageViewTopConstant: CGFloat = 20.0
+    let dayCellWidth: CGFloat = 50
+    let offSetDays:Int = 4
+    
+    var days =  [DayCell]()
+    
+    lazy var daysDataService: DayCollectionDataService = {
+        return DayCollectionDataService(offsetDays: self.offSetDays)
+    }()
     
     private var usageViewleftConstant: CGFloat {
         return self.view.bounds.width / 4.3
@@ -43,6 +52,11 @@ class HomeViewController: BaseViewController {
         return view
     }()
     
+    let seperateLineView: UIView = {
+        let cv = UIView(frame: .zero)
+        return cv
+    }()
+    
     lazy var tableView: UITableView = {
         let tv = UITableView(frame: .zero, style: .plain)
         let nib = UINib(nibName: "TransactionTableViewCell", bundle: nil)
@@ -54,10 +68,24 @@ class HomeViewController: BaseViewController {
         return tv
     }()
     
+    lazy var dayCollectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 0
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.backgroundColor = .clear
+        cv.showsHorizontalScrollIndicator = false
+        cv.delegate = self
+        cv.dataSource = self
+        cv.register(DayCollectionViewCell.self, forCellWithReuseIdentifier: DayCollectionViewCell.cellId)
+        return cv
+    }()
+    
     // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        days = daysDataService.days()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -66,9 +94,15 @@ class HomeViewController: BaseViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        setupSeperateLine()
         showLoginView()
         usageProgressView.refresh(usage: 80)
+        let indexPath = IndexPath(item: days.count - 1 - offSetDays, section: 0)
+        dayCollectionView.scrollToItem(at:indexPath, at: .centeredHorizontally, animated: true)
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -83,6 +117,8 @@ class HomeViewController: BaseViewController {
         view.addSubview(headerMeddileView)
         view.addSubview(usageProgressView)
         view.addSubview(tableView)
+        view.addSubview(seperateLineView)
+        view.addSubview(dayCollectionView)
         
         addViewConstraints()
         
@@ -91,7 +127,6 @@ class HomeViewController: BaseViewController {
         headerMeddileView.setBottomBorder(color: borderColor, borderWidth: borderWidth)
         headerRightView.setBottomBorder(color: borderColor, borderWidth: borderWidth)
         headerRightView.setLeftBorder(color: borderColor, borderWidth: borderWidth)
-        
     }
     
     private func addViewConstraints() {
@@ -106,8 +141,12 @@ class HomeViewController: BaseViewController {
         
         _ = usageProgressView.anchor(headerMeddileView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: usageViewTopConstant, leftConstant: usageViewleftConstant, bottomConstant: 0, rightConstant: usageViewleftConstant, widthConstant: 0, heightConstant: usageViewHeight)
         
-        _ = tableView.anchor(usageProgressView.bottomAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 20
-            , leftConstant: 10, bottomConstant: 50, rightConstant: 10, widthConstant: 0, heightConstant: 0)
+        _ = dayCollectionView.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 70)
+        
+        _ = tableView.anchor(usageProgressView.bottomAnchor, left: view.leftAnchor, bottom: dayCollectionView.topAnchor, right: view.rightAnchor, topConstant: 15
+            , leftConstant: 10, bottomConstant: 0, rightConstant: 10, widthConstant: 0, heightConstant: 0)
+        
+        _ = seperateLineView.anchor(nil, left: view.leftAnchor, bottom: dayCollectionView.topAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 20)
     }
     
     
@@ -120,13 +159,47 @@ class HomeViewController: BaseViewController {
         }
         performSegue(withIdentifier: "LoginView", sender: self)
     }
+    
+    private func setupSeperateLine(){
+        let gradient = CAGradientLayer()
+        gradient.frame = seperateLineView.bounds
+        gradient.colors = [Color.darkBackgroundWith05alpha.cgColor, Color.darkerBackground.cgColor]
+        seperateLineView.backgroundColor = .clear
+        gradient.locations = [0.0, 1.0]
+        seperateLineView.layer.insertSublayer(gradient, at: 0)
+    }
+    
+    
+    fileprivate func getSelectedIndexPath()-> IndexPath {
+        let xFinal = self.dayCollectionView.contentOffset.x + (self.view.frame.size.width / 2)
+        var viewIndex = Int(floor(xFinal / self.dayCellWidth))
+        
+        if viewIndex < 0 { viewIndex = 0 }
+        if viewIndex > days.count - 1 { viewIndex = days.count - 1 }
+        
+        let dayCell = days[viewIndex]
+        
+        guard dayCell.type == .noSelectedable else {
+            return IndexPath(item: viewIndex, section: 0)
+        }
+        
+        guard dayCell.date.isInFuture else {
+            return IndexPath(item: offSetDays, section: 0)
+        }
+        
+        return IndexPath(item: days.count - offSetDays - 1, section: 0)
+    }
+    
+    fileprivate func centerDayCollectionView() {
+        dayCollectionView.scrollToItem(at: getSelectedIndexPath(), at: .centeredHorizontally, animated: true)
+    }
 }
 
 
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -137,7 +210,79 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
+    
+}
 
+extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return days.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DayCollectionViewCell.cellId, for: indexPath) as! DayCollectionViewCell
+        let day = days[indexPath.item]
+        cell.date = day.date
+        cell.type = day.type
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: dayCellWidth, height: collectionView.frame.height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard days[indexPath.item].type != .noSelectedable else {
+            return
+        }
+        dayCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+}
+
+extension HomeViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let indexPath = self.getSelectedIndexPath()
+        
+        if let cell = dayCollectionView.cellForItem(at: indexPath) as? DayCollectionViewCell {
+            cell.selectedStyle()
+        }
+        
+        if let cell = dayCollectionView.cellForItem(at: IndexPath(item: indexPath.item + 1, section: 0)) as? DayCollectionViewCell {
+            cell.noSelectedStyle()
+        }
+        
+        if let cell = dayCollectionView.cellForItem(at: IndexPath(item: indexPath.item - 1, section: 0)) as? DayCollectionViewCell {
+            cell.noSelectedStyle()
+        }
+        
+    }
+    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        
+        //    var targetX = targetContentOffset.pointee.x + (view.frame.size.width / 2)
+        //    let targetIndex = floor(targetX / dayCellWidth)
+        //    targetX = targetIndex * dayCellWidth + (view.frame.size.width / 2) + (dayCellWidth / 2)
+        //
+        //    print("targetx: \(targetX)")
+        //    print("targetIndex: \(targetIndex)")
+        //
+        //    targetContentOffset.pointee.x = targetX
+        //    let newPoint = CGPoint(x: CGFloat(newTargetOffset), y: 0)
+        //    scrollView.setContentOffset(newPoint, animated: true)
+    }
+    
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            centerDayCollectionView()
+        }
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        centerDayCollectionView()
+    }
 }
 
 

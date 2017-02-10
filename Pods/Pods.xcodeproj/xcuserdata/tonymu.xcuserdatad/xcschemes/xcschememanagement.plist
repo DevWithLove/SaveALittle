@@ -39,6 +39,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SwiftDate.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>UICircularProgressRing.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -47,7 +52,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>138AC3809B66F513C1A866B06FA37A51</key>
+		<key>2B6900F2480A35B42823EB72FA146360</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2CEB200E0CC7DE0DA12A00E9281016C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,12 +72,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>56F9FE05D0E8B1754447D77C607510CF</key>
+		<key>4ECDB1A8DFF2AD31402429BB27372D92</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8F00C6B45809EAA308F9C1B6B73A37FF</key>
+		<key>5E71A705500CE112A29E5A1ED0791894</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,7 +87,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EA28FCDF90A0DA2B4FBDC829BC301850</key>
+		<key>F0D558E3395EA755DD91933D1F8D8EC8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
