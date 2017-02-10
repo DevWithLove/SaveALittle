@@ -13,7 +13,7 @@ class DayCollectionViewCell: UICollectionViewCell {
     
     static let cellId = String(describing: type(of: DayCollectionViewCell.self))
     
-    var type: DayCellType? {
+    var type: DayCellDataType? {
         didSet{
             if type == .noSelectedable {
                 ghostDayStyle()

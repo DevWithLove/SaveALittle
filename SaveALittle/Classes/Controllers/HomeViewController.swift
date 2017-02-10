@@ -16,13 +16,9 @@ class HomeViewController: BaseViewController {
     let borderWidth: CGFloat = 0.5
     let usageViewTopConstant: CGFloat = 20.0
     let dayCellWidth: CGFloat = 50
-    let offSetDays:Int = 4
     
-    var days =  [DayCell]()
+    let days = DayCollectionDataSource(offsetDays: 4)
     
-    lazy var daysDataService: DayCollectionDataService = {
-        return DayCollectionDataService(offsetDays: self.offSetDays)
-    }()
     
     private var usageViewleftConstant: CGFloat {
         return self.view.bounds.width / 4.3
@@ -85,7 +81,8 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        days = daysDataService.days()
+        
+        // TODO: Reload day data
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -99,7 +96,7 @@ class HomeViewController: BaseViewController {
         setupSeperateLine()
         showLoginView()
         usageProgressView.refresh(usage: 80)
-        let indexPath = IndexPath(item: days.count - 1 - offSetDays, section: 0)
+        let indexPath = IndexPath(item: days.lastSelectableIndex!, section: 0)
         dayCollectionView.scrollToItem(at:indexPath, at: .centeredHorizontally, animated: true)
     }
     
@@ -184,10 +181,10 @@ class HomeViewController: BaseViewController {
         }
         
         guard dayCell.date.isInFuture else {
-            return IndexPath(item: offSetDays, section: 0)
+            return IndexPath(item: days.firstSelectableIndex!, section: 0)
         }
         
-        return IndexPath(item: days.count - offSetDays - 1, section: 0)
+        return IndexPath(item:days.lastSelectableIndex!, section: 0)
     }
     
     fileprivate func centerDayCollectionView() {
