@@ -6,6 +6,7 @@ def savealittle_shared_pods
   pod 'Charts'
   pod 'SlideMenuControllerSwift'
   pod 'UICircularProgressRing'
+  pod 'SCLAlertView'
   pod 'SwiftDate', '~> 4.0'
 end
 
