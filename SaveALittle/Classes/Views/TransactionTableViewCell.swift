@@ -46,6 +46,10 @@ class TransactionTableViewCell: UITableViewCell {
         lineViewTwo.layer.cornerRadius = 1
         lineViewTwo.layer.masksToBounds = true
         lineViewTwo.backgroundColor = Color.darkLine
+        
+        timeLabel.font = Font.titilliumWebRegular(size: 12)
+        amountLabel.font = Font.titilliumWebSemiBold(size: 15)
+        storeLabel.font = Font.titilliumWebLight(size: 12)
     }
 
 }

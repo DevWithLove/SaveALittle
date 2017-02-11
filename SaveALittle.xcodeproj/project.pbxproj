@@ -13,6 +13,30 @@
 		023215F61E31F7580025D065 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F41E31F7580025D065 /* HomeViewController.swift */; };
 		023215F81E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */; };
 		023215F91E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */; };
+		0238E2B91E4F08C1005EB0BA /* TitilliumWeb-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2AE1E4F08C1005EB0BA /* TitilliumWeb-Black.ttf */; };
+		0238E2BA1E4F08C1005EB0BA /* TitilliumWeb-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2AE1E4F08C1005EB0BA /* TitilliumWeb-Black.ttf */; };
+		0238E2BB1E4F08C1005EB0BA /* TitilliumWeb-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2AF1E4F08C1005EB0BA /* TitilliumWeb-Bold.ttf */; };
+		0238E2BC1E4F08C1005EB0BA /* TitilliumWeb-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2AF1E4F08C1005EB0BA /* TitilliumWeb-Bold.ttf */; };
+		0238E2BD1E4F08C1005EB0BA /* TitilliumWeb-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B01E4F08C1005EB0BA /* TitilliumWeb-BoldItalic.ttf */; };
+		0238E2BE1E4F08C1005EB0BA /* TitilliumWeb-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B01E4F08C1005EB0BA /* TitilliumWeb-BoldItalic.ttf */; };
+		0238E2BF1E4F08C1005EB0BA /* TitilliumWeb-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B11E4F08C1005EB0BA /* TitilliumWeb-ExtraLight.ttf */; };
+		0238E2C01E4F08C1005EB0BA /* TitilliumWeb-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B11E4F08C1005EB0BA /* TitilliumWeb-ExtraLight.ttf */; };
+		0238E2C11E4F08C1005EB0BA /* TitilliumWeb-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B21E4F08C1005EB0BA /* TitilliumWeb-ExtraLightItalic.ttf */; };
+		0238E2C21E4F08C1005EB0BA /* TitilliumWeb-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B21E4F08C1005EB0BA /* TitilliumWeb-ExtraLightItalic.ttf */; };
+		0238E2C31E4F08C1005EB0BA /* TitilliumWeb-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B31E4F08C1005EB0BA /* TitilliumWeb-Italic.ttf */; };
+		0238E2C41E4F08C1005EB0BA /* TitilliumWeb-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B31E4F08C1005EB0BA /* TitilliumWeb-Italic.ttf */; };
+		0238E2C51E4F08C1005EB0BA /* TitilliumWeb-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B41E4F08C1005EB0BA /* TitilliumWeb-Light.ttf */; };
+		0238E2C61E4F08C1005EB0BA /* TitilliumWeb-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B41E4F08C1005EB0BA /* TitilliumWeb-Light.ttf */; };
+		0238E2C71E4F08C1005EB0BA /* TitilliumWeb-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B51E4F08C1005EB0BA /* TitilliumWeb-LightItalic.ttf */; };
+		0238E2C81E4F08C1005EB0BA /* TitilliumWeb-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B51E4F08C1005EB0BA /* TitilliumWeb-LightItalic.ttf */; };
+		0238E2C91E4F08C1005EB0BA /* TitilliumWeb-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B61E4F08C1005EB0BA /* TitilliumWeb-Regular.ttf */; };
+		0238E2CA1E4F08C1005EB0BA /* TitilliumWeb-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B61E4F08C1005EB0BA /* TitilliumWeb-Regular.ttf */; };
+		0238E2CB1E4F08C1005EB0BA /* TitilliumWeb-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B71E4F08C1005EB0BA /* TitilliumWeb-SemiBold.ttf */; };
+		0238E2CC1E4F08C1005EB0BA /* TitilliumWeb-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B71E4F08C1005EB0BA /* TitilliumWeb-SemiBold.ttf */; };
+		0238E2CD1E4F08C1005EB0BA /* TitilliumWeb-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B81E4F08C1005EB0BA /* TitilliumWeb-SemiBoldItalic.ttf */; };
+		0238E2CE1E4F08C1005EB0BA /* TitilliumWeb-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B81E4F08C1005EB0BA /* TitilliumWeb-SemiBoldItalic.ttf */; };
+		0238E2D31E4F0CED005EB0BA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238E2D21E4F0CED005EB0BA /* Font.swift */; };
+		0238E2D41E4F0CED005EB0BA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238E2D21E4F0CED005EB0BA /* Font.swift */; };
 		0239487E1E4E5A7D009A29F3 /* DayCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0239487D1E4E5A7D009A29F3 /* DayCollectionDataSource.swift */; };
 		0239487F1E4E5A7D009A29F3 /* DayCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0239487D1E4E5A7D009A29F3 /* DayCollectionDataSource.swift */; };
 		023948801E4E5A7D009A29F3 /* DayCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0239487D1E4E5A7D009A29F3 /* DayCollectionDataSource.swift */; };
@@ -92,26 +116,6 @@
 		029266AB1E39D98E00668A1A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029266AA1E39D98E00668A1A /* BaseViewController.swift */; };
 		029266AC1E39D98E00668A1A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029266AA1E39D98E00668A1A /* BaseViewController.swift */; };
 		029266AD1E39E24000668A1A /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB04331E3883990029D37D /* UIColorExtensions.swift */; };
-		029266B91E39F20600668A1A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266AF1E39F20600668A1A /* OpenSans-Bold.ttf */; };
-		029266BA1E39F20600668A1A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266AF1E39F20600668A1A /* OpenSans-Bold.ttf */; };
-		029266BB1E39F20600668A1A /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B01E39F20600668A1A /* OpenSans-BoldItalic.ttf */; };
-		029266BC1E39F20600668A1A /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B01E39F20600668A1A /* OpenSans-BoldItalic.ttf */; };
-		029266BD1E39F20600668A1A /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B11E39F20600668A1A /* OpenSans-ExtraBold.ttf */; };
-		029266BE1E39F20600668A1A /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B11E39F20600668A1A /* OpenSans-ExtraBold.ttf */; };
-		029266BF1E39F20600668A1A /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B21E39F20600668A1A /* OpenSans-ExtraBoldItalic.ttf */; };
-		029266C01E39F20600668A1A /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B21E39F20600668A1A /* OpenSans-ExtraBoldItalic.ttf */; };
-		029266C11E39F20600668A1A /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B31E39F20600668A1A /* OpenSans-Italic.ttf */; };
-		029266C21E39F20600668A1A /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B31E39F20600668A1A /* OpenSans-Italic.ttf */; };
-		029266C31E39F20600668A1A /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B41E39F20600668A1A /* OpenSans-Light.ttf */; };
-		029266C41E39F20600668A1A /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B41E39F20600668A1A /* OpenSans-Light.ttf */; };
-		029266C51E39F20600668A1A /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B51E39F20600668A1A /* OpenSans-LightItalic.ttf */; };
-		029266C61E39F20600668A1A /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B51E39F20600668A1A /* OpenSans-LightItalic.ttf */; };
-		029266C71E39F20600668A1A /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B61E39F20600668A1A /* OpenSans-Regular.ttf */; };
-		029266C81E39F20600668A1A /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B61E39F20600668A1A /* OpenSans-Regular.ttf */; };
-		029266C91E39F20600668A1A /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B71E39F20600668A1A /* OpenSans-Semibold.ttf */; };
-		029266CA1E39F20600668A1A /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B71E39F20600668A1A /* OpenSans-Semibold.ttf */; };
-		029266CB1E39F20600668A1A /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B81E39F20600668A1A /* OpenSans-SemiboldItalic.ttf */; };
-		029266CC1E39F20600668A1A /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 029266B81E39F20600668A1A /* OpenSans-SemiboldItalic.ttf */; };
 		029FA0D61E30ABD30065E1E5 /* LeftPaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FA0D51E30ABD30065E1E5 /* LeftPaddedTextField.swift */; };
 		029FA0D81E30AC1F0065E1E5 /* LoginCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FA0D71E30AC1F0065E1E5 /* LoginCollectionViewCell.swift */; };
 		029FA0D91E30AC1F0065E1E5 /* LoginCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FA0D71E30AC1F0065E1E5 /* LoginCollectionViewCell.swift */; };
@@ -147,6 +151,18 @@
 		02191C331E46E9CE00D00E17 /* DayCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCollectionViewCell.swift; sourceTree = "<group>"; };
 		023215F41E31F7580025D065 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
+		0238E2AE1E4F08C1005EB0BA /* TitilliumWeb-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Black.ttf"; sourceTree = "<group>"; };
+		0238E2AF1E4F08C1005EB0BA /* TitilliumWeb-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Bold.ttf"; sourceTree = "<group>"; };
+		0238E2B01E4F08C1005EB0BA /* TitilliumWeb-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-BoldItalic.ttf"; sourceTree = "<group>"; };
+		0238E2B11E4F08C1005EB0BA /* TitilliumWeb-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-ExtraLight.ttf"; sourceTree = "<group>"; };
+		0238E2B21E4F08C1005EB0BA /* TitilliumWeb-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		0238E2B31E4F08C1005EB0BA /* TitilliumWeb-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Italic.ttf"; sourceTree = "<group>"; };
+		0238E2B41E4F08C1005EB0BA /* TitilliumWeb-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Light.ttf"; sourceTree = "<group>"; };
+		0238E2B51E4F08C1005EB0BA /* TitilliumWeb-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-LightItalic.ttf"; sourceTree = "<group>"; };
+		0238E2B61E4F08C1005EB0BA /* TitilliumWeb-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Regular.ttf"; sourceTree = "<group>"; };
+		0238E2B71E4F08C1005EB0BA /* TitilliumWeb-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-SemiBold.ttf"; sourceTree = "<group>"; };
+		0238E2B81E4F08C1005EB0BA /* TitilliumWeb-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		0238E2D21E4F0CED005EB0BA /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		0239487D1E4E5A7D009A29F3 /* DayCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCollectionDataSource.swift; sourceTree = "<group>"; };
 		02493FD51E2F64A3002FC473 /* SaveALittle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveALittle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02493FD81E2F64A3002FC473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
@@ -194,16 +210,6 @@
 		029266A41E39CEEB00668A1A /* MonthHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthHeaderCell.swift; sourceTree = "<group>"; };
 		029266A71E39D03500668A1A /* DailyTableViewCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailyTableViewCellView.xib; sourceTree = "<group>"; };
 		029266AA1E39D98E00668A1A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		029266AF1E39F20600668A1A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
-		029266B01E39F20600668A1A /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
-		029266B11E39F20600668A1A /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
-		029266B21E39F20600668A1A /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
-		029266B31E39F20600668A1A /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
-		029266B41E39F20600668A1A /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
-		029266B51E39F20600668A1A /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
-		029266B61E39F20600668A1A /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
-		029266B71E39F20600668A1A /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
-		029266B81E39F20600668A1A /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
 		029FA0D51E30ABD30065E1E5 /* LeftPaddedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftPaddedTextField.swift; sourceTree = "<group>"; };
 		029FA0D71E30AC1F0065E1E5 /* LoginCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCollectionViewCell.swift; sourceTree = "<group>"; };
 		02CB04331E3883990029D37D /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
@@ -259,6 +265,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0238E2AD1E4F0849005EB0BA /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0238E2AE1E4F08C1005EB0BA /* TitilliumWeb-Black.ttf */,
+				0238E2AF1E4F08C1005EB0BA /* TitilliumWeb-Bold.ttf */,
+				0238E2B01E4F08C1005EB0BA /* TitilliumWeb-BoldItalic.ttf */,
+				0238E2B11E4F08C1005EB0BA /* TitilliumWeb-ExtraLight.ttf */,
+				0238E2B21E4F08C1005EB0BA /* TitilliumWeb-ExtraLightItalic.ttf */,
+				0238E2B31E4F08C1005EB0BA /* TitilliumWeb-Italic.ttf */,
+				0238E2B41E4F08C1005EB0BA /* TitilliumWeb-Light.ttf */,
+				0238E2B51E4F08C1005EB0BA /* TitilliumWeb-LightItalic.ttf */,
+				0238E2B61E4F08C1005EB0BA /* TitilliumWeb-Regular.ttf */,
+				0238E2B71E4F08C1005EB0BA /* TitilliumWeb-SemiBold.ttf */,
+				0238E2B81E4F08C1005EB0BA /* TitilliumWeb-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		0239487C1E4E5A57009A29F3 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +392,7 @@
 				024CE3C41E30988B00586D1F /* Color.swift */,
 				023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */,
 				02CB04331E3883990029D37D /* UIColorExtensions.swift */,
+				0238E2D21E4F0CED005EB0BA /* Font.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -410,28 +435,11 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		029266AE1E39F20600668A1A /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				029266AF1E39F20600668A1A /* OpenSans-Bold.ttf */,
-				029266B01E39F20600668A1A /* OpenSans-BoldItalic.ttf */,
-				029266B11E39F20600668A1A /* OpenSans-ExtraBold.ttf */,
-				029266B21E39F20600668A1A /* OpenSans-ExtraBoldItalic.ttf */,
-				029266B31E39F20600668A1A /* OpenSans-Italic.ttf */,
-				029266B41E39F20600668A1A /* OpenSans-Light.ttf */,
-				029266B51E39F20600668A1A /* OpenSans-LightItalic.ttf */,
-				029266B61E39F20600668A1A /* OpenSans-Regular.ttf */,
-				029266B71E39F20600668A1A /* OpenSans-Semibold.ttf */,
-				029266B81E39F20600668A1A /* OpenSans-SemiboldItalic.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		02F202E21E2F668100566B88 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0238E2AD1E4F0849005EB0BA /* Fonts */,
 				02F202E31E2F669700566B88 /* Assets.xcassets */,
-				029266AE1E39F20600668A1A /* Fonts */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -603,24 +611,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				029266C11E39F20600668A1A /* OpenSans-Italic.ttf in Resources */,
-				029266BB1E39F20600668A1A /* OpenSans-BoldItalic.ttf in Resources */,
+				0238E2BB1E4F08C1005EB0BA /* TitilliumWeb-Bold.ttf in Resources */,
 				029266A81E39D03500668A1A /* DailyTableViewCellView.xib in Resources */,
+				0238E2C11E4F08C1005EB0BA /* TitilliumWeb-ExtraLightItalic.ttf in Resources */,
+				0238E2C51E4F08C1005EB0BA /* TitilliumWeb-Light.ttf in Resources */,
+				0238E2CB1E4F08C1005EB0BA /* TitilliumWeb-SemiBold.ttf in Resources */,
+				0238E2BD1E4F08C1005EB0BA /* TitilliumWeb-BoldItalic.ttf in Resources */,
+				0238E2CD1E4F08C1005EB0BA /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
 				025E442E1E43210500A20809 /* WeekHeaderView.xib in Resources */,
+				0238E2C31E4F08C1005EB0BA /* TitilliumWeb-Italic.ttf in Resources */,
+				0238E2C91E4F08C1005EB0BA /* TitilliumWeb-Regular.ttf in Resources */,
 				025389311E453E6B00A4ED48 /* TransactionTableViewCell.xib in Resources */,
-				029266C91E39F20600668A1A /* OpenSans-Semibold.ttf in Resources */,
-				029266BD1E39F20600668A1A /* OpenSans-ExtraBold.ttf in Resources */,
 				02493FE61E2F64A3002FC473 /* LaunchScreen.storyboard in Resources */,
-				029266C51E39F20600668A1A /* OpenSans-LightItalic.ttf in Resources */,
 				02F202E41E2F669700566B88 /* Assets.xcassets in Resources */,
+				0238E2BF1E4F08C1005EB0BA /* TitilliumWeb-ExtraLight.ttf in Resources */,
+				0238E2B91E4F08C1005EB0BA /* TitilliumWeb-Black.ttf in Resources */,
 				027EF4841E3D86E6008318DB /* MonthHeaderCellView.xib in Resources */,
-				029266B91E39F20600668A1A /* OpenSans-Bold.ttf in Resources */,
 				02493FDE1E2F64A3002FC473 /* Main.storyboard in Resources */,
-				029266CB1E39F20600668A1A /* OpenSans-SemiboldItalic.ttf in Resources */,
-				029266C31E39F20600668A1A /* OpenSans-Light.ttf in Resources */,
+				0238E2C71E4F08C1005EB0BA /* TitilliumWeb-LightItalic.ttf in Resources */,
 				025389281E451BFB00A4ED48 /* UsageProgressView.xib in Resources */,
-				029266C71E39F20600668A1A /* OpenSans-Regular.ttf in Resources */,
-				029266BF1E39F20600668A1A /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,24 +651,25 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				029266C21E39F20600668A1A /* OpenSans-Italic.ttf in Resources */,
-				029266BC1E39F20600668A1A /* OpenSans-BoldItalic.ttf in Resources */,
+				0238E2BC1E4F08C1005EB0BA /* TitilliumWeb-Bold.ttf in Resources */,
 				029266A91E39D03500668A1A /* DailyTableViewCellView.xib in Resources */,
+				0238E2C21E4F08C1005EB0BA /* TitilliumWeb-ExtraLightItalic.ttf in Resources */,
+				0238E2C61E4F08C1005EB0BA /* TitilliumWeb-Light.ttf in Resources */,
+				0238E2CC1E4F08C1005EB0BA /* TitilliumWeb-SemiBold.ttf in Resources */,
+				0238E2BE1E4F08C1005EB0BA /* TitilliumWeb-BoldItalic.ttf in Resources */,
+				0238E2CE1E4F08C1005EB0BA /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
 				025E442F1E43210500A20809 /* WeekHeaderView.xib in Resources */,
+				0238E2C41E4F08C1005EB0BA /* TitilliumWeb-Italic.ttf in Resources */,
+				0238E2CA1E4F08C1005EB0BA /* TitilliumWeb-Regular.ttf in Resources */,
 				025389321E453E6B00A4ED48 /* TransactionTableViewCell.xib in Resources */,
-				029266CA1E39F20600668A1A /* OpenSans-Semibold.ttf in Resources */,
-				029266BE1E39F20600668A1A /* OpenSans-ExtraBold.ttf in Resources */,
 				026050551E2F685F00026F5B /* LaunchScreen.storyboard in Resources */,
-				029266C61E39F20600668A1A /* OpenSans-LightItalic.ttf in Resources */,
 				026050561E2F685F00026F5B /* Assets.xcassets in Resources */,
+				0238E2C01E4F08C1005EB0BA /* TitilliumWeb-ExtraLight.ttf in Resources */,
+				0238E2BA1E4F08C1005EB0BA /* TitilliumWeb-Black.ttf in Resources */,
 				027EF4851E3D86E6008318DB /* MonthHeaderCellView.xib in Resources */,
-				029266BA1E39F20600668A1A /* OpenSans-Bold.ttf in Resources */,
 				026050571E2F685F00026F5B /* Main.storyboard in Resources */,
-				029266CC1E39F20600668A1A /* OpenSans-SemiboldItalic.ttf in Resources */,
-				029266C41E39F20600668A1A /* OpenSans-Light.ttf in Resources */,
+				0238E2C81E4F08C1005EB0BA /* TitilliumWeb-LightItalic.ttf in Resources */,
 				025389291E451BFB00A4ED48 /* UsageProgressView.xib in Resources */,
-				029266C81E39F20600668A1A /* OpenSans-Regular.ttf in Resources */,
-				029266C01E39F20600668A1A /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -881,6 +891,7 @@
 				02CB043F1E38A4000029D37D /* DailyTableViewCell.swift in Sources */,
 				02191C341E46E9CE00D00E17 /* DayCollectionViewCell.swift in Sources */,
 				024CE3C51E30988B00586D1F /* Color.swift in Sources */,
+				0238E2D31E4F0CED005EB0BA /* Font.swift in Sources */,
 				024CE3CD1E30A26F00586D1F /* Page.swift in Sources */,
 				02493FE11E2F64A3002FC473 /* SaveALittle.xcdatamodeld in Sources */,
 				024CE3C91E30A16700586D1F /* PageCollectionViewCell.swift in Sources */,
@@ -948,6 +959,7 @@
 				024CE3CE1E30A26F00586D1F /* Page.swift in Sources */,
 				02191C351E46E9CE00D00E17 /* DayCollectionViewCell.swift in Sources */,
 				02CB04401E38A4000029D37D /* DailyTableViewCell.swift in Sources */,
+				0238E2D41E4F0CED005EB0BA /* Font.swift in Sources */,
 				029266A61E39CEEB00668A1A /* MonthHeaderCell.swift in Sources */,
 				026050521E2F685F00026F5B /* SaveALittle.xcdatamodeld in Sources */,
 				024CE3CA1E30A16700586D1F /* PageCollectionViewCell.swift in Sources */,

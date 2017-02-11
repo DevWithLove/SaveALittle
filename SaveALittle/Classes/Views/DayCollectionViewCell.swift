@@ -36,7 +36,7 @@ class DayCollectionViewCell: UICollectionViewCell {
     
     let weekDayLable: UILabel = {
         let lable = UILabel()
-        lable.font = UIFont(name: "OpenSans-Light", size: 10)
+        lable.font = Font.titilliumWebLight(size: 10)
         lable.textAlignment = .center
         lable.textColor = Color.darkText
         return lable
@@ -45,7 +45,7 @@ class DayCollectionViewCell: UICollectionViewCell {
     let dateLable: UILabel = {
         let lable = UILabel()
         lable.textAlignment = .center
-        lable.font = UIFont(name: "OpenSans-Regular", size: 13)
+        lable.font = Font.titilliumWebRegular(size: 15)
         lable.textColor = Color.whiteColor
         return lable
     }()
