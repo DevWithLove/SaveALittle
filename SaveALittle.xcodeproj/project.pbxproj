@@ -63,6 +63,8 @@
 		0253892F1E453C0700A4ED48 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0253892D1E453C0700A4ED48 /* TransactionTableViewCell.swift */; };
 		025389311E453E6B00A4ED48 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025389301E453E6B00A4ED48 /* TransactionTableViewCell.xib */; };
 		025389321E453E6B00A4ED48 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025389301E453E6B00A4ED48 /* TransactionTableViewCell.xib */; };
+		02561C5E1E503EBE002E7283 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02561C5D1E503EBE002E7283 /* TransactionViewController.swift */; };
+		02561C5F1E503EBE002E7283 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02561C5D1E503EBE002E7283 /* TransactionViewController.swift */; };
 		025723DD1E49A8B700E9C9FF /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025723D81E49A8B700E9C9FF /* DateExtensions.swift */; };
 		025723DE1E49A8B700E9C9FF /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025723D81E49A8B700E9C9FF /* DateExtensions.swift */; };
 		025723DF1E49A8B700E9C9FF /* DateInRegionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025723D91E49A8B700E9C9FF /* DateInRegionExtension.swift */; };
@@ -185,6 +187,7 @@
 		0253892A1E451E6100A4ED48 /* UsageProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsageProgressView.swift; sourceTree = "<group>"; };
 		0253892D1E453C0700A4ED48 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		025389301E453E6B00A4ED48 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
+		02561C5D1E503EBE002E7283 /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		025723D81E49A8B700E9C9FF /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		025723D91E49A8B700E9C9FF /* DateInRegionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateInRegionExtension.swift; sourceTree = "<group>"; };
 		025723DA1E49A8B700E9C9FF /* DayIterator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayIterator.swift; sourceTree = "<group>"; };
@@ -374,6 +377,7 @@
 				029266AA1E39D98E00668A1A /* BaseViewController.swift */,
 				027033221E41B63E00BD5272 /* MonthViewController.swift */,
 				027033251E41B8AB00BD5272 /* LeftViewController.swift */,
+				02561C5D1E503EBE002E7283 /* TransactionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -882,6 +886,7 @@
 				027033231E41B63E00BD5272 /* MonthViewController.swift in Sources */,
 				025723E51E49A8B700E9C9FF /* SequenceExtension.swift in Sources */,
 				027033261E41B8AB00BD5272 /* LeftViewController.swift in Sources */,
+				02561C5E1E503EBE002E7283 /* TransactionViewController.swift in Sources */,
 				023215F51E31F7580025D065 /* HomeViewController.swift in Sources */,
 				025723E31E49A8B700E9C9FF /* MonthIterator.swift in Sources */,
 				0253892E1E453C0700A4ED48 /* TransactionTableViewCell.swift in Sources */,
@@ -950,6 +955,7 @@
 				027033241E41B63E00BD5272 /* MonthViewController.swift in Sources */,
 				025723E61E49A8B700E9C9FF /* SequenceExtension.swift in Sources */,
 				027033271E41B8AB00BD5272 /* LeftViewController.swift in Sources */,
+				02561C5F1E503EBE002E7283 /* TransactionViewController.swift in Sources */,
 				029266AD1E39E24000668A1A /* UIColorExtensions.swift in Sources */,
 				025723E41E49A8B700E9C9FF /* MonthIterator.swift in Sources */,
 				0253892F1E453C0700A4ED48 /* TransactionTableViewCell.swift in Sources */,

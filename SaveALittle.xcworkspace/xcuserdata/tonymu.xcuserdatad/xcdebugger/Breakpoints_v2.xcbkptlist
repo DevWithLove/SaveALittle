@@ -36,49 +36,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SaveALittle/Classes/Controllers/HomeViewController.swift"
-            timestampString = "508496678.434752"
+            timestampString = "508674869.60921"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "254"
-            endingLineNumber = "254"
-            landmarkName = "scrollViewDidScroll(_:)"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "viewDidAppear(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SaveALittleDev.HomeViewController.scrollViewDidScroll (__ObjC.UIScrollView) -&gt; ()"
-                  moduleName = "SaveALittleDev"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tonymu/Dev/Projects/SaveALittle/SaveALittle/Classes/Controllers/HomeViewController.swift"
-                  timestampString = "508448865.42703"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "248"
-                  endingLineNumber = "248"
-                  offsetFromSymbolStart = "48">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SaveALittleDev.HomeViewController.scrollViewDidScroll (__ObjC.UIScrollView) -&gt; ()"
-                  moduleName = "SaveALittleDev"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tonymu/Dev/Projects/SaveALittle/SaveALittle/Classes/Controllers/HomeViewController.swift"
-                  timestampString = "508448865.42875"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "248"
-                  endingLineNumber = "248"
-                  offsetFromSymbolStart = "372">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -87,13 +55,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SaveALittle/Classes/Controllers/HomeViewController.swift"
-            timestampString = "508496678.434752"
+            filePath = "Pods/SlideMenuControllerSwift/Source/SlideMenuController.swift"
+            timestampString = "508564858.486742"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "viewDidAppear(_:)"
+            startingLineNumber = "1051"
+            endingLineNumber = "1051"
+            landmarkName = "toggleRight()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/SlideMenuControllerSwift/Source/SlideMenuController.swift"
+            timestampString = "508564867.014482"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1047"
+            endingLineNumber = "1047"
+            landmarkName = "toggleLeft()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SaveALittle/Classes/Data/DayCollectionDataSource.swift"
+            timestampString = "508675598.818573"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "reload()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -64,7 +64,6 @@ class MonthViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setNavigationBarItem()
     }
     
     override func viewDidAppear(_ animated: Bool) {

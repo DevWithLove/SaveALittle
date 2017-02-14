@@ -81,22 +81,13 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-
-        for family: String in UIFont.familyNames
-        {
-            print("\(family)")
-            for names: String in UIFont.fontNames(forFamilyName: family)
-            {
-                print("== \(names)")
-            }
-        }
         
-        // TODO: Reload day data
+        // Register notification run everytime when app will enter foreground.
+        NotificationCenter.default.addObserver(self, selector: #selector(enterForeground), name: NSNotification.Name.UIApplicationWillEnterForeground, object: nil);
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setNavigationBarItem()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -199,6 +190,29 @@ class HomeViewController: BaseViewController {
     fileprivate func centerDayCollectionView() {
         dayCollectionView.scrollToItem(at: getSelectedIndexPath(), at: .centeredHorizontally, animated: true)
     }
+    
+    private func refreshDayCollectionView() {
+        // TODO: if the current changed to pass date,(e.g. time zone change), refresh as well
+        
+        // If today is not in the day collection, refresh the day collection
+        guard days.getIndex(date: DateInRegion().startOfDay) == nil else {
+            return
+        }
+        
+        days.reload()
+        dayCollectionView.reloadData()
+        let indexPath = IndexPath(item: days.lastSelectableIndex!, section: 0)
+        dayCollectionView.scrollToItem(at:indexPath, at: .centeredHorizontally, animated: true)
+    
+    }
+    
+    // MARK: Notification
+    
+    func enterForeground(noftification:NSNotification){
+        refreshDayCollectionView()
+    }
+    
+
 }
 
 
