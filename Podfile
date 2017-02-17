@@ -8,6 +8,7 @@ def savealittle_shared_pods
   pod 'UICircularProgressRing'
   pod 'SCLAlertView'
   pod 'SwiftDate', '~> 4.0'
+  pod 'SkyFloatingLabelTextField', '~> 2.0.0'
 end
 
 target 'SaveALittle' do

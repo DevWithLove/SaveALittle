@@ -80,6 +80,7 @@ class HomeViewController: BaseViewController {
     // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupViews()
         
         // Register notification run everytime when app will enter foreground.
@@ -130,11 +131,11 @@ class HomeViewController: BaseViewController {
         let headerViewHeight = view.bounds.size.width / 3
         let usageViewHeight = view.bounds.size.width - (usageViewleftConstant * 2)
         
-        _ = headerLeftView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 64, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: headerViewHeight , heightConstant: headerViewHeight)
+        _ = headerLeftView.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: headerViewHeight , heightConstant: headerViewHeight)
         
-        _ = headerRightView.anchor(view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 64, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: headerViewHeight , heightConstant: headerViewHeight)
+        _ = headerRightView.anchor(view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: headerViewHeight , heightConstant: headerViewHeight)
         
-        _ = headerMeddileView.anchor(view.topAnchor, left: headerLeftView.rightAnchor, bottom: nil, right: headerRightView.leftAnchor, topConstant: 64, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: headerViewHeight)
+        _ = headerMeddileView.anchor(view.topAnchor, left: headerLeftView.rightAnchor, bottom: nil, right: headerRightView.leftAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: headerViewHeight)
         
         _ = usageProgressView.anchor(headerMeddileView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: usageViewTopConstant, leftConstant: usageViewleftConstant, bottomConstant: 0, rightConstant: usageViewleftConstant, widthConstant: 0, heightConstant: usageViewHeight)
         

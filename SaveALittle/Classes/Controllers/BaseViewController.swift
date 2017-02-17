@@ -28,6 +28,8 @@ class BaseViewController: UIViewController {
         
         // Set the status bar to white color
         UIApplication.shared.statusBarStyle = .lightContent
+        
+        self.navigationController?.navigationBar.isTranslucent = false;
     }
     
     

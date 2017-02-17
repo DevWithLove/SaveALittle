@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0206CA1F1E558AA10053F3DA /* ExpenseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0206CA1E1E558AA10053F3DA /* ExpenseType.swift */; };
+		0206CA201E558AA10053F3DA /* ExpenseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0206CA1E1E558AA10053F3DA /* ExpenseType.swift */; };
 		02191C341E46E9CE00D00E17 /* DayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02191C331E46E9CE00D00E17 /* DayCollectionViewCell.swift */; };
 		02191C351E46E9CE00D00E17 /* DayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02191C331E46E9CE00D00E17 /* DayCollectionViewCell.swift */; };
 		023215F51E31F7580025D065 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F41E31F7580025D065 /* HomeViewController.swift */; };
@@ -111,6 +113,8 @@
 		027497E71E4D9BCD00414A0C /* DayCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027497DD1E4D97E600414A0C /* DayCellData.swift */; };
 		027EF4841E3D86E6008318DB /* MonthHeaderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027EF4831E3D86E6008318DB /* MonthHeaderCellView.xib */; };
 		027EF4851E3D86E6008318DB /* MonthHeaderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 027EF4831E3D86E6008318DB /* MonthHeaderCellView.xib */; };
+		028348731E52F8E2000BDB7B /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 028348721E52F8E2000BDB7B /* fontawesome-webfont.ttf */; };
+		028348741E52F8E2000BDB7B /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 028348721E52F8E2000BDB7B /* fontawesome-webfont.ttf */; };
 		029266A51E39CEEB00668A1A /* MonthHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029266A41E39CEEB00668A1A /* MonthHeaderCell.swift */; };
 		029266A61E39CEEB00668A1A /* MonthHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029266A41E39CEEB00668A1A /* MonthHeaderCell.swift */; };
 		029266A81E39D03500668A1A /* DailyTableViewCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 029266A71E39D03500668A1A /* DailyTableViewCellView.xib */; };
@@ -122,6 +126,8 @@
 		029FA0D81E30AC1F0065E1E5 /* LoginCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FA0D71E30AC1F0065E1E5 /* LoginCollectionViewCell.swift */; };
 		029FA0D91E30AC1F0065E1E5 /* LoginCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FA0D71E30AC1F0065E1E5 /* LoginCollectionViewCell.swift */; };
 		029FA0DA1E30AC260065E1E5 /* LeftPaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029FA0D51E30ABD30065E1E5 /* LeftPaddedTextField.swift */; };
+		02AC414C1E56DD10005E8AB6 /* NoEditableOptionTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC414B1E56DD10005E8AB6 /* NoEditableOptionTextFieldWithIcon.swift */; };
+		02AC414D1E56DD10005E8AB6 /* NoEditableOptionTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AC414B1E56DD10005E8AB6 /* NoEditableOptionTextFieldWithIcon.swift */; };
 		02CB04341E3883990029D37D /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB04331E3883990029D37D /* UIColorExtensions.swift */; };
 		02CB043F1E38A4000029D37D /* DailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB043E1E38A4000029D37D /* DailyTableViewCell.swift */; };
 		02CB04401E38A4000029D37D /* DailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02CB043E1E38A4000029D37D /* DailyTableViewCell.swift */; };
@@ -150,6 +156,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0206CA1E1E558AA10053F3DA /* ExpenseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseType.swift; sourceTree = "<group>"; };
 		02191C331E46E9CE00D00E17 /* DayCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCollectionViewCell.swift; sourceTree = "<group>"; };
 		023215F41E31F7580025D065 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
@@ -210,11 +217,13 @@
 		027497DD1E4D97E600414A0C /* DayCellData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCellData.swift; sourceTree = "<group>"; };
 		027497E41E4D9BBE00414A0C /* DayCollectionDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCollectionDataSourceTests.swift; sourceTree = "<group>"; };
 		027EF4831E3D86E6008318DB /* MonthHeaderCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MonthHeaderCellView.xib; sourceTree = "<group>"; };
+		028348721E52F8E2000BDB7B /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		029266A41E39CEEB00668A1A /* MonthHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthHeaderCell.swift; sourceTree = "<group>"; };
 		029266A71E39D03500668A1A /* DailyTableViewCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DailyTableViewCellView.xib; sourceTree = "<group>"; };
 		029266AA1E39D98E00668A1A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		029FA0D51E30ABD30065E1E5 /* LeftPaddedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftPaddedTextField.swift; sourceTree = "<group>"; };
 		029FA0D71E30AC1F0065E1E5 /* LoginCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCollectionViewCell.swift; sourceTree = "<group>"; };
+		02AC414B1E56DD10005E8AB6 /* NoEditableOptionTextFieldWithIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoEditableOptionTextFieldWithIcon.swift; sourceTree = "<group>"; };
 		02CB04331E3883990029D37D /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		02CB043E1E38A4000029D37D /* DailyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyTableViewCell.swift; sourceTree = "<group>"; };
 		02F202E31E2F669700566B88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -271,6 +280,7 @@
 		0238E2AD1E4F0849005EB0BA /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				028348721E52F8E2000BDB7B /* fontawesome-webfont.ttf */,
 				0238E2AE1E4F08C1005EB0BA /* TitilliumWeb-Black.ttf */,
 				0238E2AF1E4F08C1005EB0BA /* TitilliumWeb-Bold.ttf */,
 				0238E2B01E4F08C1005EB0BA /* TitilliumWeb-BoldItalic.ttf */,
@@ -419,6 +429,7 @@
 				0253892D1E453C0700A4ED48 /* TransactionTableViewCell.swift */,
 				025389301E453E6B00A4ED48 /* TransactionTableViewCell.xib */,
 				02191C331E46E9CE00D00E17 /* DayCollectionViewCell.swift */,
+				02AC414B1E56DD10005E8AB6 /* NoEditableOptionTextFieldWithIcon.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -428,6 +439,7 @@
 			children = (
 				024CE3CC1E30A26F00586D1F /* Page.swift */,
 				027497DD1E4D97E600414A0C /* DayCellData.swift */,
+				0206CA1E1E558AA10053F3DA /* ExpenseType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -632,6 +644,7 @@
 				0238E2B91E4F08C1005EB0BA /* TitilliumWeb-Black.ttf in Resources */,
 				027EF4841E3D86E6008318DB /* MonthHeaderCellView.xib in Resources */,
 				02493FDE1E2F64A3002FC473 /* Main.storyboard in Resources */,
+				028348731E52F8E2000BDB7B /* fontawesome-webfont.ttf in Resources */,
 				0238E2C71E4F08C1005EB0BA /* TitilliumWeb-LightItalic.ttf in Resources */,
 				025389281E451BFB00A4ED48 /* UsageProgressView.xib in Resources */,
 			);
@@ -672,6 +685,7 @@
 				0238E2BA1E4F08C1005EB0BA /* TitilliumWeb-Black.ttf in Resources */,
 				027EF4851E3D86E6008318DB /* MonthHeaderCellView.xib in Resources */,
 				026050571E2F685F00026F5B /* Main.storyboard in Resources */,
+				028348741E52F8E2000BDB7B /* fontawesome-webfont.ttf in Resources */,
 				0238E2C81E4F08C1005EB0BA /* TitilliumWeb-LightItalic.ttf in Resources */,
 				025389291E451BFB00A4ED48 /* UsageProgressView.xib in Resources */,
 			);
@@ -869,6 +883,7 @@
 			files = (
 				0270332C1E41BCBF00BD5272 /* String.swift in Sources */,
 				024940101E2F650C002FC473 /* LoginViewController.swift in Sources */,
+				0206CA1F1E558AA10053F3DA /* ExpenseType.swift in Sources */,
 				02493FD91E2F64A3002FC473 /* AppDelegate.swift in Sources */,
 				029FA0D61E30ABD30065E1E5 /* LeftPaddedTextField.swift in Sources */,
 				02CB04341E3883990029D37D /* UIColorExtensions.swift in Sources */,
@@ -880,6 +895,7 @@
 				024CE3C21E30948700586D1F /* UIViewExtensions.swift in Sources */,
 				025723DD1E49A8B700E9C9FF /* DateExtensions.swift in Sources */,
 				025723DF1E49A8B700E9C9FF /* DateInRegionExtension.swift in Sources */,
+				02AC414C1E56DD10005E8AB6 /* NoEditableOptionTextFieldWithIcon.swift in Sources */,
 				0239487E1E4E5A7D009A29F3 /* DayCollectionDataSource.swift in Sources */,
 				023215F81E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */,
 				025723E11E49A8B700E9C9FF /* DayIterator.swift in Sources */,
@@ -938,6 +954,7 @@
 			files = (
 				0270332D1E41BCBF00BD5272 /* String.swift in Sources */,
 				029FA0D91E30AC1F0065E1E5 /* LoginCollectionViewCell.swift in Sources */,
+				0206CA201E558AA10053F3DA /* ExpenseType.swift in Sources */,
 				026050501E2F685F00026F5B /* LoginViewController.swift in Sources */,
 				026050511E2F685F00026F5B /* AppDelegate.swift in Sources */,
 				024CE3C31E30948700586D1F /* UIViewExtensions.swift in Sources */,
@@ -949,6 +966,7 @@
 				023215F61E31F7580025D065 /* HomeViewController.swift in Sources */,
 				025723DE1E49A8B700E9C9FF /* DateExtensions.swift in Sources */,
 				025723E01E49A8B700E9C9FF /* DateInRegionExtension.swift in Sources */,
+				02AC414D1E56DD10005E8AB6 /* NoEditableOptionTextFieldWithIcon.swift in Sources */,
 				0239487F1E4E5A7D009A29F3 /* DayCollectionDataSource.swift in Sources */,
 				029FA0DA1E30AC260065E1E5 /* LeftPaddedTextField.swift in Sources */,
 				025723E21E49A8B700E9C9FF /* DayIterator.swift in Sources */,

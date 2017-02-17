@@ -4,6 +4,7 @@ PODS:
   - Charts/Core (3.0.1)
   - FoldingCell (2.0.3)
   - SCLAlertView (0.7.0)
+  - SkyFloatingLabelTextField (2.0.1)
   - SlideMenuControllerSwift (3.0.1)
   - SwiftDate (4.0.11)
   - UICircularProgressRing (1.1.7)
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - Charts
   - FoldingCell
   - SCLAlertView
+  - SkyFloatingLabelTextField (~> 2.0.0)
   - SlideMenuControllerSwift
   - SwiftDate (~> 4.0)
   - UICircularProgressRing
@@ -20,10 +22,11 @@ SPEC CHECKSUMS:
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   FoldingCell: 2f3113051609167776743415fc00ed877ac6d62c
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
+  SkyFloatingLabelTextField: 070e749632ffd608d6fd9db3fa488a822524997c
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftDate: a36d5ce7c86bed3ed92b583ccbf15045f374ac65
   UICircularProgressRing: aa42aecd035658bd7212fab6e2feabc8dcc72fae
 
-PODFILE CHECKSUM: ffe31263f1fde92c5c605e007152634489898f3c
+PODFILE CHECKSUM: 40eb81359a1086ae335f1cecd5b795f1d6419f18
 
 COCOAPODS: 1.1.1
