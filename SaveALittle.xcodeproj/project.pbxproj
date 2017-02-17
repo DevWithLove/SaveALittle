@@ -11,6 +11,10 @@
 		0206CA201E558AA10053F3DA /* ExpenseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0206CA1E1E558AA10053F3DA /* ExpenseType.swift */; };
 		02191C341E46E9CE00D00E17 /* DayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02191C331E46E9CE00D00E17 /* DayCollectionViewCell.swift */; };
 		02191C351E46E9CE00D00E17 /* DayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02191C331E46E9CE00D00E17 /* DayCollectionViewCell.swift */; };
+		021C2D021E579B8100B1DFFF /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C2D011E579B8100B1DFFF /* Transaction.swift */; };
+		021C2D031E579B8100B1DFFF /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C2D011E579B8100B1DFFF /* Transaction.swift */; };
+		021C2D051E57B28200B1DFFF /* ObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C2D041E57B28200B1DFFF /* ObjectExtensions.swift */; };
+		021C2D061E57B28200B1DFFF /* ObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C2D041E57B28200B1DFFF /* ObjectExtensions.swift */; };
 		023215F51E31F7580025D065 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F41E31F7580025D065 /* HomeViewController.swift */; };
 		023215F61E31F7580025D065 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F41E31F7580025D065 /* HomeViewController.swift */; };
 		023215F81E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */; };
@@ -158,6 +162,8 @@
 /* Begin PBXFileReference section */
 		0206CA1E1E558AA10053F3DA /* ExpenseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseType.swift; sourceTree = "<group>"; };
 		02191C331E46E9CE00D00E17 /* DayCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCollectionViewCell.swift; sourceTree = "<group>"; };
+		021C2D011E579B8100B1DFFF /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		021C2D041E57B28200B1DFFF /* ObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectExtensions.swift; sourceTree = "<group>"; };
 		023215F41E31F7580025D065 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		0238E2AE1E4F08C1005EB0BA /* TitilliumWeb-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Black.ttf"; sourceTree = "<group>"; };
@@ -407,6 +413,7 @@
 				023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */,
 				02CB04331E3883990029D37D /* UIColorExtensions.swift */,
 				0238E2D21E4F0CED005EB0BA /* Font.swift */,
+				021C2D041E57B28200B1DFFF /* ObjectExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -440,6 +447,7 @@
 				024CE3CC1E30A26F00586D1F /* Page.swift */,
 				027497DD1E4D97E600414A0C /* DayCellData.swift */,
 				0206CA1E1E558AA10053F3DA /* ExpenseType.swift */,
+				021C2D011E579B8100B1DFFF /* Transaction.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -882,6 +890,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0270332C1E41BCBF00BD5272 /* String.swift in Sources */,
+				021C2D051E57B28200B1DFFF /* ObjectExtensions.swift in Sources */,
 				024940101E2F650C002FC473 /* LoginViewController.swift in Sources */,
 				0206CA1F1E558AA10053F3DA /* ExpenseType.swift in Sources */,
 				02493FD91E2F64A3002FC473 /* AppDelegate.swift in Sources */,
@@ -907,6 +916,7 @@
 				025723E31E49A8B700E9C9FF /* MonthIterator.swift in Sources */,
 				0253892E1E453C0700A4ED48 /* TransactionTableViewCell.swift in Sources */,
 				025E442B1E43165300A20809 /* WeekHeaderView.swift in Sources */,
+				021C2D021E579B8100B1DFFF /* Transaction.swift in Sources */,
 				027497DE1E4D97E600414A0C /* DayCellData.swift in Sources */,
 				0270332F1E41C3FF00BD5272 /* UIViewController.swift in Sources */,
 				02CB043F1E38A4000029D37D /* DailyTableViewCell.swift in Sources */,
@@ -953,6 +963,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0270332D1E41BCBF00BD5272 /* String.swift in Sources */,
+				021C2D061E57B28200B1DFFF /* ObjectExtensions.swift in Sources */,
 				029FA0D91E30AC1F0065E1E5 /* LoginCollectionViewCell.swift in Sources */,
 				0206CA201E558AA10053F3DA /* ExpenseType.swift in Sources */,
 				026050501E2F685F00026F5B /* LoginViewController.swift in Sources */,
@@ -978,6 +989,7 @@
 				025723E41E49A8B700E9C9FF /* MonthIterator.swift in Sources */,
 				0253892F1E453C0700A4ED48 /* TransactionTableViewCell.swift in Sources */,
 				025E442C1E43165300A20809 /* WeekHeaderView.swift in Sources */,
+				021C2D031E579B8100B1DFFF /* Transaction.swift in Sources */,
 				027497DF1E4D97E600414A0C /* DayCellData.swift in Sources */,
 				027033301E41C3FF00BD5272 /* UIViewController.swift in Sources */,
 				024CE3CE1E30A26F00586D1F /* Page.swift in Sources */,

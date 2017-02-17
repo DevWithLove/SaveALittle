@@ -3,6 +3,11 @@ PODS:
     - Charts/Core (= 3.0.1)
   - Charts/Core (3.0.1)
   - FoldingCell (2.0.3)
+  - Realm (2.3.0):
+    - Realm/Headers (= 2.3.0)
+  - Realm/Headers (2.3.0)
+  - RealmSwift (2.3.0):
+    - Realm (= 2.3.0)
   - SCLAlertView (0.7.0)
   - SkyFloatingLabelTextField (2.0.1)
   - SlideMenuControllerSwift (3.0.1)
@@ -12,6 +17,7 @@ PODS:
 DEPENDENCIES:
   - Charts
   - FoldingCell
+  - RealmSwift
   - SCLAlertView
   - SkyFloatingLabelTextField (~> 2.0.0)
   - SlideMenuControllerSwift
@@ -21,12 +27,14 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
   FoldingCell: 2f3113051609167776743415fc00ed877ac6d62c
+  Realm: 69d7de9aa569a11eed490aaabc8f2109e3985ecf
+  RealmSwift: dc6f99ea55e59490cec69c860f91932b6bf7efb6
   SCLAlertView: 8a14ffc40590c619e183eed2298b854385f30be1
   SkyFloatingLabelTextField: 070e749632ffd608d6fd9db3fa488a822524997c
   SlideMenuControllerSwift: 9a163b16d54afab734add42858cba7ef7c307755
   SwiftDate: a36d5ce7c86bed3ed92b583ccbf15045f374ac65
   UICircularProgressRing: aa42aecd035658bd7212fab6e2feabc8dcc72fae
 
-PODFILE CHECKSUM: 40eb81359a1086ae335f1cecd5b795f1d6419f18
+PODFILE CHECKSUM: e8a5c499efd4f88b949990fe2cdf8ec0d9050ff6
 
 COCOAPODS: 1.1.1

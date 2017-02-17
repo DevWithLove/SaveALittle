@@ -9,6 +9,7 @@
 import UIKit
 import SkyFloatingLabelTextField
 import SwiftDate
+import RealmSwift
 
 class TransactionViewController: UIViewController {
     
@@ -129,6 +130,7 @@ class TransactionViewController: UIViewController {
     private func setupViews() {
         self.automaticallyAdjustsScrollViewInsets = false
         view.backgroundColor = Color.darkBackground
+        self.addRightBarButton(#imageLiteral(resourceName: "plus"))
         
         view.addSubview(amountTextField)
         view.addSubview(storeTextField)
@@ -147,6 +149,13 @@ class TransactionViewController: UIViewController {
         _ = dateTimeField.anchor(typeTextField.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: 0, rightConstant: 10, widthConstant: 0, heightConstant: 45)
         
     }
+
+    
+    private func addRightBarButton(_ buttonImage: UIImage) {
+        let rightButton: UIBarButtonItem = UIBarButtonItem(image: buttonImage, style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.saveTransaction))
+        navigationItem.rightBarButtonItem = rightButton
+    }
+    
     
     private func applyTextFieldTheme(textField:SkyFloatingLabelTextField){
         textField.tintColor = Color.darkText
@@ -175,6 +184,18 @@ class TransactionViewController: UIViewController {
         if let amountString = textField.text?.currencyInputFormatting() {
             textField.text = amountString
         }
+    }
+    
+    func saveTransaction() {
+        let transaction = ExpenseTransaction()
+        transaction.dateTime = dateTimePicker.date as NSDate
+        transaction.from = storeTextField.text
+        let amountText = amountTextField.text ?? "0.0"
+        transaction.amount = (amountText as NSString).floatValue
+        transaction.expenseType = Expense(rawValue: self.expenseTypesPicker.selectedRow(inComponent: 0))!
+        transaction.save()
+        
+        _ = navigationController?.popToRootViewController(animated: true)
     }
 }
 

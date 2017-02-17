@@ -9,6 +9,7 @@ def savealittle_shared_pods
   pod 'SCLAlertView'
   pod 'SwiftDate', '~> 4.0'
   pod 'SkyFloatingLabelTextField', '~> 2.0.0'
+  pod 'RealmSwift'
 end
 
 target 'SaveALittle' do
@@ -32,4 +33,12 @@ target 'SaveALittleDev' do
   # Pods for SaveALittleDev
   savealittle_shared_pods
 
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '3.0'
+        end
+    end
 end
