@@ -173,6 +173,24 @@ class TransactionViewController: UIViewController {
         return dateInRegion.string(dateStyle: .long, timeStyle: .short)
     }
     
+    private func isInputValid() -> Bool {
+        var isValid = true
+        
+        if !self.typeTextField.hasText {
+            isValid = false
+            self.typeTextField.setTitleVisible(true, animated: true, animationCompletion: self.showingTitleInAnimationComplete)
+            self.typeTextField.isHighlighted = true
+        }
+        
+        if !self.amountTextField.hasText {
+            isValid = false
+            self.amountTextField.setTitleVisible(true, animated: true, animationCompletion: self.showingTitleInAnimationComplete)
+            self.amountTextField.isHighlighted = true
+        }
+        
+        return isValid
+    }
+    
     // MARK: Actions
     
     func dateTimeDonePressed(){
@@ -187,6 +205,11 @@ class TransactionViewController: UIViewController {
     }
     
     func saveTransaction() {
+        
+        guard isInputValid() else {
+            return
+        }
+        
         let transaction = ExpenseTransaction()
         transaction.dateTime = dateTimePicker.date as NSDate
         transaction.from = storeTextField.text
@@ -197,8 +220,15 @@ class TransactionViewController: UIViewController {
         
         _ = navigationController?.popToRootViewController(animated: true)
     }
+    
+    func showingTitleInAnimationComplete() {
+        // If a field is not filled out, display the highlighted title for 0.3 seco
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3) {
+            self.typeTextField.setTitleVisible(false, animated: true)
+            self.amountTextField.setTitleVisible(false, animated: true)
+        }
+    }
 }
-
 
 extension TransactionViewController: UITextFieldDelegate {
     

@@ -14,6 +14,7 @@ enum Expense: Int, CustomStringConvertible {
     case BankCharges = 1
     case Charity = 2
     case Childcare = 3
+    case EatOut = 20
     case Education = 4
     case Entertainment = 5
     case Events = 6
@@ -40,6 +41,7 @@ enum Expense: Int, CustomStringConvertible {
         case .BankCharges: return "Bank Charges"
         case .Charity: return "Charity"
         case .Childcare: return "Childcare"
+        case .EatOut: return "Eat Out"
         case .Education: return "Education"
         case .Entertainment: return "Entertainment"
         case .Events: return "Events"
