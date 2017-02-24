@@ -11,36 +11,26 @@ import SwiftDate
 import RealmSwift
 
 
-@objc enum TransactionType: Int {
-    case expense = 0
-    case income = 1
-}
 
-class Transaction: Object {
+public class Transaction: Object {
     
-    dynamic var id = ""
-    dynamic var type: Int = -1
-    dynamic var amount: Float = 0.0
-    dynamic var dateTime: NSDate = NSDate()
-    dynamic var from: String? = nil
+    public dynamic var id = ""
+    public dynamic var type: Int = -1
+    public dynamic var amount: Float = 0.0
+    public dynamic var dateTime: NSDate = NSDate()
+    public dynamic var from: String? = nil
     
-    override static func indexedProperties() -> [String] {
+    override public static func indexedProperties() -> [String] {
         return ["dateTime"]
     }
     
-    override static func primaryKey() -> String? {
+    override public static func primaryKey() -> String? {
         return "id"
     }
-    
-    lazy var dateInRegion: DateInRegion = {
-        let swiftDate = self.dateTime as Date
-        return swiftDate.toDateInRegion()
-    }()
-
 }
 
-class ExpenseTransaction: Transaction {
-    var expenseType: Expense {
+public class ExpenseTransaction: Transaction {
+    public var expenseType: Expense {
         get {
             return Expense(rawValue: self.type)!
         }

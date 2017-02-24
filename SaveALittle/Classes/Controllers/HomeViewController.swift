@@ -18,6 +18,8 @@ class HomeViewController: BaseViewController {
     let dayCellWidth: CGFloat = 50
     
     let days = DayCollectionDataSource(offsetDays: 4)
+    var selectedDate = DateInRegion().startOfDay
+    let dailyDataSource = DailyDataSource.shared
     
     
     private var usageViewleftConstant: CGFloat {
@@ -89,6 +91,8 @@ class HomeViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        dailyDataSource.reload()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -97,8 +101,12 @@ class HomeViewController: BaseViewController {
         setupSeperateLine()
         showLoginView()
         usageProgressView.refresh(usage: 80)
+        
+        refreshDayCollectionView()
+        
+        // Scroll the selected to the current date
         let indexPath = IndexPath(item: days.lastSelectableIndex!, section: 0)
-        dayCollectionView.scrollToItem(at:indexPath, at: .centeredHorizontally, animated: true)
+        scrollToDate(indexPath: indexPath)
     }
     
     
@@ -188,8 +196,15 @@ class HomeViewController: BaseViewController {
         return IndexPath(item:days.lastSelectableIndex!, section: 0)
     }
     
+    fileprivate func scrollToDate(indexPath: IndexPath) {
+        selectedDate = days[indexPath.item].date
+        tableView.reloadData()
+        dayCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    }
+    
     fileprivate func centerDayCollectionView() {
-        dayCollectionView.scrollToItem(at: getSelectedIndexPath(), at: .centeredHorizontally, animated: true)
+        let indexPath = getSelectedIndexPath()
+        scrollToDate(indexPath: indexPath)
     }
     
     private func refreshDayCollectionView() {
@@ -204,7 +219,7 @@ class HomeViewController: BaseViewController {
         dayCollectionView.reloadData()
         let indexPath = IndexPath(item: days.lastSelectableIndex!, section: 0)
         dayCollectionView.scrollToItem(at:indexPath, at: .centeredHorizontally, animated: true)
-    
+        
     }
     
     // MARK: Notification
@@ -213,18 +228,22 @@ class HomeViewController: BaseViewController {
         refreshDayCollectionView()
     }
     
-
+    
 }
 
 
 extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        guard let selectedDayData = dailyDataSource[selectedDate.absoluteDate] else {
+            return 0
+        }
+        return selectedDayData.transactions.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: TransactionTableViewCell.cellId, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: TransactionTableViewCell.cellId, for: indexPath) as! TransactionTableViewCell
+        cell.transaction =  dailyDataSource[selectedDate.absoluteDate]?.transactions[indexPath.item]
         return cell
     }
     
@@ -256,7 +275,7 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         guard days[indexPath.item].type != .noSelectedable else {
             return
         }
-        dayCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        scrollToDate(indexPath: indexPath)
     }
 }
 

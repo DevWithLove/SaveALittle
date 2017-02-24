@@ -11,6 +11,18 @@ import UIKit
 class TransactionTableViewCell: UITableViewCell {
     
     static let cellId = String(describing: type(of:TransactionTableViewCell.self))
+    
+    var transaction: TransactionViewModel? {
+        didSet{
+            guard let strongTransaction = transaction else {
+                return
+            }
+            
+            timeLabel.text = strongTransaction.dateTime.string(custom: "HH:mm")
+            amountLabel.text = strongTransaction.amount.toCurrency
+            storeLabel.text = strongTransaction.from
+        }
+    }
 
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!

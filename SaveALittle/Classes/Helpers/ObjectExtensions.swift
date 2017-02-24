@@ -16,7 +16,7 @@ enum RealmObjectError: Error {
     
 }
 
-extension ExpenseTransaction {
+public extension ExpenseTransaction {
 
     func save() {
         if self.id.isEmpty {

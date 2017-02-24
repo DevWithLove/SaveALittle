@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Expense: Int, CustomStringConvertible {
+public enum Expense: Int, CustomStringConvertible {
     
     case Automobile = 0
     case BankCharges = 1
@@ -35,7 +35,7 @@ enum Expense: Int, CustomStringConvertible {
     static var count: Int { return Expense.Vacation.rawValue + 1 }
     
     
-    var description: String {
+    public var description: String {
         switch self {
         case .Automobile: return "Automobile"
         case .BankCharges: return "Bank Charges"
