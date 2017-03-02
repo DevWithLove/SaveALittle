@@ -9,6 +9,7 @@
 import UIKit
 import SlideMenuControllerSwift
 import SwiftDate
+import RealmSwift
 
 class HomeViewController: BaseViewController {
     
@@ -251,6 +252,24 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
         return 60
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            guard let transaction = dailyDataSource[selectedDate.absoluteDate]?.transactions[indexPath.item] else {
+                return
+            }
+            
+            let realm = try! Realm()
+            guard let selectedTransaction = realm.objects(ExpenseTransaction.self).filter("id = '\(transaction.id)'").first else {
+                return
+            }
+            
+            selectedTransaction.delete()
+            
+            dailyDataSource[selectedDate.absoluteDate]?.transactions.remove(at: indexPath.item)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            // TODO: Reload DataSource ??
+        }
+    }
 }
 
 extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

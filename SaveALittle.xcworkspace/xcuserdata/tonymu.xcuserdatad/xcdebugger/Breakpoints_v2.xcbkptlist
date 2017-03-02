@@ -72,7 +72,7 @@
                   moduleName = "SaveALittleDev"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tonymu/Dev/Projects/SaveALittle/SaveALittle/Classes/Data/DailyData.swift"
-                  timestampString = "509614735.611688"
+                  timestampString = "510133623.035521"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
@@ -87,7 +87,7 @@
                   moduleName = "SaveALittleDev"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tonymu/Dev/Projects/SaveALittle/SaveALittle/Classes/Data/DailyData.swift"
-                  timestampString = "509614735.612934"
+                  timestampString = "510133623.037456"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -120,12 +120,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SaveALittle/Classes/Controllers/HomeViewController.swift"
-            timestampString = "509614298.903575"
+            timestampString = "509785413.104467"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
-            landmarkName = "viewDidAppear(_:)"
+            startingLineNumber = "266"
+            endingLineNumber = "266"
+            landmarkName = "tableView(_:commit:forRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -135,13 +135,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SaveALittle/Classes/Data/DailyDataSource.swift"
-            timestampString = "509614719.441963"
+            filePath = "SaveALittle/Classes/Controllers/HomeViewController.swift"
+            timestampString = "509785414.783135"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "reload()"
+            startingLineNumber = "262"
+            endingLineNumber = "262"
+            landmarkName = "tableView(_:commit:forRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

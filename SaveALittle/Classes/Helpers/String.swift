@@ -9,6 +9,7 @@
 import Foundation
 
 extension String {
+    
     static func className(_ aClass: AnyClass) -> String {
         return NSStringFromClass(aClass).components(separatedBy: ".").last!
     }
@@ -19,6 +20,16 @@ extension String {
     
     var length: Int {
         return self.characters.count
+    }
+    
+    var isEmptyWhitespaces: Bool {
+        let string = self.removeSpaces()
+        return string.isEmpty
+    }
+    
+    func removeSpaces() ->String {
+        let newString = self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        return newString
     }
     
     // formatting text for currency textField

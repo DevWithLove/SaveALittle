@@ -14,6 +14,7 @@ import RealmSwift
 class TransactionViewController: UIViewController {
     
     let now = Date()
+    var autoCompleteStrings: [String]? = nil
     
     lazy var amountTextField: NoEditableOptionTextFieldWithIcon = {
         let textField = NoEditableOptionTextFieldWithIcon(frame: .zero)
@@ -38,12 +39,18 @@ class TransactionViewController: UIViewController {
         
         textField.iconColor = Color.darkText
         textField.selectedIconColor = Color.whiteColor
+        textField.autocorrectionType = .no
         textField.iconFont = UIFont(name: "FontAwesome", size: 15)
         textField.iconText = "\u{f041}"
         
         textField.placeholder = "Store"
         textField.title = "STORE"
         textField.returnKeyType = .next
+        
+        textField.clearButtonMode = .always
+        textField.addTarget(self, action: #selector(self.textFieldDidChange), for: .editingChanged)
+        textField.addTarget(self, action: #selector(self.textFieldDidEndEditing), for: .editingDidEnd)
+
         
         return textField
     }()
@@ -61,6 +68,7 @@ class TransactionViewController: UIViewController {
         textField.title = "TYPE"
         textField.delegate = self
         textField.inputView = self.expenseTypesPicker
+        
         
         return textField
     }()
@@ -93,7 +101,7 @@ class TransactionViewController: UIViewController {
         textField.inputAccessoryView = toolBar
         
         textField.text = self.dateToString(date: self.now)
-    
+        
         return textField
     }()
     
@@ -103,8 +111,20 @@ class TransactionViewController: UIViewController {
         pickerView.date = self.now
         pickerView.timeZone = .current
         pickerView.calendar = Calendar(identifier: .gregorian)
-    
+        
         return pickerView
+    }()
+    
+    lazy var autoCompleteStoreTableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.isHidden = true
+        tableView.backgroundColor = Color.darkerBackground
+        tableView.separatorStyle = .none
+        tableView.layer.cornerRadius = 3
+        tableView.layer.masksToBounds = true
+        return tableView
     }()
     
     
@@ -136,6 +156,7 @@ class TransactionViewController: UIViewController {
         view.addSubview(storeTextField)
         view.addSubview(typeTextField)
         view.addSubview(dateTimeField)
+        view.addSubview(autoCompleteStoreTableView)
         addViewConstraints()
     }
     
@@ -144,12 +165,14 @@ class TransactionViewController: UIViewController {
         
         _ = storeTextField.anchor(amountTextField.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: 0, rightConstant: 10, widthConstant: 0 , heightConstant: 45)
         
+        _ = autoCompleteStoreTableView.anchor(storeTextField.bottomAnchor, left: storeTextField.leftAnchor, bottom: nil, right: storeTextField.rightAnchor, topConstant: 2, leftConstant: 10, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 100)
+        
         _ = typeTextField.anchor(storeTextField.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: 0, rightConstant: 10, widthConstant: 0, heightConstant: 45)
         
         _ = dateTimeField.anchor(typeTextField.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 10, leftConstant: 10, bottomConstant: 0, rightConstant: 10, widthConstant: 0, heightConstant: 45)
         
     }
-
+    
     
     private func addRightBarButton(_ buttonImage: UIImage) {
         let rightButton: UIBarButtonItem = UIBarButtonItem(image: buttonImage, style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.saveTransaction))
@@ -210,6 +233,7 @@ class TransactionViewController: UIViewController {
             return
         }
         
+        // Save transaction
         let transaction = ExpenseTransaction()
         transaction.dateTime = dateTimePicker.date as NSDate
         transaction.from = storeTextField.text
@@ -218,7 +242,19 @@ class TransactionViewController: UIViewController {
         transaction.expenseType = Expense(rawValue: self.expenseTypesPicker.selectedRow(inComponent: 0))!
         transaction.save()
         
+        // Cache transaction location
+        if let from = storeTextField.text, !from.isEmptyWhitespaces {
+            self.cacheTransactionLocation(from: from)
+        }
+        
         _ = navigationController?.popToRootViewController(animated: true)
+    }
+    
+    
+    func cacheTransactionLocation(from: String) {
+        let location = CachedLocation()
+        location.from = from
+        location.save()
     }
     
     func showingTitleInAnimationComplete() {
@@ -227,6 +263,48 @@ class TransactionViewController: UIViewController {
             self.typeTextField.setTitleVisible(false, animated: true)
             self.amountTextField.setTitleVisible(false, animated: true)
         }
+    }
+    
+    func textFieldDidChange(){
+        guard let text = storeTextField.text else {
+            return
+        }
+        
+        onTextChange(text: text)
+        
+        if text.isEmpty{ autoCompleteStrings = nil }
+        
+        DispatchQueue.main.async(execute: { () -> Void in
+            self.autoCompleteStoreTableView.isHidden = false
+            if text.isEmpty || self.isAutoCompletedStringEmpty() {
+                self.autoCompleteStoreTableView.isHidden = true
+            }
+        })
+    }
+    
+    func isAutoCompletedStringEmpty() ->Bool {
+        
+        guard let filteredStrings = self.autoCompleteStrings,
+                  !filteredStrings.isEmpty else {
+            return true
+        }
+        
+        return false
+    }
+    
+    func textFieldDidEndEditing() {
+        autoCompleteStoreTableView.isHidden = true
+    }
+    
+    func onTextChange(text: String) {
+        // Filter the cached store data
+        let realm = try! Realm()
+        
+        let locations = realm.objects(CachedLocation.self).map { (location) -> String in
+            location.from
+        }
+        autoCompleteStrings = locations.filter({$0.lowercased().contains(text.lowercased())})
+        autoCompleteStoreTableView.reloadData()
     }
 }
 
@@ -240,6 +318,7 @@ extension TransactionViewController: UITextFieldDelegate {
     
 }
 
+// MARK: -UIPickerViewDelegate, -UIPickerViewDataSource
 
 extension TransactionViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -261,5 +340,47 @@ extension TransactionViewController: UIPickerViewDelegate, UIPickerViewDataSourc
         self.view.endEditing(true)
     }
 }
+
+// MARK: -UITableViewDataSource, -UITableViewDelegate
+
+extension TransactionViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return autoCompleteStrings?.count ?? 0
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellIdentifier = "autocompleteCellIdentifier"
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier)
+        if cell == nil{
+            cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
+        }
+        cell?.backgroundColor = UIColor.clear
+        cell?.textLabel?.font = Font.titilliumWebRegular(size: 15)
+        cell?.textLabel?.textColor = Color.darkText
+        cell?.textLabel?.text = autoCompleteStrings?[indexPath.row]
+        
+        cell?.contentView.gestureRecognizers = nil
+        return cell!
+    }
+    
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath)
+        
+        if let selectedText = cell?.textLabel?.text {
+            self.storeTextField.text = selectedText
+        }
+        
+        DispatchQueue.main.async(execute: { () -> Void in
+            tableView.isHidden = true
+        })
+    }
+    
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 20
+    }
+}
+
+
 
 

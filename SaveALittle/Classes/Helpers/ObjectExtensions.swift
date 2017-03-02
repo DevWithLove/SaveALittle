@@ -18,13 +18,27 @@ enum RealmObjectError: Error {
 
 public extension ExpenseTransaction {
 
-    func save() {
+    override func save() {
         if self.id.isEmpty {
             self.id = newId
         }
         self.saveObject()
     }
     
+}
+
+public extension Object {
+    
+    func save() {
+        self.saveObject()
+    }
+    
+    func delete() {
+        let realm = try! Realm()
+        try! realm.write {
+            realm.delete(self)
+        }
+    }
 }
 
 fileprivate extension Object {
@@ -39,5 +53,4 @@ fileprivate extension Object {
             realm.add(self, update: true)
         }
     }
-    
 }

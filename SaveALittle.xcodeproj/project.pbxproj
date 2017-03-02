@@ -76,6 +76,8 @@
 		0253892F1E453C0700A4ED48 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0253892D1E453C0700A4ED48 /* TransactionTableViewCell.swift */; };
 		025389311E453E6B00A4ED48 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025389301E453E6B00A4ED48 /* TransactionTableViewCell.xib */; };
 		025389321E453E6B00A4ED48 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 025389301E453E6B00A4ED48 /* TransactionTableViewCell.xib */; };
+		02548FBE1E64069E008A5492 /* CachedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02548FBD1E64069E008A5492 /* CachedLocation.swift */; };
+		02548FBF1E64069E008A5492 /* CachedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02548FBD1E64069E008A5492 /* CachedLocation.swift */; };
 		02561C5E1E503EBE002E7283 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02561C5D1E503EBE002E7283 /* TransactionViewController.swift */; };
 		02561C5F1E503EBE002E7283 /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02561C5D1E503EBE002E7283 /* TransactionViewController.swift */; };
 		025723DD1E49A8B700E9C9FF /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025723D81E49A8B700E9C9FF /* DateExtensions.swift */; };
@@ -216,6 +218,7 @@
 		0253892A1E451E6100A4ED48 /* UsageProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsageProgressView.swift; sourceTree = "<group>"; };
 		0253892D1E453C0700A4ED48 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		025389301E453E6B00A4ED48 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
+		02548FBD1E64069E008A5492 /* CachedLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachedLocation.swift; sourceTree = "<group>"; };
 		02561C5D1E503EBE002E7283 /* TransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		025723D81E49A8B700E9C9FF /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		025723D91E49A8B700E9C9FF /* DateInRegionExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateInRegionExtension.swift; sourceTree = "<group>"; };
@@ -328,6 +331,7 @@
 				026CA8101E598E80004BD303 /* TransactionDataSource.swift */,
 				02075B8B1E5D641B005B4AAA /* DailyDataSource.swift */,
 				02075B8F1E5D67B5005B4AAA /* DailyData.swift */,
+				02548FBD1E64069E008A5492 /* CachedLocation.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -929,6 +933,7 @@
 				029266AB1E39D98E00668A1A /* BaseViewController.swift in Sources */,
 				029FA0D81E30AC1F0065E1E5 /* LoginCollectionViewCell.swift in Sources */,
 				024CE3C21E30948700586D1F /* UIViewExtensions.swift in Sources */,
+				02548FBE1E64069E008A5492 /* CachedLocation.swift in Sources */,
 				02075B901E5D67B5005B4AAA /* DailyData.swift in Sources */,
 				025723DD1E49A8B700E9C9FF /* DateExtensions.swift in Sources */,
 				025723DF1E49A8B700E9C9FF /* DateInRegionExtension.swift in Sources */,
@@ -1009,6 +1014,7 @@
 				029266AC1E39D98E00668A1A /* BaseViewController.swift in Sources */,
 				023215F91E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */,
 				023215F61E31F7580025D065 /* HomeViewController.swift in Sources */,
+				02548FBF1E64069E008A5492 /* CachedLocation.swift in Sources */,
 				02075B911E5D67B5005B4AAA /* DailyData.swift in Sources */,
 				025723DE1E49A8B700E9C9FF /* DateExtensions.swift in Sources */,
 				025723E01E49A8B700E9C9FF /* DateInRegionExtension.swift in Sources */,
