@@ -15,7 +15,7 @@ class HomeViewController: BaseViewController {
     
     let borderColor = Color.darkLine
     let borderWidth: CGFloat = 0.5
-    let usageViewTopConstant: CGFloat = 20.0
+    let usageViewTopConstant: CGFloat = 30.0
     let dayCellWidth: CGFloat = 50
     
     let days = DayCollectionDataSource(offsetDays: 4)

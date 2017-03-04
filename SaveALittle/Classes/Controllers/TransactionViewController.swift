@@ -13,8 +13,10 @@ import RealmSwift
 
 class TransactionViewController: UIViewController {
     
-    let now = Date()
-    var autoCompleteStrings: [String]? = nil
+    fileprivate let now = Date()
+    fileprivate var autoCompleteStrings: [String]? = nil
+    
+    var transactionType: TransactionType = .Expense
     
     lazy var amountTextField: NoEditableOptionTextFieldWithIcon = {
         let textField = NoEditableOptionTextFieldWithIcon(frame: .zero)
@@ -43,14 +45,14 @@ class TransactionViewController: UIViewController {
         textField.iconFont = UIFont(name: "FontAwesome", size: 15)
         textField.iconText = "\u{f041}"
         
-        textField.placeholder = "Store"
-        textField.title = "STORE"
+        textField.placeholder = self.transactionType == .Expense ? "Store" : "From"
+        textField.title = self.transactionType == .Expense ? "STORE" : "FROM"
         textField.returnKeyType = .next
         
         textField.clearButtonMode = .always
         textField.addTarget(self, action: #selector(self.textFieldDidChange), for: .editingChanged)
         textField.addTarget(self, action: #selector(self.textFieldDidEndEditing), for: .editingDidEnd)
-
+        
         
         return textField
     }()
@@ -67,13 +69,13 @@ class TransactionViewController: UIViewController {
         textField.placeholder = "Type"
         textField.title = "TYPE"
         textField.delegate = self
-        textField.inputView = self.expenseTypesPicker
+        textField.inputView = self.typePicker
         
         
         return textField
     }()
     
-    lazy var expenseTypesPicker: UIPickerView = {
+    lazy var typePicker: UIPickerView = {
         let pickerView = UIPickerView(frame: .zero)
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -233,23 +235,47 @@ class TransactionViewController: UIViewController {
             return
         }
         
-        // Save transaction
-        let transaction = ExpenseTransaction()
-        transaction.dateTime = dateTimePicker.date as NSDate
-        transaction.from = storeTextField.text
-        let amountText = amountTextField.text ?? "0.0"
-        transaction.amount = (amountText as NSString).floatValue
-        transaction.expenseType = Expense(rawValue: self.expenseTypesPicker.selectedRow(inComponent: 0))!
-        transaction.save()
-        
-        // Cache transaction location
-        if let from = storeTextField.text, !from.isEmptyWhitespaces {
-            self.cacheTransactionLocation(from: from)
+        if transactionType == .Expense {
+            saveExpenseTransaction()
+        }else {
+            saveIncomeTransaction()
         }
         
         _ = navigationController?.popToRootViewController(animated: true)
     }
     
+    private func saveExpenseTransaction(){
+        
+        let transaction = ExpenseTransaction()
+        transaction.dateTime = dateTimePicker.date as NSDate
+        transaction.from = storeTextField.text
+        let amountText = amountTextField.text ?? "0.0"
+        transaction.amount = (amountText as NSString).floatValue
+        transaction.expenseType = Expense(rawValue: self.typePicker.selectedRow(inComponent: 0))!
+        transaction.save()
+        
+        saveCachedFrom()
+    }
+    
+    private func saveIncomeTransaction() {
+        
+        let transaction = IncomeTransaction()
+        transaction.dateTime = dateTimePicker.date as NSDate
+        transaction.from = storeTextField.text
+        let amountText = amountTextField.text ?? "0.0"
+        transaction.amount = (amountText as NSString).floatValue
+        transaction.incomeType = Income(rawValue: self.typePicker.selectedRow(inComponent: 0))!
+        transaction.save()
+        
+        saveCachedFrom()
+    }
+    
+    private func saveCachedFrom() {
+        // Cache transaction location
+        if let from = storeTextField.text, !from.isEmptyWhitespaces {
+            self.cacheTransactionLocation(from: from)
+        }
+    }
     
     func cacheTransactionLocation(from: String) {
         let location = CachedLocation()
@@ -285,8 +311,8 @@ class TransactionViewController: UIViewController {
     func isAutoCompletedStringEmpty() ->Bool {
         
         guard let filteredStrings = self.autoCompleteStrings,
-                  !filteredStrings.isEmpty else {
-            return true
+            !filteredStrings.isEmpty else {
+                return true
         }
         
         return false
@@ -311,7 +337,7 @@ class TransactionViewController: UIViewController {
 extension TransactionViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField.inputView == expenseTypesPicker && (textField.text?.isEmpty)! {
+        if textField.inputView == typePicker && (textField.text?.isEmpty)! {
             textField.text = Expense(rawValue: 0)?.description
         }
     }
@@ -327,16 +353,16 @@ extension TransactionViewController: UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return Expense.count
+        return transactionType == .Expense ? Expense.count : Income.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return Expense(rawValue: row)?.description
+        return transactionType == .Expense ? Expense(rawValue: row)?.description : Income(rawValue: row)?.description
     }
     
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        typeTextField.text = Expense(rawValue: row)?.description
+        typeTextField.text = transactionType == .Expense ? Expense(rawValue: row)?.description : Income(rawValue: row)?.description
         self.view.endEditing(true)
     }
 }

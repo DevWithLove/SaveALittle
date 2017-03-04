@@ -47,4 +47,13 @@ public class ExpenseTransactonViewModel: TransactionViewModel {
     }
 }
 
+public class IncomeTransactionViewModel: TransactionViewModel {
+    var type: Income
+    
+    init(id: String, amount: Float, dateTime: Date, type: Income) {
+        self.type = type
+        super.init(id: id, amount: amount, dateTime: dateTime)
+    }
+}
+
 

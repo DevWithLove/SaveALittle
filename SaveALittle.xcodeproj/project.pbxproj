@@ -114,6 +114,8 @@
 		026CA80D1E59857B004BD303 /* TransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CA80B1E59857B004BD303 /* TransactionViewModel.swift */; };
 		026CA8111E598E80004BD303 /* TransactionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CA8101E598E80004BD303 /* TransactionDataSource.swift */; };
 		026CA8121E598E80004BD303 /* TransactionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CA8101E598E80004BD303 /* TransactionDataSource.swift */; };
+		026CE2331E6A023200ABEFB4 /* MonthlyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CE2321E6A023200ABEFB4 /* MonthlyData.swift */; };
+		026CE2341E6A023200ABEFB4 /* MonthlyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CE2321E6A023200ABEFB4 /* MonthlyData.swift */; };
 		027033231E41B63E00BD5272 /* MonthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027033221E41B63E00BD5272 /* MonthViewController.swift */; };
 		027033241E41B63E00BD5272 /* MonthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027033221E41B63E00BD5272 /* MonthViewController.swift */; };
 		027033261E41B8AB00BD5272 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027033251E41B8AB00BD5272 /* LeftViewController.swift */; };
@@ -236,6 +238,7 @@
 		0260505D1E2F69CB00026F5B /* Dev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Dev-Info.plist"; sourceTree = "<group>"; };
 		026CA80B1E59857B004BD303 /* TransactionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 		026CA8101E598E80004BD303 /* TransactionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDataSource.swift; sourceTree = "<group>"; };
+		026CE2321E6A023200ABEFB4 /* MonthlyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyData.swift; sourceTree = "<group>"; };
 		027033221E41B63E00BD5272 /* MonthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthViewController.swift; sourceTree = "<group>"; };
 		027033251E41B8AB00BD5272 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		027033281E41BBF600BD5272 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -332,6 +335,7 @@
 				02075B8B1E5D641B005B4AAA /* DailyDataSource.swift */,
 				02075B8F1E5D67B5005B4AAA /* DailyData.swift */,
 				02548FBD1E64069E008A5492 /* CachedLocation.swift */,
+				026CE2321E6A023200ABEFB4 /* MonthlyData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -924,6 +928,7 @@
 				021C2D051E57B28200B1DFFF /* ObjectExtensions.swift in Sources */,
 				024940101E2F650C002FC473 /* LoginViewController.swift in Sources */,
 				0206CA1F1E558AA10053F3DA /* ExpenseType.swift in Sources */,
+				026CE2331E6A023200ABEFB4 /* MonthlyData.swift in Sources */,
 				02493FD91E2F64A3002FC473 /* AppDelegate.swift in Sources */,
 				029FA0D61E30ABD30065E1E5 /* LeftPaddedTextField.swift in Sources */,
 				02CB04341E3883990029D37D /* UIColorExtensions.swift in Sources */,
@@ -1005,6 +1010,7 @@
 				021C2D061E57B28200B1DFFF /* ObjectExtensions.swift in Sources */,
 				029FA0D91E30AC1F0065E1E5 /* LoginCollectionViewCell.swift in Sources */,
 				0206CA201E558AA10053F3DA /* ExpenseType.swift in Sources */,
+				026CE2341E6A023200ABEFB4 /* MonthlyData.swift in Sources */,
 				026050501E2F685F00026F5B /* LoginViewController.swift in Sources */,
 				026050511E2F685F00026F5B /* AppDelegate.swift in Sources */,
 				024CE3C31E30948700586D1F /* UIViewExtensions.swift in Sources */,

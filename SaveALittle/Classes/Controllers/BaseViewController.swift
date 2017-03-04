@@ -52,13 +52,18 @@ class BaseViewController: UIViewController {
     
     @objc private func addTransaction(){
         let alert = SCLAlertView()
+        
         _ = alert.addButton("Add Expnese") {
-            let monthViewController = TransactionViewController()
-            self.navigationController?.pushViewController(monthViewController, animated: true)
+            let transactionViewController = TransactionViewController()
+            self.navigationController?.pushViewController(transactionViewController, animated: true)
         }
+        
         _ = alert.addButton("Add Income") {
-            print("Second button tapped")
+            let transactionViewController = TransactionViewController()
+            transactionViewController.transactionType = .Income
+            self.navigationController?.pushViewController(transactionViewController, animated: true)
         }
+        
         
         let icon = #imageLiteral(resourceName: "shopping")
         let color = Color.lightOrange

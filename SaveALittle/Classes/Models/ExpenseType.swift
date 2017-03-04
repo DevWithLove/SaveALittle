@@ -8,6 +8,12 @@
 
 import Foundation
 
+
+public enum TransactionType: Int {
+    case Expense = 0
+    case Income = 1
+}
+
 public enum Expense: Int, CustomStringConvertible {
     
     case Automobile = 0
@@ -32,7 +38,7 @@ public enum Expense: Int, CustomStringConvertible {
     case Utilities = 18
     case Vacation = 19
     
-    static var count: Int { return Expense.Vacation.rawValue + 1 }
+    static var count: Int { return Expense.EatOut.rawValue + 1 }
     
     
     public var description: String {
@@ -60,7 +66,31 @@ public enum Expense: Int, CustomStringConvertible {
         case .Vacation: return "Vacation"
         }
     }
-    
 
+}
+
+
+public enum Income: Int, CustomStringConvertible {
+    
+    case WagesSalaries = 0
+    case InterestReceived = 1
+    case Dividends = 2
+    case CapitalGainsLosses = 3
+    case UnemploymentCompensation = 4
+    case Others = 5
+    
+    static var count: Int { return Income.Others.rawValue + 1 }
+    
+    
+    public var description: String {
+        switch self {
+        case .WagesSalaries: return "Wages and Salaries"
+        case .InterestReceived: return "Interest Received"
+        case .Dividends: return "Dividends"
+        case .CapitalGainsLosses: return "Capital Gains and Losses"
+        case .UnemploymentCompensation: return "Unemployment Compensation"
+        case .Others: return "Others"
+        }
+    }
     
 }

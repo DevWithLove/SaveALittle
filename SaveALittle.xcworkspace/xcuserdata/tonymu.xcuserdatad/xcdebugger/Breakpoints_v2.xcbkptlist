@@ -72,12 +72,12 @@
                   moduleName = "SaveALittleDev"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tonymu/Dev/Projects/SaveALittle/SaveALittle/Classes/Data/DailyData.swift"
-                  timestampString = "510133623.035521"
+                  timestampString = "510305151.558346"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
                   endingLineNumber = "17"
-                  offsetFromSymbolStart = "16">
+                  offsetFromSymbolStart = "20">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -87,12 +87,12 @@
                   moduleName = "SaveALittleDev"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/tonymu/Dev/Projects/SaveALittle/SaveALittle/Classes/Data/DailyData.swift"
-                  timestampString = "510133623.037456"
+                  timestampString = "510305151.559518"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
                   endingLineNumber = "18"
-                  offsetFromSymbolStart = "12">
+                  offsetFromSymbolStart = "16">
                </Location>
             </Locations>
          </BreakpointContent>

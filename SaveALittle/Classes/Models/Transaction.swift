@@ -41,9 +41,13 @@ public class ExpenseTransaction: Transaction {
 }
 
 
-//class incomeTransaction: Transaction {
-//    
-//    init(amount:Decimal, dateTime: Date) {
-//        super.init(type: .income, amount: amount, dateTime: dateTime)
-//    }
-//}
+public class IncomeTransaction: Transaction {
+    public var incomeType: Income {
+        get {
+            return Income(rawValue: self.type)!
+        }
+        set {
+            self.type = newValue.rawValue
+        }
+    }
+}
