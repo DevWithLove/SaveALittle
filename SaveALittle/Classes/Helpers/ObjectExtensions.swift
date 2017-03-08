@@ -16,7 +16,7 @@ enum RealmObjectError: Error {
     
 }
 
-public extension ExpenseTransaction {
+public extension Transaction {
 
     override func save() {
         if self.id.isEmpty {

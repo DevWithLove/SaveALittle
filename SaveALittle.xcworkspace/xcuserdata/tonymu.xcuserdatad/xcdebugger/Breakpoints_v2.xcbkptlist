@@ -55,54 +55,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SaveALittle/Classes/Data/DailyData.swift"
-            timestampString = "509525545.434778"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
-            landmarkName = "DailyData"
-            landmarkType = "14">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SaveALittleDev.DailyData.total.getter : Swift.Double"
-                  moduleName = "SaveALittleDev"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tonymu/Dev/Projects/SaveALittle/SaveALittle/Classes/Data/DailyData.swift"
-                  timestampString = "510305151.558346"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "20">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SaveALittleDev.DailyData.(total.getter : Swift.Double).(closure #1)"
-                  moduleName = "SaveALittleDev"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tonymu/Dev/Projects/SaveALittle/SaveALittle/Classes/Data/DailyData.swift"
-                  timestampString = "510305151.559518"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "SaveALittleTests/DailyDataTests.swift"
             timestampString = "509527435.354069"
             startingColumnNumber = "9223372036854775807"
@@ -120,11 +72,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SaveALittle/Classes/Controllers/HomeViewController.swift"
-            timestampString = "509785413.104467"
+            timestampString = "510658411.549248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "266"
-            endingLineNumber = "266"
+            startingLineNumber = "297"
+            endingLineNumber = "297"
             landmarkName = "tableView(_:commit:forRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -135,13 +87,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SaveALittle/Classes/Controllers/HomeViewController.swift"
-            timestampString = "509785414.783135"
+            filePath = "SaveALittle/Classes/Helpers/ObjectExtensions.swift"
+            timestampString = "510655959.997431"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "262"
-            endingLineNumber = "262"
-            landmarkName = "tableView(_:commit:forRowAt:)"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "save()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

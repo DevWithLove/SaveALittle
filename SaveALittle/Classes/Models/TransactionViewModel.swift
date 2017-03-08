@@ -16,16 +16,18 @@ public class TransactionViewModel: Hashable, Equatable, Comparable {
             return id.hashValue
         }
     }
-   
+    
     public var id: String
     public var amount: Float
     public var dateTime: DateInRegion
     public var from: String? = nil
+    public var transactionType: TransactionType
     
-    public init(id:String , amount: Float, dateTime: Date) {
+    public init(id:String , amount: Float, dateTime: Date, transactionType: TransactionType) {
         self.id = id
         self.amount = amount
         self.dateTime = dateTime.toDateInRegion()
+        self.transactionType = transactionType
     }
 }
 
@@ -43,7 +45,7 @@ public class ExpenseTransactonViewModel: TransactionViewModel {
     
     init(id: String, amount: Float, dateTime: Date, type: Expense) {
         self.type = type
-        super.init(id: id, amount: amount, dateTime: dateTime)
+        super.init(id: id, amount: amount, dateTime: dateTime, transactionType: .Expense)
     }
 }
 
@@ -52,7 +54,7 @@ public class IncomeTransactionViewModel: TransactionViewModel {
     
     init(id: String, amount: Float, dateTime: Date, type: Income) {
         self.type = type
-        super.init(id: id, amount: amount, dateTime: dateTime)
+        super.init(id: id, amount: amount, dateTime: dateTime, transactionType: .Income)
     }
 }
 

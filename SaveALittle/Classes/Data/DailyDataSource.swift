@@ -50,10 +50,10 @@ public class DailyDataSource: Sequence {
     }
     
     public func reload(){
+        var transactions: [TransactionViewModel] = getExpenseTransactions()
+        transactions += getIncomeTransactions() as [TransactionViewModel]
         
-        let expenses = getExpenseTransactions()
-        
-        let groupedDailyData = expenses.map{$0}.groupedBy { (transaction) -> DateInRegion in
+        let groupedDailyData = transactions.map{$0}.groupedBy { (transaction) -> DateInRegion in
             return transaction.dateTime.startOfDay
         }
         
@@ -69,10 +69,41 @@ public class DailyDataSource: Sequence {
         let expenses = realm.objects(ExpenseTransaction.self)
         
         return expenses.map({ (transaction) -> ExpenseTransactonViewModel in
-           let transactionViewModel = ExpenseTransactonViewModel(id: transaction.id, amount: transaction.amount, dateTime: transaction.dateTime as Date, type: Expense(rawValue: transaction.type)!)
-           transactionViewModel.from = transaction.from
-           return transactionViewModel
+            let transactionViewModel = ExpenseTransactonViewModel(id: transaction.id, amount: transaction.amount, dateTime: transaction.dateTime as Date, type: Expense(rawValue: transaction.type)!)
+            transactionViewModel.from = transaction.from
+            return transactionViewModel
         })
     }
+    
+    private func getIncomeTransactions() ->[IncomeTransactionViewModel] {
+        let realm = try! Realm()
+        let expenses = realm.objects(IncomeTransaction.self)
+        
+        return expenses.map({ (transaction) -> IncomeTransactionViewModel in
+            let transactionViewModel = IncomeTransactionViewModel(id: transaction.id, amount: transaction.amount, dateTime: transaction.dateTime as Date, type: Income(rawValue: transaction.type)!)
+            transactionViewModel.from = transaction.from
+            return transactionViewModel
+        })
+    }
+    
+}
 
+extension DailyDataSource {
+    
+    public func dataOfTheMonth(date: DateInRegion) ->[DailyData] {
+        let targetMonth = date.month
+        let targetYear = date.year
+        
+        let data = self.flatMap { (key, value) -> DailyData? in
+            let month = value.date.month
+            let year = value.date.year
+            
+            if month == targetMonth && year == targetYear {
+                return value
+            }
+            return nil
+        }
+        
+        return data
+    }
 }

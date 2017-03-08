@@ -19,8 +19,30 @@ class HomeViewController: BaseViewController {
     let dayCellWidth: CGFloat = 50
     
     let days = DayCollectionDataSource(offsetDays: 4)
-    var selectedDate = DateInRegion().startOfDay
     let dailyDataSource = DailyDataSource.shared
+    
+    var selectedDate = DateInRegion().startOfDay
+    var currentMonthData: [DailyData]? = nil
+    
+    private var monthIncome: Double {
+        guard let data = self.currentMonthData, !data.isEmpty else {
+            return 0.0
+        }
+        
+        return data.sum({ (dailyData) -> Double in
+            return Double(dailyData.totalIncome)
+        })
+    }
+    
+    private var monthExpense: Double {
+        guard let data = self.currentMonthData, !data.isEmpty else {
+            return 0.0
+        }
+        
+        return data.sum({ (dailyData) -> Double in
+            return Double(dailyData.totalExpense)
+        })
+    }
     
     
     private var usageViewleftConstant: CGFloat {
@@ -93,7 +115,8 @@ class HomeViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        dailyDataSource.reload()
+        // Update data sources
+       reloadDataSource()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -176,6 +199,12 @@ class HomeViewController: BaseViewController {
         seperateLineView.layer.insertSublayer(gradient, at: 0)
     }
     
+    fileprivate func reloadDataSource(){
+        dailyDataSource.reload()
+        currentMonthData = dailyDataSource.dataOfTheMonth(date: DateInRegion())
+        self.headerLeftView.valueLabel.text = self.monthIncome.description
+        self.headerMeddileView.valueLabel.text = self.monthExpense.description
+    }
     
     fileprivate func getSelectedIndexPath()-> IndexPath {
         let xFinal = self.dayCollectionView.contentOffset.x + (self.view.frame.size.width / 2)
@@ -259,15 +288,23 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
             }
             
             let realm = try! Realm()
-            guard let selectedTransaction = realm.objects(ExpenseTransaction.self).filter("id = '\(transaction.id)'").first else {
+            
+            var selectedTransaction: Transaction? = nil
+            if transaction.transactionType == .Expense {
+                selectedTransaction = realm.objects(ExpenseTransaction.self).filter("id = '\(transaction.id)'").first
+            } else {
+                selectedTransaction = realm.objects(IncomeTransaction.self).filter("id = '\(transaction.id)'").first
+            }
+            
+            guard let strongTransaction = selectedTransaction else {
                 return
             }
             
-            selectedTransaction.delete()
-            
+            strongTransaction.delete()
             dailyDataSource[selectedDate.absoluteDate]?.transactions.remove(at: indexPath.item)
             tableView.deleteRows(at: [indexPath], with: .automatic)
-            // TODO: Reload DataSource ??
+            
+            reloadDataSource()
         }
     }
 }

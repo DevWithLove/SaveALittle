@@ -13,9 +13,19 @@ public struct DailyData: Equatable, Comparable {
     public let date: DateInRegion
     public var transactions = [TransactionViewModel]()
     
-    public var total: Double {
-        return transactions.sum({ (transaction) -> Double in
-           return Double(transaction.amount)
+    public var totalIncome: Double {
+        let incomes = transactions.filter({$0.transactionType == .Income})
+        
+        return incomes.sum({ (transaction) -> Double in
+            return Double(transaction.amount)
+        })
+    }
+    
+    public var totalExpense: Double {
+        let expenses = transactions.filter({$0.transactionType == .Expense})
+        
+        return expenses.sum({ (transaction) -> Double in
+            return Double(transaction.amount)
         })
     }
     

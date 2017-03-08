@@ -116,6 +116,7 @@
 		026CA8121E598E80004BD303 /* TransactionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CA8101E598E80004BD303 /* TransactionDataSource.swift */; };
 		026CE2331E6A023200ABEFB4 /* MonthlyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CE2321E6A023200ABEFB4 /* MonthlyData.swift */; };
 		026CE2341E6A023200ABEFB4 /* MonthlyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026CE2321E6A023200ABEFB4 /* MonthlyData.swift */; };
+		026D0E961E6FF5F300A17E72 /* DailyDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026D0E951E6FF5F300A17E72 /* DailyDataSourceTests.swift */; };
 		027033231E41B63E00BD5272 /* MonthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027033221E41B63E00BD5272 /* MonthViewController.swift */; };
 		027033241E41B63E00BD5272 /* MonthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027033221E41B63E00BD5272 /* MonthViewController.swift */; };
 		027033261E41B8AB00BD5272 /* LeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027033251E41B8AB00BD5272 /* LeftViewController.swift */; };
@@ -239,6 +240,7 @@
 		026CA80B1E59857B004BD303 /* TransactionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionViewModel.swift; sourceTree = "<group>"; };
 		026CA8101E598E80004BD303 /* TransactionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionDataSource.swift; sourceTree = "<group>"; };
 		026CE2321E6A023200ABEFB4 /* MonthlyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyData.swift; sourceTree = "<group>"; };
+		026D0E951E6FF5F300A17E72 /* DailyDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyDataSourceTests.swift; sourceTree = "<group>"; };
 		027033221E41B63E00BD5272 /* MonthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthViewController.swift; sourceTree = "<group>"; };
 		027033251E41B8AB00BD5272 /* LeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftViewController.swift; sourceTree = "<group>"; };
 		027033281E41BBF600BD5272 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 				027497E41E4D9BBE00414A0C /* DayCollectionDataSourceTests.swift */,
 				0285C2E61E5C1E42006DDA62 /* TransactionDataSourceTests.swift */,
 				02075B931E5D6E1F005B4AAA /* DailyDataTests.swift */,
+				026D0E951E6FF5F300A17E72 /* DailyDataSourceTests.swift */,
 			);
 			path = SaveALittleTests;
 			sourceTree = "<group>";
@@ -990,6 +993,7 @@
 				02493FF11E2F64A3002FC473 /* SaveALittleTests.swift in Sources */,
 				025723EF1E49A90900E9C9FF /* MonthIteratorTests.swift in Sources */,
 				02075B941E5D6E1F005B4AAA /* DailyDataTests.swift in Sources */,
+				026D0E961E6FF5F300A17E72 /* DailyDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -56,7 +56,7 @@ class DailyDataTests: XCTestCase {
             dailyDataSource[dailyData.date.absoluteDate] = dailyData
         }
         
-        let dailyData = dailyDataSource[DateInRegion().startOfDay.absoluteDate]
+        _ = dailyDataSource[DateInRegion().startOfDay.absoluteDate]
     
         // Assect
         XCTAssertEqual(dataSource.count, 5)
