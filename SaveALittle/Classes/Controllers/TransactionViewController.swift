@@ -250,7 +250,7 @@ class TransactionViewController: UIViewController {
         transaction.dateTime = dateTimePicker.date as NSDate
         transaction.from = storeTextField.text
         let amountText = amountTextField.text ?? "0.0"
-        transaction.amount = (amountText as NSString).floatValue
+        transaction.amount = amountText.floatValue
         transaction.expenseType = Expense(rawValue: self.typePicker.selectedRow(inComponent: 0))!
         transaction.save()
         
@@ -263,7 +263,7 @@ class TransactionViewController: UIViewController {
         transaction.dateTime = dateTimePicker.date as NSDate
         transaction.from = storeTextField.text
         let amountText = amountTextField.text ?? "0.0"
-        transaction.amount = (amountText as NSString).floatValue
+        transaction.amount = amountText.floatValue
         transaction.incomeType = Income(rawValue: self.typePicker.selectedRow(inComponent: 0))!
         transaction.save()
         
@@ -338,7 +338,12 @@ extension TransactionViewController: UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField.inputView == typePicker && (textField.text?.isEmpty)! {
-            textField.text = Expense(rawValue: 0)?.description
+            if transactionType == .Expense {
+                textField.text = Expense(rawValue: 0)?.description
+                return
+            }
+            
+            textField.text = Income(rawValue: 0)?.description
         }
     }
     

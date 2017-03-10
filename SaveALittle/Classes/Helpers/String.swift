@@ -27,6 +27,19 @@ extension String {
         return string.isEmpty
     }
     
+    var floatValue: Float {
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        formatter.locale = Locale.current
+        
+        guard let value = formatter.number(from: self)?.floatValue else {
+            return 0.0
+        }
+    
+        return value
+    }
+    
     func removeSpaces() ->String {
         let newString = self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         return newString
