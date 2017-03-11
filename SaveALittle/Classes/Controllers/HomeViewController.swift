@@ -52,18 +52,21 @@ class HomeViewController: BaseViewController {
     let headerLeftView: WeekHeaderView = {
         let nib = UINib(nibName: "WeekHeaderView", bundle: nil)
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! WeekHeaderView
+        view.titleLabel.text = "Total Income"
         return view
     }()
     
     let headerMeddileView: WeekHeaderView = {
         let nib = UINib(nibName: "WeekHeaderView", bundle: nil)
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! WeekHeaderView
+        view.titleLabel.text = "Total Expense"
         return view
     }()
     
     let headerRightView: WeekHeaderView = {
         let nib = UINib(nibName: "WeekHeaderView", bundle: nil)
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! WeekHeaderView
+        view.titleLabel.text = "Left Over"
         return view
     }()
     
@@ -116,7 +119,7 @@ class HomeViewController: BaseViewController {
         super.viewWillAppear(animated)
         
         // Update data sources
-       reloadDataSource()
+        reloadDataSource()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -124,13 +127,14 @@ class HomeViewController: BaseViewController {
         
         setupSeperateLine()
         showLoginView()
-        usageProgressView.refresh(usage: 80)
         
         refreshDayCollectionView()
         
         // Scroll the selected to the current date
         let indexPath = IndexPath(item: days.lastSelectableIndex!, section: 0)
         scrollToDate(indexPath: indexPath)
+        
+        refreshView()
     }
     
     
@@ -142,6 +146,9 @@ class HomeViewController: BaseViewController {
     
     private func setupViews() {
         self.automaticallyAdjustsScrollViewInsets = false
+        
+        self.title = "Current Month"
+        
         view.addSubview(headerLeftView)
         view.addSubview(headerRightView)
         view.addSubview(headerMeddileView)
@@ -202,9 +209,24 @@ class HomeViewController: BaseViewController {
     fileprivate func reloadDataSource(){
         dailyDataSource.reload()
         currentMonthData = dailyDataSource.dataOfTheMonth(date: DateInRegion())
-        self.headerLeftView.valueLabel.text = self.monthIncome.description
-        self.headerMeddileView.valueLabel.text = self.monthExpense.description
     }
+    
+    fileprivate func refreshView() {
+        
+        let income = self.monthIncome
+        let expense = self.monthExpense
+        let leftOver = income > expense ? income - expense : 0
+        
+        self.headerLeftView.valueLabel.text = income.toCurrency
+        self.headerMeddileView.valueLabel.text = expense.toCurrency
+        self.headerRightView.valueLabel.text = leftOver.toCurrency
+        
+        let percentage = income > expense ? (expense / income) * 100 : 100
+        
+        usageProgressView.refresh(usage: CGFloat(percentage))
+    }
+    
+    
     
     fileprivate func getSelectedIndexPath()-> IndexPath {
         let xFinal = self.dayCollectionView.contentOffset.x + (self.view.frame.size.width / 2)
@@ -305,6 +327,7 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
             tableView.deleteRows(at: [indexPath], with: .automatic)
             
             reloadDataSource()
+            refreshView()
         }
     }
 }

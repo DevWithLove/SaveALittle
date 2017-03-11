@@ -10,7 +10,7 @@ import UIKit
 import UICircularProgressRing
 
 class UsageProgressView: UIView, UICircularProgressRingDelegate {
-
+    
     @IBOutlet weak var usageProgressRingView: UICircularProgressRingView!
     
     @IBOutlet weak var topLabel: UILabel!
@@ -29,6 +29,8 @@ class UsageProgressView: UIView, UICircularProgressRingDelegate {
         lineView.layer.cornerRadius = 1
         lineView.layer.masksToBounds = true
         lineView.backgroundColor = Color.darkerBackground
+        topLabel.font = Font.titilliumWebRegular(size: 15)
+        bottomLabel.font = Font.titilliumWebLight(size: 11)
         
         
         usageProgressRingView.delegate = self
@@ -44,10 +46,10 @@ class UsageProgressView: UIView, UICircularProgressRingDelegate {
         usageProgressRingView.endAngle = 62
         usageProgressRingView.valueIndicator = " %"
         usageProgressRingView.fontColor = Color.whiteColor
-        usageProgressRingView.customFontWithName = "OpenSans-Bold"
-        usageProgressRingView.fontSize = 20
+        usageProgressRingView.customFontWithName = "TitilliumWeb-Regular"
+        usageProgressRingView.fontSize = 16
     }
-
+    
     func finishedUpdatingProgress(forRing ring: UICircularProgressRingView) {
         if ring === self.usageProgressRingView {
             print("From delegate: Ring 1 finished")

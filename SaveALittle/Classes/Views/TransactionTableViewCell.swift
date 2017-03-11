@@ -21,6 +21,7 @@ class TransactionTableViewCell: UITableViewCell {
             timeLabel.text = strongTransaction.dateTime.string(custom: "HH:mm")
             amountLabel.text = strongTransaction.amount.toCurrency
             storeLabel.text = strongTransaction.from
+            iconLabel.text = strongTransaction.transactionType == .Expense ? "\u{f063}" : "\u{f062}"
         }
     }
 
@@ -29,6 +30,7 @@ class TransactionTableViewCell: UITableViewCell {
     @IBOutlet weak var storeLabel: UILabel!
     @IBOutlet weak var lineViewOne: UIView!
     @IBOutlet weak var lineViewTwo: UIView!
+    @IBOutlet weak var iconLabel: UILabel!
     
     // MARK: Life Cycle
     override func awakeFromNib() {
@@ -62,6 +64,8 @@ class TransactionTableViewCell: UITableViewCell {
         timeLabel.font = Font.titilliumWebRegular(size: 12)
         amountLabel.font = Font.titilliumWebSemiBold(size: 15)
         storeLabel.font = Font.titilliumWebLight(size: 12)
+        iconLabel.font = Font.iconRegular(size: 16)
+        iconLabel.textColor = Color.lightOrange
     }
 
 }

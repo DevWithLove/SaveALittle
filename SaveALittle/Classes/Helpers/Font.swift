@@ -23,4 +23,8 @@ struct Font {
         return UIFont(name: "TitilliumWeb-SemiBold", size: size)!
     }
     
+    static func iconRegular(size: CGFloat) -> UIFont {
+        return UIFont(name: "FontAwesome", size: size)!
+    }
+    
 }

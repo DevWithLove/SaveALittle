@@ -25,6 +25,7 @@ class BaseViewController: UIViewController {
         // to remove the nav bar bottom line
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "nav_bar_background"), for: .default)
+        navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: Font.titilliumWebSemiBold(size: 18),NSForegroundColorAttributeName: Color.whiteColor]
         
         // Set the status bar to white color
         UIApplication.shared.statusBarStyle = .lightContent
@@ -49,7 +50,6 @@ class BaseViewController: UIViewController {
         navigationItem.rightBarButtonItem = rightButton
     }
     
-    
     @objc private func addTransaction(){
         let alert = SCLAlertView()
         
@@ -72,10 +72,10 @@ class BaseViewController: UIViewController {
     }
     
     
-//    private func removeNavigationBarItem() {
-//        self.navigationItem.leftBarButtonItem = nil
-//        self.navigationItem.rightBarButtonItem = nil
-//        self.slideMenuController()?.removeLeftGestures()
-//        self.slideMenuController()?.removeRightGestures()
-//    }
+    //    private func removeNavigationBarItem() {
+    //        self.navigationItem.leftBarButtonItem = nil
+    //        self.navigationItem.rightBarButtonItem = nil
+    //        self.slideMenuController()?.removeLeftGestures()
+    //        self.slideMenuController()?.removeRightGestures()
+    //    }
 }

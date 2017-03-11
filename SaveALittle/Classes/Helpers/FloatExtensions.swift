@@ -7,14 +7,36 @@
 //
 
 import Foundation
+import UIKit
 
 
 extension Float {
+    
     var toCurrency:String {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.locale = Locale.current
         let price = self as NSNumber
         return formatter.string(from: price)!
+    }
+    
+    var twoDecimpalPlacesString: String {
+        return String(format: "%.2f", self)
+    }
+    
+}
+
+extension Double {
+    
+    var toCurrency:String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.locale = Locale.current
+        let price = self as NSNumber
+        return formatter.string(from: price)!
+    }
+    
+    var twoDecimpalPlacesString: String {
+        return String(format: "%.2f", self)
     }
 }
