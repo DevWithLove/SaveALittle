@@ -17,6 +17,8 @@ class DailyDataSourceTests: XCTestCase {
         super.setUp()
     }
     
+    // MARK: Get Month Data
+    
     func testDailyDataSource_get_month_data() {
         
         // Arrange
@@ -59,6 +61,47 @@ class DailyDataSourceTests: XCTestCase {
         
         self.measure {
             _ = dailyDataSource.dataOfTheMonth(date: date)
+        }
+    }
+    
+    // MARK: Group Month Data
+    
+    func testDailyDataSource_group_month_data() {
+        
+        // Arrange
+        let dataSampleSize: Int = 500
+        var startDate = Date() - 1.year
+        let dailyDataSource = DailyDataSource()
+        
+        for _ in 0..<dataSampleSize {
+            let dailyData = DailyData(date: DateInRegion(absoluteDate: startDate))
+            dailyDataSource[startDate] = dailyData
+            startDate = startDate + 1.day
+        }
+        
+        // Act
+        let data = dailyDataSource.groupedByMonth()
+        
+        // Assect
+        XCTAssertEqual(data.count, 17)
+        
+    }
+    
+    func testPerformance_group_month_data() {
+        
+        // Arrange
+        let dataSampleSize: Int = 2000
+        var startDate = Date() - 5.year
+        let dailyDataSource = DailyDataSource()
+        
+        for _ in 0..<dataSampleSize {
+            let dailyData = DailyData(date: DateInRegion(absoluteDate: startDate))
+            dailyDataSource[startDate] = dailyData
+            startDate = startDate + 1.day
+        }
+        
+        self.measure {
+            _ = dailyDataSource.groupedByMonth()
         }
     }
 }

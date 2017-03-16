@@ -8,98 +8,118 @@
 
 import UIKit
 import Charts
+import SwiftDate
 
 class MonthHeaderCell: UICollectionViewCell {
+  
+  static let cellId = "monthHeaderCell"
+  
+  @IBOutlet weak var monthLabel: UILabel!
+  @IBOutlet weak var yearLabel: UILabel!
+  @IBOutlet weak var incomeValueLabel: UILabel!
+  @IBOutlet weak var expenseValueLabel: UILabel!
+  @IBOutlet weak var firstDayLabel: UILabel!
+  @IBOutlet weak var lastDayLabel: UILabel!
+  @IBOutlet weak var lineChartView: LineChartView!
+  
+  var data: MonthlyData? {
+    didSet{
+      guard let data = data else {
+        return
+      }
+      
+      self.monthLabel.text = data.firstDay.monthName
+      self.yearLabel.text = data.firstDay.year.description
+      self.lastDayLabel.text = data.firstDay.monthDays.description
+      
+      incomeValueLabel.text = data.days.sum({ (dailyData) -> Double in
+        dailyData.totalIncome
+      }).toCurrency
+      
+      expenseValueLabel.text = data.days.sum({ (dailyData) -> Double in
+        dailyData.totalExpense
+      }).toCurrency
+      
+      loadChartData(expense: data.expenses())
+    }
+  }
+  
+  
+  // MARK: Lifecycle
+  
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+    setupViews()
+  }
+  
+  override open func awakeFromNib() {
+    super.awakeFromNib()
+    setupViews()
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    super.init(coder: aDecoder)
+  }
+  
+  // MARK: Layout
+  
+  private func setupViews(){
+    firstDayLabel.layer.cornerRadius = 10
+    lastDayLabel.layer.cornerRadius = 10
+    firstDayLabel.layer.masksToBounds = true
+    lastDayLabel.layer.masksToBounds = true
+  }
+  
+  private func loadChartData(expense:[Double]) {
     
-    static let cellId = "monthHeaderCell"
+    var dataEntries = [ChartDataEntry]()
     
-    @IBOutlet weak var monthLabel: UILabel!
-    @IBOutlet weak var yearLabel: UILabel!
-    @IBOutlet weak var incomeValueLabel: UILabel!
-    @IBOutlet weak var expenseValueLabel: UILabel!
-    @IBOutlet weak var firstDayLabel: UILabel!
-    @IBOutlet weak var lastDayLabel: UILabel!
-    @IBOutlet weak var lineChartView: LineChartView!
-    
-    
-    // MARK: Lifecycle
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupViews()
+    for i in 0 ..< expense.count {
+      dataEntries.append(ChartDataEntry(x: Double(i), y: expense[i]))
     }
     
-    override open func awakeFromNib() {
-        super.awakeFromNib()
-        setupViews()
-        loadChartData()
-    }
+    let dataSet = LineChartDataSet(values: dataEntries, label: "")
+    dataSet.axisDependency = .left
+    dataSet.setColor(Color.lightOrange)
+    dataSet.drawCirclesEnabled = false
+    dataSet.drawValuesEnabled = false
+    dataSet.lineWidth = 1.5
+    dataSet.highlightEnabled = false
+    dataSet.mode = .cubicBezier
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-    }
+    let gradientColors = [Color.lightOrange.cgColor, UIColor.clear.cgColor] as CFArray
+    let colorLocations:[CGFloat] = [1.0, 0.0]
+    let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations)
     
-    // MARK: Layout
+    dataSet.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0)
+    dataSet.drawFilledEnabled = true
+    let chartData = LineChartData(dataSet: dataSet)
+    configChart(data: chartData)
     
-    private func setupViews(){
-        firstDayLabel.layer.cornerRadius = 10
-        lastDayLabel.layer.cornerRadius = 10
-        firstDayLabel.layer.masksToBounds = true
-        lastDayLabel.layer.masksToBounds = true
-    }
+  }
+  
+  
+  private func configChart(data: LineChartData) {
     
-    private func loadChartData() {
-        
-        let dollars = [1453.0,2352,5431,1442,5451,6486,1173,5678,9234,1345,9411,2212,1453.0,2352,5431,1442,5451,6486,1173,5678,9234,1345,9411,2212]
-        
-        var dataEntries = [ChartDataEntry]()
-        
-        for i in 0 ..< dollars.count {
-            dataEntries.append(ChartDataEntry(x: Double(i), y: dollars[i]))
-        }
-        
-        let dataSet = LineChartDataSet(values: dataEntries, label: "")
-        dataSet.axisDependency = .left
-        dataSet.setColor(Color.lightOrange)
-        dataSet.drawCirclesEnabled = false
-        dataSet.drawValuesEnabled = false
-        dataSet.lineWidth = 1.5
-        dataSet.highlightEnabled = false
-        dataSet.mode = .cubicBezier
-        
-        let gradientColors = [Color.lightOrange.cgColor, UIColor.clear.cgColor] as CFArray
-        let colorLocations:[CGFloat] = [1.0, 0.0]
-        let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations)
-        
-        dataSet.fill = Fill.fillWithLinearGradient(gradient!, angle: 90.0)
-        dataSet.drawFilledEnabled = true
-        let chartData = LineChartData(dataSet: dataSet)
-        configChart(data: chartData)
-        
-    }
+    lineChartView.data = data
+    lineChartView.setScaleEnabled(false)
+    lineChartView.rightAxis.drawAxisLineEnabled = false
+    lineChartView.leftAxis.drawAxisLineEnabled = false
+    lineChartView.leftAxis.drawLabelsEnabled = false
+    lineChartView.rightAxis.drawLabelsEnabled = false
+    lineChartView.backgroundColor = Color.darkBackground
+    lineChartView.xAxis.drawAxisLineEnabled = false
+    lineChartView.xAxis.drawGridLinesEnabled = false
+    lineChartView.leftAxis.drawAxisLineEnabled = false
+    lineChartView.rightAxis.drawAxisLineEnabled = false
+    lineChartView.leftAxis.drawGridLinesEnabled = false
+    lineChartView.rightAxis.drawGridLinesEnabled = false
+    lineChartView.chartDescription?.text = nil
+    lineChartView.xAxis.labelPosition = .bottom
+    lineChartView.legend.enabled = false
+    lineChartView.xAxis.drawLabelsEnabled = false
     
-    
-    private func configChart(data: LineChartData) {
-        
-        lineChartView.data = data
-        lineChartView.setScaleEnabled(false)
-        lineChartView.rightAxis.drawAxisLineEnabled = false
-        lineChartView.leftAxis.drawAxisLineEnabled = false
-        lineChartView.leftAxis.drawLabelsEnabled = false
-        lineChartView.rightAxis.drawLabelsEnabled = false
-        lineChartView.backgroundColor = Color.darkBackground
-        lineChartView.xAxis.drawAxisLineEnabled = false
-        lineChartView.xAxis.drawGridLinesEnabled = false
-        lineChartView.leftAxis.drawAxisLineEnabled = false
-        lineChartView.rightAxis.drawAxisLineEnabled = false
-        lineChartView.leftAxis.drawGridLinesEnabled = false
-        lineChartView.rightAxis.drawGridLinesEnabled = false
-        lineChartView.chartDescription?.text = nil
-        lineChartView.xAxis.labelPosition = .bottom
-        lineChartView.legend.enabled = false
-        lineChartView.xAxis.drawLabelsEnabled = false
-        
-        lineChartView.animate(xAxisDuration: 1, easingOption: .easeInOutQuart)
-    }
-    
+    lineChartView.animate(xAxisDuration: 1, easingOption: .easeInOutQuart)
+  }
+  
 }
