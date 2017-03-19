@@ -26,6 +26,7 @@ class MonthViewController: BaseViewController {
   
   let dailyDataSource = DailyDataSource.shared
   var monthlyData = [MonthlyData]()
+  var currentMonth: MonthlyData?
   
   let separatorLineView: UIView = {
     let lineView = UIView()
@@ -73,6 +74,7 @@ class MonthViewController: BaseViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     showLoginView()
+    scrollToFirstMonth()
   }
   
   override func didReceiveMemoryWarning() {
@@ -112,6 +114,20 @@ class MonthViewController: BaseViewController {
     }
     performSegue(withIdentifier: "LoginView", sender: self)
   }
+  
+  fileprivate func scrollToFirstMonth() {
+    currentMonth = monthlyData.first
+    tableView.reloadData()
+    let firstMonthIndexPath = IndexPath(item: 0, section: 0)
+    collectionView.scrollToItem(at: firstMonthIndexPath, at: .centeredHorizontally, animated: true)
+  }
+  
+  fileprivate func updateSelectedMonth() {
+    let xFinal = self.collectionView.contentOffset.x + (self.view.frame.size.width)
+    let viewIndex = Int(floor(xFinal / self.view.frame.size.width)) - 1
+    currentMonth = monthlyData[viewIndex]
+    tableView.reloadData()
+  }
 }
 
 
@@ -124,7 +140,8 @@ extension MonthViewController: UICollectionViewDelegate, UICollectionViewDataSou
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MonthHeaderCell.cellId, for: indexPath) as! MonthHeaderCell
-    cell.data = monthlyData[indexPath.item]
+    currentMonth = monthlyData[indexPath.item]
+    cell.data = currentMonth
     return cell
   }
   
@@ -137,10 +154,23 @@ extension MonthViewController: UICollectionViewDelegate, UICollectionViewDataSou
   //    }
 }
 
+extension MonthViewController: UIScrollViewDelegate {
+  
+  func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    if !decelerate {
+      updateSelectedMonth()
+    }
+  }
+  
+  func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    updateSelectedMonth()
+  }
+}
+
 extension MonthViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return cellHeights.count
+    return currentMonth?.days.count ?? 0
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -148,7 +178,8 @@ extension MonthViewController: UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: DailyTableViewCell.cellId, for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: DailyTableViewCell.cellId, for: indexPath) as! DailyTableViewCell
+    cell.dailyData = currentMonth?.days[indexPath.item]
     return cell
   }
   

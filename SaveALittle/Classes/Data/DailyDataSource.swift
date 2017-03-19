@@ -122,7 +122,7 @@ extension DailyDataSource {
     }
     
     let data = self.map{$0.value}.groupedBy{groupBy($0)}.map { (key, value) -> MonthlyData in
-      return MonthlyData(firstDay: DateInRegion(absoluteDate:key), days: value)
+      return MonthlyData(firstDay: DateInRegion(absoluteDate:key), days: value.sorted())
     }
     return data.sorted()
   }
