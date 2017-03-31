@@ -30,7 +30,9 @@ class DailyTableViewCell: FoldingCell {
       }
       
       dateLabel.text = dailyData.date.day.description
-      weekDayLabel.text = dailyData.date.shortWeekdayName
+      weekDayLabel.text = dailyData.date.shortWeekdayName.uppercased()
+      transactionsValueLabel.text = dailyData.transactions.count.description
+      expenseValueLabel.text = dailyData.totalExpense.toCurrency
     }
   }
   
@@ -56,13 +58,30 @@ class DailyTableViewCell: FoldingCell {
   
   private func setupViews() {
     dateLabel.textColor = Color.darkerText
+    dateLabel.font = Font.titilliumWebRegular(size: 15)
+    
+    let titleFont = Font.titilliumWebLight(size: 10)
+    let valueFont = Font.titilliumWebRegular(size: 10)
+    
     weekDayLabel.textColor = Color.darkText
+    weekDayLabel.font = titleFont
+    
     transactionsLabel.textColor = Color.darkText
+    transactionsLabel.font = titleFont
+    
     expenseLabel.textColor = Color.darkText
-    separateLineView.backgroundColor = Color.darkText
+    expenseLabel.font = titleFont
+    
     transactionsValueLabel.textColor = Color.darkerText
+    transactionsValueLabel.font = valueFont
+    
     expenseValueLabel.textColor = Color.darkerText
+    expenseValueLabel.font = valueFont
+    
     transactionTypesLabel.textColor = Color.darkText
+    transactionTypesLabel.font = titleFont
+    
+    separateLineView.backgroundColor = Color.darkText
     leftBorderView.backgroundColor = Color.lightOrange
   }
   
