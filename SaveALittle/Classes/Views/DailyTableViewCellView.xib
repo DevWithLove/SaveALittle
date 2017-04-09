@@ -296,8 +296,14 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="containerDateLabel" destination="fIZ-Qd-vde" id="CKe-AK-VFE"/>
+                <outlet property="containerExpenseLabel" destination="0K7-Se-bRf" id="qC7-dW-Ugh"/>
+                <outlet property="containerExpenseValueLabel" destination="zbQ-yd-XS1" id="CP6-HD-QRP"/>
+                <outlet property="containerIncomeLabel" destination="M8G-oX-Umn" id="Mla-T9-dqd"/>
+                <outlet property="containerIncomeValueLabel" destination="etD-Zn-oxd" id="vRD-Nj-0Rt"/>
                 <outlet property="containerView" destination="YwW-SU-Wjt" id="Yaf-MX-1Fl"/>
                 <outlet property="containerViewTop" destination="gRb-MM-IQf" id="gFQ-Ml-rEB"/>
+                <outlet property="containerWeekDayLabel" destination="rtt-mg-Lc6" id="N09-kf-HN9"/>
                 <outlet property="dateLabel" destination="rLE-XA-CEB" id="yKn-n9-yxe"/>
                 <outlet property="expenseLabel" destination="OFS-ST-HYU" id="qIB-ef-3EF"/>
                 <outlet property="expenseValueLabel" destination="Myt-4W-04a" id="bl5-HH-0YV"/>
@@ -307,6 +313,7 @@
                 <outlet property="separateLineView" destination="7R4-Ih-pmK" id="iNr-tI-qsv"/>
                 <outlet property="transactionTypesLabel" destination="YbF-ec-HNs" id="jPD-Yc-NMT"/>
                 <outlet property="transactionsLabel" destination="Y2A-Jg-KCT" id="Bpe-Pc-BZE"/>
+                <outlet property="transactionsTableView" destination="GrD-Or-JY5" id="W6b-O9-pJh"/>
                 <outlet property="transactionsValueLabel" destination="goq-NO-Ltf" id="rT9-TX-lQY"/>
                 <outlet property="weekDayLabel" destination="E5r-2P-KaS" id="fmD-8x-uYP"/>
             </connections>

@@ -63,53 +63,6 @@
             endingLineNumber = "62"
             landmarkName = "testGroupToDailyData()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SaveALittleTests.DailyDataTests.testGroupToDailyData () -&gt; ()"
-                  moduleName = "SaveALittleTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tonymu/Dev/Projects/SaveALittle/SaveALittleTests/DailyDataTests.swift"
-                  timestampString = "512299696.826903"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "2587">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SaveALittleTests.DailyDataTests.(testGroupToDailyData () -&gt; ()).(implicit closure #1)"
-                  moduleName = "SaveALittleTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tonymu/Dev/Projects/SaveALittle/SaveALittleTests/DailyDataTests.swift"
-                  timestampString = "512299696.828639"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SaveALittleTests.DailyDataTests.(testGroupToDailyData () -&gt; ()).(implicit closure #2)"
-                  moduleName = "SaveALittleTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tonymu/Dev/Projects/SaveALittle/SaveALittleTests/DailyDataTests.swift"
-                  timestampString = "512299696.830393"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62"
-                  offsetFromSymbolStart = "13">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -126,53 +79,6 @@
             endingLineNumber = "86"
             landmarkName = "testDailyDataSource_group_month_data()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SaveALittleTests.DailyDataSourceTests.testDailyDataSource_group_month_data () -&gt; ()"
-                  moduleName = "SaveALittleTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tonymu/Dev/Projects/SaveALittle/SaveALittleTests/DailyDataSourceTests.swift"
-                  timestampString = "512299696.834705"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "607">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SaveALittleTests.DailyDataSourceTests.(testDailyDataSource_group_month_data () -&gt; ()).(implicit closure #1)"
-                  moduleName = "SaveALittleTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tonymu/Dev/Projects/SaveALittle/SaveALittleTests/DailyDataSourceTests.swift"
-                  timestampString = "512299696.836198"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "23">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SaveALittleTests.DailyDataSourceTests.(testDailyDataSource_group_month_data () -&gt; ()).(implicit closure #2)"
-                  moduleName = "SaveALittleTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/tonymu/Dev/Projects/SaveALittle/SaveALittleTests/DailyDataSourceTests.swift"
-                  timestampString = "512299696.837556"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "13">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -220,6 +126,38 @@
             startingLineNumber = "82"
             endingLineNumber = "82"
             landmarkName = "testSample()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SaveALittle/Classes/Views/TransactionTableViewCell.swift"
+            timestampString = "513158664.909439"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "applyLightStyle()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SaveALittle/Classes/Views/TransactionTableViewCell.swift"
+            timestampString = "513158664.909439"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "awakeFromNib()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

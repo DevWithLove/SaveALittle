@@ -14,6 +14,7 @@ struct Color {
     static let orangeColor = UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1)
     
     static let lightOrange = UIColor(r:235 ,g:147, b:123)
+    static let lightBlue = UIColor(red: 184/255, green: 197/255, blue: 214/255, alpha: 1)
     
     
     // MARK: Background
