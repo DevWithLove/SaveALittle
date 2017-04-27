@@ -73,7 +73,6 @@ class MonthViewController: BaseViewController {
   }
   
   override func viewDidAppear(_ animated: Bool) {
-    showLoginView()
     scrollToFirstMonth()
   }
   
@@ -108,21 +107,22 @@ class MonthViewController: BaseViewController {
   
   // MARK: Additional Helpers
   
-  private func showLoginView() {
-    guard !UserDefaults.standard.isLoggedIn() else {
+  fileprivate func scrollToFirstMonth() {
+    guard let firstMonth = monthlyData.first else {
       return
     }
-    performSegue(withIdentifier: "LoginView", sender: self)
-  }
-  
-  fileprivate func scrollToFirstMonth() {
-    currentMonth = monthlyData.first
+    currentMonth = firstMonth
     tableView.reloadData()
     let firstMonthIndexPath = IndexPath(item: 0, section: 0)
     collectionView.scrollToItem(at: firstMonthIndexPath, at: .centeredHorizontally, animated: true)
   }
   
   fileprivate func updateSelectedMonth() {
+    
+    guard !monthlyData.isEmpty else {
+      return
+    }
+    
     let xFinal = self.collectionView.contentOffset.x + (self.view.frame.size.width)
     let viewIndex = Int(floor(xFinal / self.view.frame.size.width)) - 1
     currentMonth = monthlyData[viewIndex]
