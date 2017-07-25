@@ -35,19 +35,19 @@ class UsageProgressView: UIView, UICircularProgressRingDelegate {
         
         usageProgressRingView.delegate = self
         usageProgressRingView.maxValue = 100
-        usageProgressRingView.viewStyle = 2
+        usageProgressRingView.ringStyle = .ontop
         usageProgressRingView.outerRingColor = Color.darkerBackground
-        usageProgressRingView.outerRingCapStyle = 2
+        usageProgressRingView.outerCapStyle = .round
         usageProgressRingView.outerRingWidth = 10
-        usageProgressRingView.innerRingCapStyle = 2
+        usageProgressRingView.innerCapStyle = .round
         usageProgressRingView.innerRingColor = Color.lightOrange
         usageProgressRingView.innerRingWidth = 9
         usageProgressRingView.startAngle = -240
         usageProgressRingView.endAngle = 62
+        usageProgressRingView.fullCircle = false
         usageProgressRingView.valueIndicator = " %"
         usageProgressRingView.fontColor = Color.whiteColor
-        usageProgressRingView.customFontWithName = "TitilliumWeb-Regular"
-        usageProgressRingView.fontSize = 16
+        usageProgressRingView.font = Font.titilliumWebLight(size: 16)
     }
     
     func finishedUpdatingProgress(forRing ring: UICircularProgressRingView) {

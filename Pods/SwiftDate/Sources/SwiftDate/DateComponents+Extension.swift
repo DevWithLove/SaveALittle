@@ -102,11 +102,7 @@ public extension DateComponents {
 	/// It's the same of `DateInRegion(components:)` init func but it may return nil (instead of throwing an exception)
 	/// if a valid date cannot be produced.
 	public var dateInRegion: DateInRegion? {
-		do {
-			return try DateInRegion(components: self)
-		} catch {
-			return nil
-		}
+		return DateInRegion(components: self)
 	}
 	
 	
@@ -129,6 +125,13 @@ public extension DateComponents {
 			if left != nil && right != nil && left != Int(NSDateComponentUndefined) && right != Int(NSDateComponentUndefined) {
 				let value = left! + (right! * multipler)
 				newCmps.setValue(value, for: component)
+			} else {
+				if left != nil && left != Int(NSDateComponentUndefined) {
+					newCmps.setValue(left!, for: component)
+				}
+				if right != nil && right != Int(NSDateComponentUndefined) {
+					newCmps.setValue(right!, for: component)
+				}
 			}
 		}
 		return newCmps

@@ -24,6 +24,40 @@
 
 import Foundation
 
+/// Time interval reference
+///
+/// - start: start of the specified component
+/// - end: end of the specified component
+/// - auto: value is the result of the operation
+public enum TimeReference {
+	case start
+	case end
+	case auto
+}
+
+
+/// Rounding mode of the interval
+///
+/// - round: round
+/// - ceil: ceil
+/// - floor: floor
+public enum IntervalRoundingType {
+	case round
+	case ceil
+	case floor
+}
+
+public enum IntervalType {
+	case seconds(_: Int)
+	case minutes(_: Int)
+	
+	internal var seconds: TimeInterval {
+		switch self {
+		case .seconds(let secs):	return TimeInterval(secs)
+		case .minutes(let mins):	return TimeInterval(mins * 60)
+		}
+	}
+}
 
 /// This define the weekdays
 ///
@@ -82,19 +116,28 @@ public enum DateError: Error {
 	case DifferentCalendar
 	case MissingRsrcBundle
 	case FailedToSetComponent(Calendar.Component)
+	case InvalidLocalizationFile
 }
 
 
 /// Available date formats used to parse strings and format date into string
 ///
-/// - custom:   custom format expressed in Unicode tr35-31 (see http://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns and Apple's Date Formatting Guide)
-/// - iso8601:  iso8601 date format (see https://en.wikipedia.org/wiki/ISO_8601)
+/// - custom:   custom format expressed in Unicode tr35-31 (see http://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Format_Patterns and Apple's Date Formatting Guide). Formatter uses heuristics to guess the date if it's invalid.
+///				This may end in a wrong parsed date. Use `strict` to disable heuristics parsing.
+/// - strict:	strict format is like custom but does not apply heuristics to guess at the date which is intended by the string.
+///				So, if you pass an invalid date (like 1999-02-31) formatter fails instead of returning guessing date (in our case
+///				1999-03-03).
+/// - iso8601:  ISO8601 date format (see https://en.wikipedia.org/wiki/ISO_8601).
+/// - iso8601Auto:	ISO8601 date format. You should use it to parse a date (parsers evaluate automatically the format of
+///					the ISO8601 string). Passed as options to transform a date to string it's equal to [.withInternetDateTime] options.
 /// - extended: extended date format ("eee dd-MMM-yyyy GG HH:mm:ss.SSS zzz")
 /// - rss:      RSS and AltRSS date format
 /// - dotNET:   .NET date format
 public enum DateFormat {
 	case custom(String)
+	case strict(String)
 	case iso8601(options: ISO8601DateTimeFormatter.Options)
+	case iso8601Auto
 	case extended
 	case rss(alt: Bool)
 	case dotNET
