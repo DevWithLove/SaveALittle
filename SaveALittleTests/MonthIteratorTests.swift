@@ -50,42 +50,42 @@ class MonthIteratorTests: XCTestCase {
     XCTAssertEqual(monthes.count, 4)
   }
   
-  func testSample(){
-    
-    var start = try! DateInRegion(components: [.year: 2007, .month: 3, .day: 1])
-    var end = try! DateInRegion(components: [.year: 2007, .month: 3, .day: 7])
-    
-    
-    var array = [MetricData]()
-    let data1 = MetricData(dateInRegion: try! DateInRegion(components: [.year: 2007, .month: 3, .day: 1]), isHighLeak: true)
-    let data2 = MetricData(dateInRegion: try! DateInRegion(components: [.year: 2007, .month: 3, .day: 3]), isHighLeak: true)
-    let data3 = MetricData(dateInRegion: try! DateInRegion(components: [.year: 2007, .month: 3, .day: 4]), isHighLeak: true)
-    let data4 = MetricData(dateInRegion: try! DateInRegion(components: [.year: 2007, .month: 3, .day: 5]), isHighLeak: true)
-    let data5 = MetricData(dateInRegion: try! DateInRegion(components: [.year: 2007, .month: 3, .day: 6]), isHighLeak: false)
-    
-    array.append(data1)
-    array.append(data2)
-    array.append(data3)
-    array.append(data4)
-    array.append(data5)
-    
-
-    let dateRange = DateRange(start: start, end: end)
-    let ranges = DateRangeIterator(dateRange: dateRange).map{$0}
-    
-    for range in ranges {
-      let data = array.filter({ (metricData) -> Bool in
-        range.contains(metricData.dateInRegion) && metricData.isHighLeak
-      })
-      
-      if data.count == 3 {
-        print(range)
-      }
-      
-    }
-    
-    
-    
+//  func testSample(){
+//    
+//    var start = try! DateInRegion(components: [.year: 2007, .month: 3, .day: 1])
+//    var end = try! DateInRegion(components: [.year: 2007, .month: 3, .day: 7])
+//    
+//    
+//    var array = [MetricData]()
+//    let data1 = MetricData(dateInRegion: try! DateInRegion(components: [.year: 2007, .month: 3, .day: 1]), isHighLeak: true)
+//    let data2 = MetricData(dateInRegion: try! DateInRegion(components: [.year: 2007, .month: 3, .day: 3]), isHighLeak: true)
+//    let data3 = MetricData(dateInRegion: try! DateInRegion(components: [.year: 2007, .month: 3, .day: 4]), isHighLeak: true)
+//    let data4 = MetricData(dateInRegion: try! DateInRegion(components: [.year: 2007, .month: 3, .day: 5]), isHighLeak: true)
+//    let data5 = MetricData(dateInRegion: try! DateInRegion(components: [.year: 2007, .month: 3, .day: 6]), isHighLeak: false)
+//    
+//    array.append(data1)
+//    array.append(data2)
+//    array.append(data3)
+//    array.append(data4)
+//    array.append(data5)
+//    
+//
+//    let dateRange = DateRange(start: start, end: end)
+//    let ranges = DateRangeIterator(dateRange: dateRange).map{$0}
+//    
+//    for range in ranges {
+//      let data = array.filter({ (metricData) -> Bool in
+//        range.contains(metricData.dateInRegion) && metricData.isHighLeak
+//      })
+//      
+//      if data.count == 3 {
+//        print(range)
+//      }
+//      
+//    }
+//    
+//    
+//    
 //    let input = [1,2,3,4,8,10,12,19]
 //    
 //    let d = input.enumerated().flatMap { (index, element) -> Int? in
@@ -99,13 +99,13 @@ class MonthIteratorTests: XCTestCase {
 //    for (index, item) in input.enumerated() {
 //      print("Found \(item) at position \(index)")
 //    }
-    
+//    
 //    let output = input.enumerated().flatMap { index, element in
 //      return index > 0 && input[index - 1] + 1 == element ? nil : element
 //    }
 //    
-    
-  }
+//    
+//  }
   
     func testPerformanceExample() {
         // This is an example of a performance test case.

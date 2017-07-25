@@ -22,6 +22,12 @@
 		021C2D031E579B8100B1DFFF /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C2D011E579B8100B1DFFF /* Transaction.swift */; };
 		021C2D051E57B28200B1DFFF /* ObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C2D041E57B28200B1DFFF /* ObjectExtensions.swift */; };
 		021C2D061E57B28200B1DFFF /* ObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C2D041E57B28200B1DFFF /* ObjectExtensions.swift */; };
+		022B45281EB1E54500022BD1 /* StasticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B45271EB1E54500022BD1 /* StasticsViewController.swift */; };
+		022B45291EB1E54500022BD1 /* StasticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B45271EB1E54500022BD1 /* StasticsViewController.swift */; };
+		022B452B1EB1E95900022BD1 /* StasticsHeaderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 022B452A1EB1E95900022BD1 /* StasticsHeaderCellView.xib */; };
+		022B452C1EB1E95900022BD1 /* StasticsHeaderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 022B452A1EB1E95900022BD1 /* StasticsHeaderCellView.xib */; };
+		022B452E1EB1EDB200022BD1 /* StasticsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B452D1EB1EDB200022BD1 /* StasticsHeaderCell.swift */; };
+		022B452F1EB1EDB200022BD1 /* StasticsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B452D1EB1EDB200022BD1 /* StasticsHeaderCell.swift */; };
 		023215F51E31F7580025D065 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F41E31F7580025D065 /* HomeViewController.swift */; };
 		023215F61E31F7580025D065 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F41E31F7580025D065 /* HomeViewController.swift */; };
 		023215F81E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */; };
@@ -185,6 +191,9 @@
 		02191C331E46E9CE00D00E17 /* DayCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCollectionViewCell.swift; sourceTree = "<group>"; };
 		021C2D011E579B8100B1DFFF /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		021C2D041E57B28200B1DFFF /* ObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectExtensions.swift; sourceTree = "<group>"; };
+		022B45271EB1E54500022BD1 /* StasticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StasticsViewController.swift; sourceTree = "<group>"; };
+		022B452A1EB1E95900022BD1 /* StasticsHeaderCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StasticsHeaderCellView.xib; sourceTree = "<group>"; };
+		022B452D1EB1EDB200022BD1 /* StasticsHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StasticsHeaderCell.swift; sourceTree = "<group>"; };
 		023215F41E31F7580025D065 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		0238E2AE1E4F08C1005EB0BA /* TitilliumWeb-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Black.ttf"; sourceTree = "<group>"; };
@@ -428,6 +437,7 @@
 				027033221E41B63E00BD5272 /* MonthViewController.swift */,
 				027033251E41B8AB00BD5272 /* LeftViewController.swift */,
 				02561C5D1E503EBE002E7283 /* TransactionViewController.swift */,
+				022B45271EB1E54500022BD1 /* StasticsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -472,6 +482,8 @@
 				025389301E453E6B00A4ED48 /* TransactionTableViewCell.xib */,
 				02191C331E46E9CE00D00E17 /* DayCollectionViewCell.swift */,
 				02AC414B1E56DD10005E8AB6 /* NoEditableOptionTextFieldWithIcon.swift */,
+				022B452A1EB1E95900022BD1 /* StasticsHeaderCellView.xib */,
+				022B452D1EB1EDB200022BD1 /* StasticsHeaderCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -623,7 +635,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = DevWithLove.com;
 				TargetAttributes = {
 					02493FD41E2F64A3002FC473 = {
@@ -679,6 +691,7 @@
 				0238E2CB1E4F08C1005EB0BA /* TitilliumWeb-SemiBold.ttf in Resources */,
 				0238E2BD1E4F08C1005EB0BA /* TitilliumWeb-BoldItalic.ttf in Resources */,
 				0238E2CD1E4F08C1005EB0BA /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
+				022B452B1EB1E95900022BD1 /* StasticsHeaderCellView.xib in Resources */,
 				025E442E1E43210500A20809 /* WeekHeaderView.xib in Resources */,
 				0238E2C31E4F08C1005EB0BA /* TitilliumWeb-Italic.ttf in Resources */,
 				0238E2C91E4F08C1005EB0BA /* TitilliumWeb-Regular.ttf in Resources */,
@@ -720,6 +733,7 @@
 				0238E2CC1E4F08C1005EB0BA /* TitilliumWeb-SemiBold.ttf in Resources */,
 				0238E2BE1E4F08C1005EB0BA /* TitilliumWeb-BoldItalic.ttf in Resources */,
 				0238E2CE1E4F08C1005EB0BA /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
+				022B452C1EB1E95900022BD1 /* StasticsHeaderCellView.xib in Resources */,
 				025E442F1E43210500A20809 /* WeekHeaderView.xib in Resources */,
 				0238E2C41E4F08C1005EB0BA /* TitilliumWeb-Italic.ttf in Resources */,
 				0238E2CA1E4F08C1005EB0BA /* TitilliumWeb-Regular.ttf in Resources */,
@@ -938,12 +952,14 @@
 				029266A51E39CEEB00668A1A /* MonthHeaderCell.swift in Sources */,
 				0253892B1E451E6100A4ED48 /* UsageProgressView.swift in Sources */,
 				029266AB1E39D98E00668A1A /* BaseViewController.swift in Sources */,
+				022B452E1EB1EDB200022BD1 /* StasticsHeaderCell.swift in Sources */,
 				029FA0D81E30AC1F0065E1E5 /* LoginCollectionViewCell.swift in Sources */,
 				024CE3C21E30948700586D1F /* UIViewExtensions.swift in Sources */,
 				02548FBE1E64069E008A5492 /* CachedLocation.swift in Sources */,
 				02075B901E5D67B5005B4AAA /* DailyData.swift in Sources */,
 				025723DD1E49A8B700E9C9FF /* DateExtensions.swift in Sources */,
 				025723DF1E49A8B700E9C9FF /* DateInRegionExtension.swift in Sources */,
+				022B45281EB1E54500022BD1 /* StasticsViewController.swift in Sources */,
 				026CA80C1E59857B004BD303 /* TransactionViewModel.swift in Sources */,
 				02AC414C1E56DD10005E8AB6 /* NoEditableOptionTextFieldWithIcon.swift in Sources */,
 				0239487E1E4E5A7D009A29F3 /* DayCollectionDataSource.swift in Sources */,
@@ -1021,12 +1037,14 @@
 				024CE3C61E30988B00586D1F /* Color.swift in Sources */,
 				0253892C1E451E6100A4ED48 /* UsageProgressView.swift in Sources */,
 				029266AC1E39D98E00668A1A /* BaseViewController.swift in Sources */,
+				022B452F1EB1EDB200022BD1 /* StasticsHeaderCell.swift in Sources */,
 				023215F91E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */,
 				023215F61E31F7580025D065 /* HomeViewController.swift in Sources */,
 				02548FBF1E64069E008A5492 /* CachedLocation.swift in Sources */,
 				02075B911E5D67B5005B4AAA /* DailyData.swift in Sources */,
 				025723DE1E49A8B700E9C9FF /* DateExtensions.swift in Sources */,
 				025723E01E49A8B700E9C9FF /* DateInRegionExtension.swift in Sources */,
+				022B45291EB1E54500022BD1 /* StasticsViewController.swift in Sources */,
 				026CA80D1E59857B004BD303 /* TransactionViewModel.swift in Sources */,
 				02AC414D1E56DD10005E8AB6 /* NoEditableOptionTextFieldWithIcon.swift in Sources */,
 				0239487F1E4E5A7D009A29F3 /* DayCollectionDataSource.swift in Sources */,
