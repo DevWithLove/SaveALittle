@@ -80,14 +80,14 @@ class MonthHeaderCell: UICollectionViewCell {
     
     let dataSet = LineChartDataSet(values: dataEntries, label: "")
     dataSet.axisDependency = .left
-    dataSet.setColor(Color.lightOrange)
+    dataSet.setColor(Color.orange_08.value)
     dataSet.drawCirclesEnabled = false
     dataSet.drawValuesEnabled = false
     dataSet.lineWidth = 1.5
     dataSet.highlightEnabled = false
     dataSet.mode = .cubicBezier
     
-    let gradientColors = [Color.lightOrange.cgColor, UIColor.clear.cgColor] as CFArray
+    let gradientColors = [Color.orange_08.value.cgColor, UIColor.clear.cgColor] as CFArray
     let colorLocations:[CGFloat] = [1.0, 0.0]
     let gradient = CGGradient.init(colorsSpace: CGColorSpaceCreateDeviceRGB(), colors: gradientColors, locations: colorLocations)
     
@@ -107,7 +107,7 @@ class MonthHeaderCell: UICollectionViewCell {
     lineChartView.leftAxis.drawAxisLineEnabled = false
     lineChartView.leftAxis.drawLabelsEnabled = false
     lineChartView.rightAxis.drawLabelsEnabled = false
-    lineChartView.backgroundColor = Color.darkBackground
+    lineChartView.backgroundColor = Color.black_29.value
     lineChartView.xAxis.drawAxisLineEnabled = false
     lineChartView.xAxis.drawGridLinesEnabled = false
     lineChartView.leftAxis.drawAxisLineEnabled = false

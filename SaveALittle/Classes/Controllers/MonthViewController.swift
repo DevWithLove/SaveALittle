@@ -30,7 +30,7 @@ class MonthViewController: BaseViewController {
   
   let separatorLineView: UIView = {
     let lineView = UIView()
-    lineView.backgroundColor = Color.darkLine
+    lineView.backgroundColor = Color.gray_15.value
     return lineView
   }()
   

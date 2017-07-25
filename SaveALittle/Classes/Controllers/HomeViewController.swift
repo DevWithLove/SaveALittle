@@ -13,7 +13,7 @@ import RealmSwift
 
 class HomeViewController: BaseViewController {
     
-    let borderColor = Color.darkLine
+    let borderColor = Color.gray_15.value
     let borderWidth: CGFloat = 0.5
     let usageViewTopConstant: CGFloat = 30.0
     let dayCellWidth: CGFloat = 50
@@ -200,7 +200,7 @@ class HomeViewController: BaseViewController {
     private func setupSeperateLine(){
         let gradient = CAGradientLayer()
         gradient.frame = seperateLineView.bounds
-        gradient.colors = [Color.darkBackgroundWith05alpha.cgColor, Color.darkerBackground.cgColor]
+        gradient.colors = [Color.black_29.withAlpha(0.5).cgColor, Color.black_32.value.cgColor]
         seperateLineView.backgroundColor = .clear
         gradient.locations = [0.0, 1.0]
         seperateLineView.layer.insertSublayer(gradient, at: 0)

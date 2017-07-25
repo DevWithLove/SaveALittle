@@ -38,7 +38,7 @@ class DayCollectionViewCell: UICollectionViewCell {
         let lable = UILabel()
         lable.font = Font.titilliumWebLight(size: 10)
         lable.textAlignment = .center
-        lable.textColor = Color.darkText
+        lable.textColor = Color.gray_26.value
         return lable
     }()
     
@@ -46,13 +46,13 @@ class DayCollectionViewCell: UICollectionViewCell {
         let lable = UILabel()
         lable.textAlignment = .center
         lable.font = Font.titilliumWebRegular(size: 15)
-        lable.textColor = Color.whiteColor
+        lable.textColor = Color.white.value
         return lable
     }()
     
     let lineView: UIView = {
         let lv = UIView(frame: .zero)
-        lv.backgroundColor = Color.lightOrange
+        lv.backgroundColor = Color.orange_08.value
         lv.layer.cornerRadius = 1
         lv.layer.masksToBounds = true
         return lv
@@ -78,7 +78,7 @@ class DayCollectionViewCell: UICollectionViewCell {
             return
         }
         
-        dateLable.textColor = Color.whiteColor
+        dateLable.textColor = Color.white.value
         lineView.isHidden = false
     }
     
@@ -88,12 +88,12 @@ class DayCollectionViewCell: UICollectionViewCell {
             return
         }
         
-        dateLable.textColor = Color.whiteColor
+        dateLable.textColor = Color.white.value
         lineView.isHidden = true
     }
     
     func ghostDayStyle(){
-        dateLable.textColor = Color.darkText
+        dateLable.textColor = Color.gray_26.value
         lineView.isHidden = true
     }
     

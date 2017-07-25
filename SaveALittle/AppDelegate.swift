@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navViewController = self.window!.rootViewController! as! UINavigationController
         let homeViewController = navViewController.viewControllers.first as! HomeViewController
         
-        UINavigationBar.appearance().tintColor = Color.whiteColor
+        UINavigationBar.appearance().tintColor = Color.white.value
         
         let leftViewController = LeftViewController()
         leftViewController.homeViewController = navViewController

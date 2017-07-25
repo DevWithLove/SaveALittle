@@ -13,7 +13,7 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Color.darkBackground
+        view.backgroundColor = Color.black_29.value
         setupNavigationBar()
         setNavigationBarItem()
     }
@@ -25,7 +25,7 @@ class BaseViewController: UIViewController {
         // to remove the nav bar bottom line
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "nav_bar_background"), for: .default)
-        navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: Font.titilliumWebSemiBold(size: 18),NSForegroundColorAttributeName: Color.whiteColor]
+        navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: Font.titilliumWebSemiBold(size: 18),NSForegroundColorAttributeName: Color.white.value]
         
         // Set the status bar to white color
         UIApplication.shared.statusBarStyle = .lightContent
@@ -66,7 +66,7 @@ class BaseViewController: UIViewController {
         
         
         let icon = #imageLiteral(resourceName: "shopping")
-        let color = Color.lightOrange
+        let color = Color.orange_08.value
         
         _ = alert.showCustom("Add a transaction", subTitle: "Add Transaction", color: color, icon: icon)
     }

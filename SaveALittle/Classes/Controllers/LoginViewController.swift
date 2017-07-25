@@ -28,14 +28,14 @@ class LoginViewController: UIViewController, LoginViewControllerDelegate {
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.dataSource = self
         cv.delegate = self
-        cv.backgroundColor = Color.whiteColor
+        cv.backgroundColor = Color.white.value
         cv.isPagingEnabled = true
         return cv
     }()
     
     lazy var pageControl: UIPageControl = {
         let pc = UIPageControl()
-        pc.currentPageIndicatorTintColor = Color.orangeColor
+        pc.currentPageIndicatorTintColor = Color.orange.value
         pc.pageIndicatorTintColor = .lightGray
         pc.numberOfPages = self.pages.count + 1
         return pc
@@ -44,7 +44,7 @@ class LoginViewController: UIViewController, LoginViewControllerDelegate {
     lazy var skipButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Skip", for: .normal)
-        button.setTitleColor(Color.orangeColor, for: .normal)
+        button.setTitleColor(Color.orange.value, for: .normal)
         button.addTarget(self, action: #selector(skipPage), for: .touchUpInside)
         return button
     }()
@@ -52,7 +52,7 @@ class LoginViewController: UIViewController, LoginViewControllerDelegate {
     lazy var nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Next", for: .normal)
-        button.setTitleColor(Color.orangeColor, for: .normal)
+        button.setTitleColor(Color.orange.value, for: .normal)
         button.addTarget(self, action: #selector(nextPage), for: .touchUpInside)
         return button
     }()

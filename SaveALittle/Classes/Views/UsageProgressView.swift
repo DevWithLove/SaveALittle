@@ -28,7 +28,7 @@ class UsageProgressView: UIView, UICircularProgressRingDelegate {
         backgroundColor = .clear
         lineView.layer.cornerRadius = 1
         lineView.layer.masksToBounds = true
-        lineView.backgroundColor = Color.darkerBackground
+        lineView.backgroundColor = Color.black_32.value
         topLabel.font = Font.titilliumWebRegular(size: 15)
         bottomLabel.font = Font.titilliumWebLight(size: 11)
         
@@ -36,17 +36,17 @@ class UsageProgressView: UIView, UICircularProgressRingDelegate {
         usageProgressRingView.delegate = self
         usageProgressRingView.maxValue = 100
         usageProgressRingView.ringStyle = .ontop
-        usageProgressRingView.outerRingColor = Color.darkerBackground
+        usageProgressRingView.outerRingColor = Color.black_32.value
         usageProgressRingView.outerCapStyle = .round
         usageProgressRingView.outerRingWidth = 10
         usageProgressRingView.innerCapStyle = .round
-        usageProgressRingView.innerRingColor = Color.lightOrange
+        usageProgressRingView.innerRingColor = Color.orange_08.value
         usageProgressRingView.innerRingWidth = 9
         usageProgressRingView.startAngle = -240
         usageProgressRingView.endAngle = 62
         usageProgressRingView.fullCircle = false
         usageProgressRingView.valueIndicator = " %"
-        usageProgressRingView.fontColor = Color.whiteColor
+        usageProgressRingView.fontColor = Color.white.value
         usageProgressRingView.font = Font.titilliumWebLight(size: 16)
     }
     

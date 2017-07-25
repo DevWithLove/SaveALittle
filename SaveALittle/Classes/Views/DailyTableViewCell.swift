@@ -57,13 +57,13 @@ class DailyTableViewCell: FoldingCell {
   override open func awakeFromNib() {
     super.awakeFromNib()
     backgroundColor = .clear
-    foregroundView.backgroundColor = Color.whiteColor
+    foregroundView.backgroundColor = Color.white.value
     foregroundView.layer.cornerRadius = 5
     foregroundView.layer.masksToBounds = true
     containerView.layer.cornerRadius = 5
     containerView.layer.masksToBounds = true
-    containerView.backgroundColor = Color.whiteColor
-    backViewColor = Color.whiteColor
+    containerView.backgroundColor = Color.white.value
+    backViewColor = Color.white.value
     setupViews()
     setupTableView()
   }
@@ -78,32 +78,32 @@ class DailyTableViewCell: FoldingCell {
   // MARK: Layout
   
   private func setupViews() {
-    dateLabel.textColor = Color.darkerText
+    dateLabel.textColor = Color.blue_34.value
     dateLabel.font = Font.titilliumWebRegular(size: 15)
     
     let titleFont = Font.titilliumWebLight(size: 10)
     let valueFont = Font.titilliumWebRegular(size: 10)
     
-    weekDayLabel.textColor = Color.darkText
+    weekDayLabel.textColor = Color.gray_26.value
     weekDayLabel.font = titleFont
     
-    transactionsLabel.textColor = Color.darkText
+    transactionsLabel.textColor = Color.gray_26.value
     transactionsLabel.font = titleFont
     
-    expenseLabel.textColor = Color.darkText
+    expenseLabel.textColor = Color.gray_26.value
     expenseLabel.font = titleFont
     
-    transactionsValueLabel.textColor = Color.darkerText
+    transactionsValueLabel.textColor = Color.blue_34.value
     transactionsValueLabel.font = valueFont
     
-    expenseValueLabel.textColor = Color.darkerText
+    expenseValueLabel.textColor = Color.blue_34.value
     expenseValueLabel.font = valueFont
     
-    transactionTypesLabel.textColor = Color.darkText
+    transactionTypesLabel.textColor = Color.gray_26.value
     transactionTypesLabel.font = titleFont
     
-    separateLineView.backgroundColor = Color.darkText
-    leftBorderView.backgroundColor = Color.lightOrange
+    separateLineView.backgroundColor = Color.gray_26.value
+    leftBorderView.backgroundColor = Color.orange_08.value
     
     containerDateLabel.font = Font.titilliumWebRegular(size: 15)
     containerWeekDayLabel.font = titleFont

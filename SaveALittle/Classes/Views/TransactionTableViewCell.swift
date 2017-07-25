@@ -46,11 +46,11 @@ class TransactionTableViewCell: UITableViewCell {
   }
   
   func applyLightStyle(){
-    self.containerView.backgroundColor = Color.whiteColor
-    timeLabel.backgroundColor = Color.lightBlue
-    timeLabel.textColor = Color.darkBackground
-    amountLabel.textColor = Color.darkBackground
-    storeLabel.textColor = Color.darkerText
+    self.containerView.backgroundColor = Color.white.value
+    timeLabel.backgroundColor = Color.blue_14.value
+    timeLabel.textColor = Color.black_29.value
+    amountLabel.textColor = Color.black_29.value
+    storeLabel.textColor = Color.gray_26.value
   }
   
   // MARK: Layout
@@ -60,21 +60,21 @@ class TransactionTableViewCell: UITableViewCell {
     
     timeLabel.layer.cornerRadius = 15
     timeLabel.layer.masksToBounds = true
-    timeLabel.backgroundColor = Color.darkerBackground
+    timeLabel.backgroundColor = Color.black_32.value
     
     lineViewOne.layer.cornerRadius = 1
     lineViewOne.layer.masksToBounds = true
-    lineViewOne.backgroundColor = Color.darkLine
+    lineViewOne.backgroundColor = Color.gray_15.value
     
     lineViewTwo.layer.cornerRadius = 1
     lineViewTwo.layer.masksToBounds = true
-    lineViewTwo.backgroundColor = Color.darkLine
+    lineViewTwo.backgroundColor = Color.gray_15.value
     
     timeLabel.font = Font.titilliumWebRegular(size: 12)
     amountLabel.font = Font.titilliumWebSemiBold(size: 15)
     storeLabel.font = Font.titilliumWebLight(size: 12)
     iconLabel.font = Font.iconRegular(size: 16)
-    iconLabel.textColor = Color.lightOrange
+    iconLabel.textColor = Color.orange_08.value
   }
   
 }

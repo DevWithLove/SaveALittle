@@ -10,51 +10,48 @@ import UIKit
 
 extension UIColor {
     
-    convenience public init(r: CGFloat, g: CGFloat, b: CGFloat) {
-        self.init(r: r, g: g, b: b, a: 1)
-    }
+  /**
+   Creates an UIColor from HEX String in "#363636" format
+   
+   - parameter hexString: HEX String in "#363636" format
+   - returns: UIColor from HexString
+   */
+  convenience init(hexString: String) {
     
-    convenience public init(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) {
-        self.init(red: r/255, green: g/255, blue: b/255, alpha: a)
-    }
+    let hexString: String = (hexString as NSString).trimmingCharacters(in: .whitespacesAndNewlines)
+    let scanner = Scanner(string: hexString as String)
     
-    convenience init(hex: String) {
-        self.init(hex: hex, alpha:1)
+    if hexString.hasPrefix("#") {
+      scanner.scanLocation = 1
     }
+    var color: UInt32 = 0
+    scanner.scanHexInt32(&color)
     
-    convenience init(hex: String, alpha: CGFloat) {
-        var hexWithoutSymbol = hex
-        if hexWithoutSymbol.hasPrefix("#") {
-            hexWithoutSymbol = hex.substring(1)
-        }
-        
-        let scanner = Scanner(string: hexWithoutSymbol)
-        var hexInt:UInt32 = 0x0
-        scanner.scanHexInt32(&hexInt)
-        
-        var r:UInt32!, g:UInt32!, b:UInt32!
-        switch (hexWithoutSymbol.length) {
-        case 3: // #RGB
-            r = ((hexInt >> 4) & 0xf0 | (hexInt >> 8) & 0x0f)
-            g = ((hexInt >> 0) & 0xf0 | (hexInt >> 4) & 0x0f)
-            b = ((hexInt << 4) & 0xf0 | hexInt & 0x0f)
-            break;
-        case 6: // #RRGGBB
-            r = (hexInt >> 16) & 0xff
-            g = (hexInt >> 8) & 0xff
-            b = hexInt & 0xff
-            break;
-        default:
-            // TODO:ERROR
-            break;
-        }
-        
-        self.init(
-            red: (CGFloat(r)/255),
-            green: (CGFloat(g)/255),
-            blue: (CGFloat(b)/255),
-            alpha:alpha)
-    }
+    let mask = 0x000000FF
+    let r = Int(color >> 16) & mask
+    let g = Int(color >> 8) & mask
+    let b = Int(color) & mask
+    
+    let red   = CGFloat(r) / 255.0
+    let green = CGFloat(g) / 255.0
+    let blue  = CGFloat(b) / 255.0
+    self.init(red:red, green:green, blue:blue, alpha:1)
+  }
 
-    
+  /**
+   Creates an UIColor Object based on provided RGB value in integer
+   
+   - parameter red:   Red Value in integer (0-255)
+   - parameter green: Green Value in integer (0-255)
+   - parameter blue:  Blue Value in integer (0-255)
+   
+   - returns: UIColor with specified RGB values
+   */
+  convenience init(red: Int, green: Int, blue: Int) {
+    assert(red >= 0 && red <= 255, "Invalid red component")
+    assert(green >= 0 && green <= 255, "Invalid green component")
+    assert(blue >= 0 && blue <= 255, "Invalid blue component")
+    self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+  }
+  
 }

@@ -1,9 +1,9 @@
 //
 //  BaseTableViewCell.swift
-//  SlideMenuControllerSwift
+//  SaveALittle
 //
-//  Created by Yuji Hato on 1/22/15.
-//  Copyright (c) 2015 Yuji Hato. All rights reserved.
+//  Created by Tony Mu on 19/01/17.
+//  Copyright © 2017 DevWithLove.com. All rights reserved.
 //
 import UIKit
 
@@ -31,9 +31,9 @@ open class BaseTableViewCell : UITableViewCell {
     }
     
     open func setData(_ data: Any?) {
-        self.backgroundColor = UIColor(hex: "F1F8E9")
+        self.backgroundColor = Color.custom(hex: "F1F8E9", alpha: 1).value
         self.textLabel?.font = UIFont.italicSystemFont(ofSize: 18)
-        self.textLabel?.textColor = UIColor(hex: "9E9E9E")
+        self.textLabel?.textColor = Color.custom(hex: "9E9E9E", alpha: 1).value
         if let menuText = data as? String {
             self.textLabel?.text = menuText
         }

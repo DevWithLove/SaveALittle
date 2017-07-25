@@ -22,8 +22,8 @@ class TransactionViewController: UIViewController {
         let textField = NoEditableOptionTextFieldWithIcon(frame: .zero)
         self.applyTextFieldTheme(textField: textField)
         
-        textField.iconColor = Color.darkText
-        textField.selectedIconColor = Color.whiteColor
+        textField.iconColor = Color.gray_26.value
+        textField.selectedIconColor = Color.white.value
         textField.iconFont = UIFont(name: "FontAwesome", size: 15)
         textField.iconText = "\u{f155}"
         
@@ -39,8 +39,8 @@ class TransactionViewController: UIViewController {
         let textField = SkyFloatingLabelTextFieldWithIcon(frame: .zero)
         self.applyTextFieldTheme(textField: textField)
         
-        textField.iconColor = Color.darkText
-        textField.selectedIconColor = Color.whiteColor
+        textField.iconColor = Color.gray_26.value
+        textField.selectedIconColor = Color.white.value
         textField.autocorrectionType = .no
         textField.iconFont = UIFont(name: "FontAwesome", size: 15)
         textField.iconText = "\u{f041}"
@@ -61,8 +61,8 @@ class TransactionViewController: UIViewController {
         let textField = NoEditableOptionTextFieldWithIcon(frame: .zero)
         self.applyTextFieldTheme(textField: textField)
         
-        textField.iconColor = Color.darkText
-        textField.selectedIconColor = Color.whiteColor
+        textField.iconColor = Color.gray_26.value
+        textField.selectedIconColor = Color.white.value
         textField.iconFont = UIFont(name: "FontAwesome", size: 15)
         textField.iconText = "\u{f200}"
         
@@ -87,8 +87,8 @@ class TransactionViewController: UIViewController {
         let textField = NoEditableOptionTextFieldWithIcon(frame: .zero)
         self.applyTextFieldTheme(textField: textField)
         
-        textField.iconColor = Color.darkText
-        textField.selectedIconColor = Color.whiteColor
+        textField.iconColor = Color.gray_26.value
+        textField.selectedIconColor = Color.white.value
         textField.iconFont = UIFont(name: "FontAwesome", size: 15)
         textField.iconText = "\u{f073}"
         
@@ -122,7 +122,7 @@ class TransactionViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.isHidden = true
-        tableView.backgroundColor = Color.darkerBackground
+        tableView.backgroundColor = Color.black_32.value
         tableView.separatorStyle = .none
         tableView.layer.cornerRadius = 3
         tableView.layer.masksToBounds = true
@@ -151,7 +151,7 @@ class TransactionViewController: UIViewController {
     
     private func setupViews() {
         self.automaticallyAdjustsScrollViewInsets = false
-        view.backgroundColor = Color.darkBackground
+        view.backgroundColor = Color.black_29.value
         self.addRightBarButton(#imageLiteral(resourceName: "plus"))
         
         view.addSubview(amountTextField)
@@ -183,11 +183,11 @@ class TransactionViewController: UIViewController {
     
     
     private func applyTextFieldTheme(textField:SkyFloatingLabelTextField){
-        textField.tintColor = Color.darkText
-        textField.textColor = Color.whiteColor
-        textField.lineColor = Color.darkText
-        textField.selectedTitleColor = Color.darkText
-        textField.selectedLineColor = Color.darkText
+        textField.tintColor = Color.gray_26.value
+        textField.textColor = Color.white.value
+        textField.lineColor = Color.gray_26.value
+        textField.selectedTitleColor = Color.gray_26.value
+        textField.selectedLineColor = Color.gray_26.value
         textField.titleLabel.font = Font.titilliumWebRegular(size: 10)
         textField.placeholderFont = Font.titilliumWebRegular(size: 13)
         textField.font = Font.titilliumWebRegular(size: 13)
@@ -388,7 +388,7 @@ extension TransactionViewController: UITableViewDataSource, UITableViewDelegate 
         }
         cell?.backgroundColor = UIColor.clear
         cell?.textLabel?.font = Font.titilliumWebRegular(size: 15)
-        cell?.textLabel?.textColor = Color.darkText
+        cell?.textLabel?.textColor = Color.gray_26.value
         cell?.textLabel?.text = autoCompleteStrings?[indexPath.row]
         
         cell?.contentView.gestureRecognizers = nil

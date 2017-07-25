@@ -65,7 +65,7 @@ class StasticsHeaderCell: UICollectionViewCell {
     self.chartView.yAxis.drawGridLinesEnabled = false
     self.chartView.yAxis.axisMinimum = 0
     self.chartView.xAxis.valueFormatter = IndexAxisValueFormatter(values:keys)
-    self.chartView.xAxis.labelTextColor = Color.lightBlue
+    self.chartView.xAxis.labelTextColor = Color.blue_14.value
     self.chartView.xAxis.labelFont = Font.titilliumWebLight(size: 8)
     self.chartView.yAxis.drawZeroLineEnabled = false
     self.chartView.xAxis.drawLabelsEnabled = true
