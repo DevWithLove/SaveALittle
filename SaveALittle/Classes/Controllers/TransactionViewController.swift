@@ -188,9 +188,9 @@ class TransactionViewController: UIViewController {
         textField.lineColor = Color.gray_26.value
         textField.selectedTitleColor = Color.gray_26.value
         textField.selectedLineColor = Color.gray_26.value
-        textField.titleLabel.font = Font.titilliumWebRegular(size: 10)
-        textField.placeholderFont = Font.titilliumWebRegular(size: 13)
-        textField.font = Font.titilliumWebRegular(size: 13)
+        textField.titleLabel.font = UIFont.TitilliumWeb.regular.withSize(10)
+        textField.placeholderFont = UIFont.TitilliumWeb.regular.withSize(13)
+        textField.font = UIFont.TitilliumWeb.regular.withSize(13)
     }
     
     private func dateToString(date: Date)-> String {
@@ -387,7 +387,7 @@ extension TransactionViewController: UITableViewDataSource, UITableViewDelegate 
             cell = UITableViewCell(style: .default, reuseIdentifier: cellIdentifier)
         }
         cell?.backgroundColor = UIColor.clear
-        cell?.textLabel?.font = Font.titilliumWebRegular(size: 15)
+        cell?.textLabel?.font = UIFont.TitilliumWeb.regular.withSize(15)
         cell?.textLabel?.textColor = Color.gray_26.value
         cell?.textLabel?.text = autoCompleteStrings?[indexPath.row]
         

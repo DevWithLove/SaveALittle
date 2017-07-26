@@ -25,7 +25,7 @@ class BaseViewController: UIViewController {
         // to remove the nav bar bottom line
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.setBackgroundImage(#imageLiteral(resourceName: "nav_bar_background"), for: .default)
-        navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: Font.titilliumWebSemiBold(size: 18),NSForegroundColorAttributeName: Color.white.value]
+        navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName:UIFont.TitilliumWeb.semiBold.withSize(18),NSForegroundColorAttributeName: Color.white.value]
         
         // Set the status bar to white color
         UIApplication.shared.statusBarStyle = .lightContent

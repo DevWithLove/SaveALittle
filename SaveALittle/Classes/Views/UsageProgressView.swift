@@ -29,8 +29,8 @@ class UsageProgressView: UIView, UICircularProgressRingDelegate {
         lineView.layer.cornerRadius = 1
         lineView.layer.masksToBounds = true
         lineView.backgroundColor = Color.black_32.value
-        topLabel.font = Font.titilliumWebRegular(size: 15)
-        bottomLabel.font = Font.titilliumWebLight(size: 11)
+        topLabel.font = UIFont.TitilliumWeb.regular.withSize(15)
+        bottomLabel.font = UIFont.TitilliumWeb.light.withSize(11)
         
         
         usageProgressRingView.delegate = self
@@ -47,7 +47,7 @@ class UsageProgressView: UIView, UICircularProgressRingDelegate {
         usageProgressRingView.fullCircle = false
         usageProgressRingView.valueIndicator = " %"
         usageProgressRingView.fontColor = Color.white.value
-        usageProgressRingView.font = Font.titilliumWebLight(size: 16)
+        usageProgressRingView.font = UIFont.TitilliumWeb.light.withSize(16)
     }
     
     func finishedUpdatingProgress(forRing ring: UICircularProgressRingView) {

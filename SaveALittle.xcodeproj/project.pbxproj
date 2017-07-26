@@ -28,6 +28,9 @@
 		022B452C1EB1E95900022BD1 /* StasticsHeaderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 022B452A1EB1E95900022BD1 /* StasticsHeaderCellView.xib */; };
 		022B452E1EB1EDB200022BD1 /* StasticsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B452D1EB1EDB200022BD1 /* StasticsHeaderCell.swift */; };
 		022B452F1EB1EDB200022BD1 /* StasticsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B452D1EB1EDB200022BD1 /* StasticsHeaderCell.swift */; };
+		022D44981F28123200C59C02 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44971F28123200C59C02 /* UIFontExtensions.swift */; };
+		022D44991F28123200C59C02 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44971F28123200C59C02 /* UIFontExtensions.swift */; };
+		022D449A1F28123200C59C02 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44971F28123200C59C02 /* UIFontExtensions.swift */; };
 		023215F51E31F7580025D065 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F41E31F7580025D065 /* HomeViewController.swift */; };
 		023215F61E31F7580025D065 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F41E31F7580025D065 /* HomeViewController.swift */; };
 		023215F81E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */; };
@@ -54,8 +57,6 @@
 		0238E2CC1E4F08C1005EB0BA /* TitilliumWeb-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B71E4F08C1005EB0BA /* TitilliumWeb-SemiBold.ttf */; };
 		0238E2CD1E4F08C1005EB0BA /* TitilliumWeb-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B81E4F08C1005EB0BA /* TitilliumWeb-SemiBoldItalic.ttf */; };
 		0238E2CE1E4F08C1005EB0BA /* TitilliumWeb-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0238E2B81E4F08C1005EB0BA /* TitilliumWeb-SemiBoldItalic.ttf */; };
-		0238E2D31E4F0CED005EB0BA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238E2D21E4F0CED005EB0BA /* Font.swift */; };
-		0238E2D41E4F0CED005EB0BA /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0238E2D21E4F0CED005EB0BA /* Font.swift */; };
 		0239487E1E4E5A7D009A29F3 /* DayCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0239487D1E4E5A7D009A29F3 /* DayCollectionDataSource.swift */; };
 		0239487F1E4E5A7D009A29F3 /* DayCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0239487D1E4E5A7D009A29F3 /* DayCollectionDataSource.swift */; };
 		023948801E4E5A7D009A29F3 /* DayCollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0239487D1E4E5A7D009A29F3 /* DayCollectionDataSource.swift */; };
@@ -194,6 +195,7 @@
 		022B45271EB1E54500022BD1 /* StasticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StasticsViewController.swift; sourceTree = "<group>"; };
 		022B452A1EB1E95900022BD1 /* StasticsHeaderCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StasticsHeaderCellView.xib; sourceTree = "<group>"; };
 		022B452D1EB1EDB200022BD1 /* StasticsHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StasticsHeaderCell.swift; sourceTree = "<group>"; };
+		022D44971F28123200C59C02 /* UIFontExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
 		023215F41E31F7580025D065 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		0238E2AE1E4F08C1005EB0BA /* TitilliumWeb-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Black.ttf"; sourceTree = "<group>"; };
@@ -207,7 +209,6 @@
 		0238E2B61E4F08C1005EB0BA /* TitilliumWeb-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Regular.ttf"; sourceTree = "<group>"; };
 		0238E2B71E4F08C1005EB0BA /* TitilliumWeb-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-SemiBold.ttf"; sourceTree = "<group>"; };
 		0238E2B81E4F08C1005EB0BA /* TitilliumWeb-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
-		0238E2D21E4F0CED005EB0BA /* Font.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		0239487D1E4E5A7D009A29F3 /* DayCollectionDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCollectionDataSource.swift; sourceTree = "<group>"; };
 		02493FD51E2F64A3002FC473 /* SaveALittle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaveALittle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02493FD81E2F64A3002FC473 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
@@ -456,9 +457,9 @@
 				024CE3C41E30988B00586D1F /* Color.swift */,
 				023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */,
 				02CB04331E3883990029D37D /* UIColorExtensions.swift */,
-				0238E2D21E4F0CED005EB0BA /* Font.swift */,
 				021C2D041E57B28200B1DFFF /* ObjectExtensions.swift */,
 				0201A9781E6012D600016D41 /* FloatExtensions.swift */,
+				022D44971F28123200C59C02 /* UIFontExtensions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -980,12 +981,12 @@
 				02CB043F1E38A4000029D37D /* DailyTableViewCell.swift in Sources */,
 				02191C341E46E9CE00D00E17 /* DayCollectionViewCell.swift in Sources */,
 				024CE3C51E30988B00586D1F /* Color.swift in Sources */,
-				0238E2D31E4F0CED005EB0BA /* Font.swift in Sources */,
 				026653271E7931040060A514 /* MonthlyData.swift in Sources */,
 				0201A9791E6012D600016D41 /* FloatExtensions.swift in Sources */,
 				024CE3CD1E30A26F00586D1F /* Page.swift in Sources */,
 				02493FE11E2F64A3002FC473 /* SaveALittle.xcdatamodeld in Sources */,
 				024CE3C91E30A16700586D1F /* PageCollectionViewCell.swift in Sources */,
+				022D44981F28123200C59C02 /* UIFontExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1001,6 +1002,7 @@
 				025723FA1E49AA2300E9C9FF /* SequenceExtension.swift in Sources */,
 				025723EC1E49A90900E9C9FF /* DateInRegionExtensionTests.swift in Sources */,
 				025723F01E49A90900E9C9FF /* SequenceTests.swift in Sources */,
+				022D449A1F28123200C59C02 /* UIFontExtensions.swift in Sources */,
 				027497E51E4D9BBE00414A0C /* DayCollectionDataSourceTests.swift in Sources */,
 				025723F71E49AA2300E9C9FF /* DateInRegionExtension.swift in Sources */,
 				025723F81E49AA2300E9C9FF /* DayIterator.swift in Sources */,
@@ -1065,12 +1067,12 @@
 				024CE3CE1E30A26F00586D1F /* Page.swift in Sources */,
 				02191C351E46E9CE00D00E17 /* DayCollectionViewCell.swift in Sources */,
 				02CB04401E38A4000029D37D /* DailyTableViewCell.swift in Sources */,
-				0238E2D41E4F0CED005EB0BA /* Font.swift in Sources */,
 				026653281E7931040060A514 /* MonthlyData.swift in Sources */,
 				0201A97A1E6012D600016D41 /* FloatExtensions.swift in Sources */,
 				029266A61E39CEEB00668A1A /* MonthHeaderCell.swift in Sources */,
 				026050521E2F685F00026F5B /* SaveALittle.xcdatamodeld in Sources */,
 				024CE3CA1E30A16700586D1F /* PageCollectionViewCell.swift in Sources */,
+				022D44991F28123200C59C02 /* UIFontExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

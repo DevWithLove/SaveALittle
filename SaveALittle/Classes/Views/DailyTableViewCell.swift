@@ -79,10 +79,10 @@ class DailyTableViewCell: FoldingCell {
   
   private func setupViews() {
     dateLabel.textColor = Color.blue_34.value
-    dateLabel.font = Font.titilliumWebRegular(size: 15)
+    dateLabel.font = UIFont.TitilliumWeb.regular.withSize(15)
     
-    let titleFont = Font.titilliumWebLight(size: 10)
-    let valueFont = Font.titilliumWebRegular(size: 10)
+    let titleFont = UIFont.TitilliumWeb.light.withSize(10)
+    let valueFont = UIFont.TitilliumWeb.regular.withSize(10)
     
     weekDayLabel.textColor = Color.gray_26.value
     weekDayLabel.font = titleFont
@@ -105,7 +105,7 @@ class DailyTableViewCell: FoldingCell {
     separateLineView.backgroundColor = Color.gray_26.value
     leftBorderView.backgroundColor = Color.orange_08.value
     
-    containerDateLabel.font = Font.titilliumWebRegular(size: 15)
+    containerDateLabel.font = UIFont.TitilliumWeb.regular.withSize(15)
     containerWeekDayLabel.font = titleFont
     containerIncomeLabel.font = titleFont
     containerExpenseLabel.font = titleFont

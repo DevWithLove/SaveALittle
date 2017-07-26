@@ -27,8 +27,8 @@ class WeekHeaderView: UIView {
         backgroundColor = .clear
         lineView.layer.cornerRadius = 1
         lineView.layer.masksToBounds = true
-        valueLabel.font = Font.titilliumWebRegular(size: 14)
-        titleLabel.font = Font.titilliumWebLight(size: 12)
+        valueLabel.font = UIFont.TitilliumWeb.regular.withSize(14)
+        titleLabel.font = UIFont.TitilliumWeb.light
     }
     
     

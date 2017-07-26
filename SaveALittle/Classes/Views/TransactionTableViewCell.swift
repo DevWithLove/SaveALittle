@@ -70,10 +70,10 @@ class TransactionTableViewCell: UITableViewCell {
     lineViewTwo.layer.masksToBounds = true
     lineViewTwo.backgroundColor = Color.gray_15.value
     
-    timeLabel.font = Font.titilliumWebRegular(size: 12)
-    amountLabel.font = Font.titilliumWebSemiBold(size: 15)
-    storeLabel.font = Font.titilliumWebLight(size: 12)
-    iconLabel.font = Font.iconRegular(size: 16)
+    timeLabel.font = UIFont.TitilliumWeb.regular
+    amountLabel.font = UIFont.TitilliumWeb.semiBold.withSize(15)
+    storeLabel.font = UIFont.TitilliumWeb.light
+    iconLabel.font = UIFont.Icon.regular.withSize(16)
     iconLabel.textColor = Color.orange_08.value
   }
   
