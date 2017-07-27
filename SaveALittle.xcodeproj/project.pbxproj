@@ -20,8 +20,6 @@
 		02191C351E46E9CE00D00E17 /* DayCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02191C331E46E9CE00D00E17 /* DayCollectionViewCell.swift */; };
 		021C2D021E579B8100B1DFFF /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C2D011E579B8100B1DFFF /* Transaction.swift */; };
 		021C2D031E579B8100B1DFFF /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C2D011E579B8100B1DFFF /* Transaction.swift */; };
-		021C2D051E57B28200B1DFFF /* ObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C2D041E57B28200B1DFFF /* ObjectExtensions.swift */; };
-		021C2D061E57B28200B1DFFF /* ObjectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C2D041E57B28200B1DFFF /* ObjectExtensions.swift */; };
 		022B45281EB1E54500022BD1 /* StasticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B45271EB1E54500022BD1 /* StasticsViewController.swift */; };
 		022B45291EB1E54500022BD1 /* StasticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022B45271EB1E54500022BD1 /* StasticsViewController.swift */; };
 		022B452B1EB1E95900022BD1 /* StasticsHeaderCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 022B452A1EB1E95900022BD1 /* StasticsHeaderCellView.xib */; };
@@ -31,6 +29,21 @@
 		022D44981F28123200C59C02 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44971F28123200C59C02 /* UIFontExtensions.swift */; };
 		022D44991F28123200C59C02 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44971F28123200C59C02 /* UIFontExtensions.swift */; };
 		022D449A1F28123200C59C02 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44971F28123200C59C02 /* UIFontExtensions.swift */; };
+		022D44A21F2844F200C59C02 /* TransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44A11F2844F200C59C02 /* TransactionRepository.swift */; };
+		022D44A31F2844F200C59C02 /* TransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44A11F2844F200C59C02 /* TransactionRepository.swift */; };
+		022D44A41F2844F200C59C02 /* TransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44A11F2844F200C59C02 /* TransactionRepository.swift */; };
+		022D44A61F2846AF00C59C02 /* DefaultTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44A51F2846AF00C59C02 /* DefaultTransactionRepository.swift */; };
+		022D44A71F2846AF00C59C02 /* DefaultTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44A51F2846AF00C59C02 /* DefaultTransactionRepository.swift */; };
+		022D44A81F2846AF00C59C02 /* DefaultTransactionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44A51F2846AF00C59C02 /* DefaultTransactionRepository.swift */; };
+		022D44AC1F284E3900C59C02 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44AB1F284E3900C59C02 /* LocationRepository.swift */; };
+		022D44AD1F284E3900C59C02 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44AB1F284E3900C59C02 /* LocationRepository.swift */; };
+		022D44AE1F284E3900C59C02 /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44AB1F284E3900C59C02 /* LocationRepository.swift */; };
+		022D44B01F284EA500C59C02 /* DefaultLocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44AF1F284EA500C59C02 /* DefaultLocationRepository.swift */; };
+		022D44B11F284EA500C59C02 /* DefaultLocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44AF1F284EA500C59C02 /* DefaultLocationRepository.swift */; };
+		022D44B21F284EA500C59C02 /* DefaultLocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022D44AF1F284EA500C59C02 /* DefaultLocationRepository.swift */; };
+		022E152F1F29DE9F0062EC87 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022E152E1F29DE9F0062EC87 /* RealmRepository.swift */; };
+		022E15301F29DE9F0062EC87 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022E152E1F29DE9F0062EC87 /* RealmRepository.swift */; };
+		022E15311F29DE9F0062EC87 /* RealmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022E152E1F29DE9F0062EC87 /* RealmRepository.swift */; };
 		023215F51E31F7580025D065 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F41E31F7580025D065 /* HomeViewController.swift */; };
 		023215F61E31F7580025D065 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F41E31F7580025D065 /* HomeViewController.swift */; };
 		023215F81E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */; };
@@ -191,11 +204,15 @@
 		02075B931E5D6E1F005B4AAA /* DailyDataTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailyDataTests.swift; sourceTree = "<group>"; };
 		02191C331E46E9CE00D00E17 /* DayCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCollectionViewCell.swift; sourceTree = "<group>"; };
 		021C2D011E579B8100B1DFFF /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
-		021C2D041E57B28200B1DFFF /* ObjectExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectExtensions.swift; sourceTree = "<group>"; };
 		022B45271EB1E54500022BD1 /* StasticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StasticsViewController.swift; sourceTree = "<group>"; };
 		022B452A1EB1E95900022BD1 /* StasticsHeaderCellView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StasticsHeaderCellView.xib; sourceTree = "<group>"; };
 		022B452D1EB1EDB200022BD1 /* StasticsHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StasticsHeaderCell.swift; sourceTree = "<group>"; };
 		022D44971F28123200C59C02 /* UIFontExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
+		022D44A11F2844F200C59C02 /* TransactionRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRepository.swift; sourceTree = "<group>"; };
+		022D44A51F2846AF00C59C02 /* DefaultTransactionRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultTransactionRepository.swift; sourceTree = "<group>"; };
+		022D44AB1F284E3900C59C02 /* LocationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
+		022D44AF1F284EA500C59C02 /* DefaultLocationRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultLocationRepository.swift; sourceTree = "<group>"; };
+		022E152E1F29DE9F0062EC87 /* RealmRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmRepository.swift; sourceTree = "<group>"; };
 		023215F41E31F7580025D065 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		0238E2AE1E4F08C1005EB0BA /* TitilliumWeb-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitilliumWeb-Black.ttf"; sourceTree = "<group>"; };
@@ -320,6 +337,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		022D449F1F2840C000C59C02 /* Stories */ = {
+			isa = PBXGroup;
+			children = (
+				022D44A01F2840D700C59C02 /* DemoMode */,
+			);
+			path = Stories;
+			sourceTree = "<group>";
+		};
+		022D44A01F2840D700C59C02 /* DemoMode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DemoMode;
+			sourceTree = "<group>";
+		};
 		0238E2AD1E4F0849005EB0BA /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +450,7 @@
 		024940091E2F64F1002FC473 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				022D449F1F2840C000C59C02 /* Stories */,
 				0239487C1E4E5A57009A29F3 /* Data */,
 				027497E01E4D984C00414A0C /* Services */,
 				024CE3CB1E30A20000586D1F /* Models */,
@@ -457,7 +490,6 @@
 				024CE3C41E30988B00586D1F /* Color.swift */,
 				023215F71E31FAB10025D065 /* UserDefaultsExtensions.swift */,
 				02CB04331E3883990029D37D /* UIColorExtensions.swift */,
-				021C2D041E57B28200B1DFFF /* ObjectExtensions.swift */,
 				0201A9781E6012D600016D41 /* FloatExtensions.swift */,
 				022D44971F28123200C59C02 /* UIFontExtensions.swift */,
 			);
@@ -505,6 +537,11 @@
 		027497E01E4D984C00414A0C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				022D44A11F2844F200C59C02 /* TransactionRepository.swift */,
+				022D44A51F2846AF00C59C02 /* DefaultTransactionRepository.swift */,
+				022D44AB1F284E3900C59C02 /* LocationRepository.swift */,
+				022D44AF1F284EA500C59C02 /* DefaultLocationRepository.swift */,
+				022E152E1F29DE9F0062EC87 /* RealmRepository.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -943,7 +980,7 @@
 			files = (
 				0270332C1E41BCBF00BD5272 /* String.swift in Sources */,
 				026CA8111E598E80004BD303 /* TransactionDataSource.swift in Sources */,
-				021C2D051E57B28200B1DFFF /* ObjectExtensions.swift in Sources */,
+				022D44AC1F284E3900C59C02 /* LocationRepository.swift in Sources */,
 				024940101E2F650C002FC473 /* LoginViewController.swift in Sources */,
 				0206CA1F1E558AA10053F3DA /* ExpenseType.swift in Sources */,
 				02493FD91E2F64A3002FC473 /* AppDelegate.swift in Sources */,
@@ -962,8 +999,11 @@
 				025723DF1E49A8B700E9C9FF /* DateInRegionExtension.swift in Sources */,
 				022B45281EB1E54500022BD1 /* StasticsViewController.swift in Sources */,
 				026CA80C1E59857B004BD303 /* TransactionViewModel.swift in Sources */,
+				022D44B01F284EA500C59C02 /* DefaultLocationRepository.swift in Sources */,
 				02AC414C1E56DD10005E8AB6 /* NoEditableOptionTextFieldWithIcon.swift in Sources */,
 				0239487E1E4E5A7D009A29F3 /* DayCollectionDataSource.swift in Sources */,
+				022D44A21F2844F200C59C02 /* TransactionRepository.swift in Sources */,
+				022E152F1F29DE9F0062EC87 /* RealmRepository.swift in Sources */,
 				023215F81E31FAB10025D065 /* UserDefaultsExtensions.swift in Sources */,
 				025723E11E49A8B700E9C9FF /* DayIterator.swift in Sources */,
 				027033231E41B63E00BD5272 /* MonthViewController.swift in Sources */,
@@ -980,6 +1020,7 @@
 				0270332F1E41C3FF00BD5272 /* UIViewController.swift in Sources */,
 				02CB043F1E38A4000029D37D /* DailyTableViewCell.swift in Sources */,
 				02191C341E46E9CE00D00E17 /* DayCollectionViewCell.swift in Sources */,
+				022D44A61F2846AF00C59C02 /* DefaultTransactionRepository.swift in Sources */,
 				024CE3C51E30988B00586D1F /* Color.swift in Sources */,
 				026653271E7931040060A514 /* MonthlyData.swift in Sources */,
 				0201A9791E6012D600016D41 /* FloatExtensions.swift in Sources */,
@@ -996,6 +1037,7 @@
 			files = (
 				025723F91E49AA2300E9C9FF /* MonthIterator.swift in Sources */,
 				025723F61E49AA2300E9C9FF /* DateExtensions.swift in Sources */,
+				022D44B21F284EA500C59C02 /* DefaultLocationRepository.swift in Sources */,
 				025723EE1E49A90900E9C9FF /* DayIteratorTests.swift in Sources */,
 				023948801E4E5A7D009A29F3 /* DayCollectionDataSource.swift in Sources */,
 				0285C2E71E5C1E42006DDA62 /* TransactionDataSourceTests.swift in Sources */,
@@ -1003,12 +1045,16 @@
 				025723EC1E49A90900E9C9FF /* DateInRegionExtensionTests.swift in Sources */,
 				025723F01E49A90900E9C9FF /* SequenceTests.swift in Sources */,
 				022D449A1F28123200C59C02 /* UIFontExtensions.swift in Sources */,
+				022D44AE1F284E3900C59C02 /* LocationRepository.swift in Sources */,
 				027497E51E4D9BBE00414A0C /* DayCollectionDataSourceTests.swift in Sources */,
 				025723F71E49AA2300E9C9FF /* DateInRegionExtension.swift in Sources */,
+				022D44A41F2844F200C59C02 /* TransactionRepository.swift in Sources */,
+				022D44A81F2846AF00C59C02 /* DefaultTransactionRepository.swift in Sources */,
 				025723F81E49AA2300E9C9FF /* DayIterator.swift in Sources */,
 				025723ED1E49A90900E9C9FF /* DateTests.swift in Sources */,
 				027497E71E4D9BCD00414A0C /* DayCellData.swift in Sources */,
 				02493FF11E2F64A3002FC473 /* SaveALittleTests.swift in Sources */,
+				022E15311F29DE9F0062EC87 /* RealmRepository.swift in Sources */,
 				025723EF1E49A90900E9C9FF /* MonthIteratorTests.swift in Sources */,
 				02075B941E5D6E1F005B4AAA /* DailyDataTests.swift in Sources */,
 				026D0E961E6FF5F300A17E72 /* DailyDataSourceTests.swift in Sources */,
@@ -1029,7 +1075,7 @@
 			files = (
 				0270332D1E41BCBF00BD5272 /* String.swift in Sources */,
 				026CA8121E598E80004BD303 /* TransactionDataSource.swift in Sources */,
-				021C2D061E57B28200B1DFFF /* ObjectExtensions.swift in Sources */,
+				022D44AD1F284E3900C59C02 /* LocationRepository.swift in Sources */,
 				029FA0D91E30AC1F0065E1E5 /* LoginCollectionViewCell.swift in Sources */,
 				0206CA201E558AA10053F3DA /* ExpenseType.swift in Sources */,
 				026050501E2F685F00026F5B /* LoginViewController.swift in Sources */,
@@ -1048,8 +1094,11 @@
 				025723E01E49A8B700E9C9FF /* DateInRegionExtension.swift in Sources */,
 				022B45291EB1E54500022BD1 /* StasticsViewController.swift in Sources */,
 				026CA80D1E59857B004BD303 /* TransactionViewModel.swift in Sources */,
+				022D44B11F284EA500C59C02 /* DefaultLocationRepository.swift in Sources */,
 				02AC414D1E56DD10005E8AB6 /* NoEditableOptionTextFieldWithIcon.swift in Sources */,
 				0239487F1E4E5A7D009A29F3 /* DayCollectionDataSource.swift in Sources */,
+				022D44A31F2844F200C59C02 /* TransactionRepository.swift in Sources */,
+				022E15301F29DE9F0062EC87 /* RealmRepository.swift in Sources */,
 				029FA0DA1E30AC260065E1E5 /* LeftPaddedTextField.swift in Sources */,
 				025723E21E49A8B700E9C9FF /* DayIterator.swift in Sources */,
 				027033241E41B63E00BD5272 /* MonthViewController.swift in Sources */,
@@ -1066,6 +1115,7 @@
 				027033301E41C3FF00BD5272 /* UIViewController.swift in Sources */,
 				024CE3CE1E30A26F00586D1F /* Page.swift in Sources */,
 				02191C351E46E9CE00D00E17 /* DayCollectionViewCell.swift in Sources */,
+				022D44A71F2846AF00C59C02 /* DefaultTransactionRepository.swift in Sources */,
 				02CB04401E38A4000029D37D /* DailyTableViewCell.swift in Sources */,
 				026653281E7931040060A514 /* MonthlyData.swift in Sources */,
 				0201A97A1E6012D600016D41 /* FloatExtensions.swift in Sources */,

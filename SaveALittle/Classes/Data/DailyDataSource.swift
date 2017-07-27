@@ -8,11 +8,11 @@
 
 import Foundation
 import SwiftDate
-import RealmSwift
 
 public class DailyDataSource: Sequence {
   
   fileprivate var data: Dictionary<Date, DailyData>
+  private let transactionRepository: TransactionRepository
   
   public var count: Int {
     get{
@@ -20,13 +20,14 @@ public class DailyDataSource: Sequence {
     }
   }
   
-  public init(){
+  public init(transactionRepository: TransactionRepository){
     data = Dictionary<Date, DailyData>()
+    self.transactionRepository = transactionRepository
   }
   
   public static var shared: DailyDataSource {
     struct Singleton{
-      static let instance = DailyDataSource()
+      static let instance = DailyDataSource(transactionRepository: DefaultTransactionRepository())
     }
     return Singleton.instance
   }
@@ -65,8 +66,8 @@ public class DailyDataSource: Sequence {
   }
   
   private func getExpenseTransactions() ->[ExpenseTransactonViewModel] {
-    let realm = try! Realm()
-    let expenses = realm.objects(ExpenseTransaction.self)
+    
+    let expenses = self.transactionRepository.getExpense()
     
     return expenses.map({ (transaction) -> ExpenseTransactonViewModel in
       let transactionViewModel = ExpenseTransactonViewModel(id: transaction.id, amount: transaction.amount, dateTime: transaction.dateTime as Date, type: Expense(rawValue: transaction.type)!)
@@ -76,8 +77,8 @@ public class DailyDataSource: Sequence {
   }
   
   private func getIncomeTransactions() ->[IncomeTransactionViewModel] {
-    let realm = try! Realm()
-    let expenses = realm.objects(IncomeTransaction.self)
+    
+    let expenses = self.transactionRepository.getIncome()
     
     return expenses.map({ (transaction) -> IncomeTransactionViewModel in
       let transactionViewModel = IncomeTransactionViewModel(id: transaction.id, amount: transaction.amount, dateTime: transaction.dateTime as Date, type: Income(rawValue: transaction.type)!)

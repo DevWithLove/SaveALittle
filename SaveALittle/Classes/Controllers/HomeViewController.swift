@@ -9,7 +9,7 @@
 import UIKit
 import SlideMenuControllerSwift
 import SwiftDate
-import RealmSwift
+//import RealmSwift
 
 class HomeViewController: BaseViewController {
     
@@ -20,6 +20,7 @@ class HomeViewController: BaseViewController {
     
     let days = DayCollectionDataSource(offsetDays: 4)
     let dailyDataSource = DailyDataSource.shared
+    let transactionRepository = DefaultTransactionRepository()
     
     var selectedDate = DateInRegion().startOfDay
     var currentMonthData: [DailyData]? = nil
@@ -308,21 +309,19 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource {
             guard let transaction = dailyDataSource[selectedDate.absoluteDate]?.transactions[indexPath.item] else {
                 return
             }
-            
-            let realm = try! Realm()
-            
+
             var selectedTransaction: Transaction? = nil
             if transaction.transactionType == .Expense {
-                selectedTransaction = realm.objects(ExpenseTransaction.self).filter("id = '\(transaction.id)'").first
+              selectedTransaction = transactionRepository.getExpense(id: transaction.id)
             } else {
-                selectedTransaction = realm.objects(IncomeTransaction.self).filter("id = '\(transaction.id)'").first
+              selectedTransaction = transactionRepository.getIncome(id: transaction.id)
             }
             
             guard let strongTransaction = selectedTransaction else {
                 return
             }
-            
-            strongTransaction.delete()
+          
+            transactionRepository.delete(transaction: strongTransaction)
             dailyDataSource[selectedDate.absoluteDate]?.transactions.remove(at: indexPath.item)
             tableView.deleteRows(at: [indexPath], with: .automatic)
             

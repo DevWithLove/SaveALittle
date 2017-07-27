@@ -11,7 +11,6 @@ import SwiftDate
 import RealmSwift
 
 
-
 public class Transaction: Object {
     
     public dynamic var id = ""
