@@ -11,7 +11,7 @@ import SwiftDate
 
 class DayCollectionViewCell: UICollectionViewCell {
     
-    static let cellId = String(describing: type(of: DayCollectionViewCell.self))
+    static let cellId = "DayCollectionViewCell"
     
     var type: DayCellDataType? {
         didSet{

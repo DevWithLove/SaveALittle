@@ -11,7 +11,7 @@ import SwiftDate
 import RealmSwift
 
 
-
+@objcMembers
 public class Transaction: Object {
     
     public dynamic var id = ""

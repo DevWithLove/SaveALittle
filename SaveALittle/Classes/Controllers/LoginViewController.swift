@@ -124,12 +124,12 @@ class LoginViewController: UIViewController, LoginViewControllerDelegate {
     
     // MARK: User Interaction
     
-    func skipPage() {
+  @objc func skipPage() {
         pageControl.currentPage = pages.count - 1
         nextPage()
     }
     
-    func nextPage() {
+  @objc func nextPage() {
         guard pageControl.currentPage < pages.count else {
             return
         }
@@ -148,7 +148,7 @@ class LoginViewController: UIViewController, LoginViewControllerDelegate {
     }
     
     
-    func keyboardShow() {
+  @objc func keyboardShow() {
         
         // Not the best solution
         
@@ -159,7 +159,7 @@ class LoginViewController: UIViewController, LoginViewControllerDelegate {
         }, completion: nil)
     }
     
-    func keyboardHide() {
+  @objc func keyboardHide() {
         // Not the best solution
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.view.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)

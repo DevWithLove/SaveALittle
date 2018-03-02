@@ -88,15 +88,15 @@ class PageCollectionViewCell: UICollectionViewCell {
     
     private func setContent(title: String , message: String) {
         
-        let attributedText = NSMutableAttributedString(string: title, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 18, weight: UIFontWeightMedium), NSForegroundColorAttributeName: Color.textColor])
+      let attributedText = NSMutableAttributedString(string: title, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18, weight: UIFont.Weight.medium), NSAttributedStringKey.foregroundColor: Color.textColor])
         
-        attributedText.append(NSAttributedString(string: "\n\n\(message)", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14), NSForegroundColorAttributeName: Color.textColor]))
+      attributedText.append(NSAttributedString(string: "\n\n\(message)", attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 14), NSAttributedStringKey.foregroundColor: Color.textColor]))
         
         let paragraphyStyle = NSMutableParagraphStyle()
         paragraphyStyle.alignment = .center
         
         let length = attributedText.string.characters.count
-        attributedText.addAttribute(NSParagraphStyleAttributeName, value: paragraphyStyle,range: NSRange(location: 0, length: length))
+      attributedText.addAttribute(NSAttributedStringKey.paragraphStyle, value: paragraphyStyle,range: NSRange(location: 0, length: length))
         
         textView.attributedText = attributedText
     }

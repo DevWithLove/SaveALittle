@@ -276,7 +276,7 @@ class HomeViewController: BaseViewController {
     
     // MARK: Notification
     
-    func enterForeground(noftification:NSNotification){
+  @objc func enterForeground(noftification:NSNotification){
         refreshDayCollectionView()
     }
     

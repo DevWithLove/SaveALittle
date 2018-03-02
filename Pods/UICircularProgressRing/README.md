@@ -1,19 +1,28 @@
-![Banner](/GitHubAssets/banner.png)
+![Banner](https://raw.githubusercontent.com/luispadron/UICircularProgressRing/master/.github/banner.png)
 
-<h3 align="center">A circular progress bar for iOS written in Swift 3</h3>
+<h3 align="center">A circular progress bar for iOS written in Swift</h3>
 
 <p align="center">
-<img src="/GitHubAssets/demo.gif"/>  
+<img src="https://raw.githubusercontent.com/luispadron/UICircularProgressRing/master/.github/demo.gif"/>  
 </p>
 
-![Styles](/GitHubAssets/styles-banner.png)
+![Styles](https://raw.githubusercontent.com/luispadron/UICircularProgressRing/master/.github/styles-banner.png)
 
 ## Features
 
 * Interface builder designable
-* Highly customizable 
-* Animation for progress and value text built in
-* Written in Swift 3 and using Xcode 8
+* Highly customizable and flexible
+* Easy to use
+* Sleek animations
+* Written in Swift
+
+## Apps Usig UICircularProgressRing
+
+- [GradePoint](http://gradepoint.luispadron.com) by Luis Padron. 
+
+- [UVI Mate](https://itunes.apple.com/us/app/uvi-mate-global-uv-index-now/id1207745216?mt=8) by Alexander Ershov.
+
+- [HotelTonight](https://itunes.apple.com/app/id407690035?mt=8) by Hotel Tonight Inc.
 
 ## Installation 
 
@@ -34,25 +43,7 @@
 4. Open up the `.xcworkspace` that CocoaPods created
 5. Done!
 
-__Note:__ If you have any issues with Swift 3 and CocoaPods you can try to force the version. (Cocoapods support for Swift 3 projects has been a bit wonky).
-
-Add this to the end of your `Podfile`
-
-```ruby
-post_install do |installer|
-  installer.pods_project.targets.each do |target|
-    target.build_configurations.each do |configuration|
-      configuration.build_settings['SWIFT_VERSION'] = "3.0"
-    end
-  end
-end
-```
-
 ### Carthage
-
-**_Important note_: Carthage support for IBDesignable and IBInspectable is broken due to how frameworks work.
-So if you decide on using Carthage, you will not be able to use IB to design this view.
-Take a look [here](https://github.com/Carthage/Carthage/issues/335) for the issue.**
 
 To use with [Carthage](https://github.com/Carthage/Carthage)
 
@@ -62,7 +53,18 @@ To use with [Carthage](https://github.com/Carthage/Carthage)
 2. Add this repo to your Cartfile
 
 	`github "luispadron/UICircularProgressRing"` 
-3. Drag the `UICircularProgressRing.framework` from `MyProjDir/Carthage/Builds/iOS/UICircularProgressRing` into the `General -> Embeded Binaries` section of your Xcode project.
+
+##### Either Embed or Link the framework
+
+###### Embed:
+
+1. Drag the `UICircularProgressRing.framework` from `MyProjDir/Carthage/Builds/iOS/UICircularProgressRing` into the `General -> Embeded Binaries` section of your Xcode project.
+
+###### Link:
+
+1. Drag the `UICircularProgressRing.framework` from `MyProjDir/Carthage/Builds/iOS/UICircularProgressRing` into the `General -> Linked Frameworks and Binaries` section of your Xcode project.
+2. Add a run script phase, under `Build Phases -> +`, put this in the code for the run script: `/usr/local/bin/carthage copy-frameworks`
+3. Add a `Copy Files Phase` under `Build Phases -> +`, select `Frameworks` as destination and add `UICircularProgressRing.framework`, make sure `Code Sign On Copy` is enabled.
 
 ### Manually
 
@@ -76,7 +78,7 @@ Simply drag a `UIView` into your storyboard. Make sure to subclass `UICircularPr
 
 Design your heart out
 
-![ib-demo.gif](/GitHubAssets/ib-demo.gif)
+![ib-demo.gif](https://raw.githubusercontent.com/luispadron/UICircularProgressRing/master/.github/ib-demo.gif)
 
 ### Code
 
@@ -95,6 +97,7 @@ To set a value and animate the view
 
 ```swift
 // Somewhere not in viewDidLoad (since the views have not set yet, thus cannot be animated)
+// Remember to use unowned or weak self if refrencing self to avoid retain cycle
 progressRing.setProgress(value: 49, animationDuration: 2.0) {
   print("Done animating!")
   // Do anything your heart desires...
@@ -103,9 +106,9 @@ progressRing.setProgress(value: 49, animationDuration: 2.0) {
 
 ## Documentation
 
-Read all about everything there is to know here:
+Please read this before creating an issue about how to use the package:
 
-[DOCUMENTATION](http://htmlpreview.github.io/?https://github.com/luispadron/UICircularProgressRing/blob/master/docs/index.html)
+[DOCUMENTATION](https://htmlpreview.github.io/?https://raw.githubusercontent.com/luispadron/UICircularProgressRing/master/docs/Classes/UICircularProgressRingView.html)
 
 ## Example project
 
@@ -115,19 +118,6 @@ Take a look at the example project over [here](Example/)
 2. Open the `Example.xcworkspace` in Xcode
 3. Mess around and experiment!
 
-## Upcoming enhancements
+## Misc.
 
-* ~~Add decreasing animation, currently nothing gets animated when decreasing value~~
-* ~~Better way of handling animation finishing, probably a completion block~~
-
-## License
-
-```
-Copyright (c) 2016 Luis Padron
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-```
+Do you use this library? Want to be featured? Go [here.](https://github.com/luispadron/UICircularProgressRing/issues/54)

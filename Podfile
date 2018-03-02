@@ -6,9 +6,8 @@ def savealittle_shared_pods
   pod 'Charts'
   pod 'SlideMenuControllerSwift'
   pod 'UICircularProgressRing'
-  pod 'SCLAlertView'
-  pod 'SwiftDate', '~> 4.0'
-  pod 'SkyFloatingLabelTextField', '~> 2.0.0'
+  pod 'SwiftDate'
+  pod 'SkyFloatingLabelTextField'
   pod 'RealmSwift'
 end
 
@@ -38,7 +37,7 @@ end
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
-            config.build_settings['SWIFT_VERSION'] = '3.0'
+            config.build_settings['SWIFT_VERSION'] = '4.0'
         end
     end
 end

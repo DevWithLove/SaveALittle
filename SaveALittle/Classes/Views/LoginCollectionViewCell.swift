@@ -77,7 +77,7 @@ class LoginCollectionViewCell: UICollectionViewCell {
     
     // MARK: User Interaction
     
-    func handleLogin() {
+  @objc func handleLogin() {
         delegate?.finishLoggingIn()
     }
     

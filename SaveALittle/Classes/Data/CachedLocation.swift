@@ -11,7 +11,7 @@ import RealmSwift
 
 class CachedLocation: Object {
     
-    dynamic var from: String = ""
+    @objc dynamic var from: String = ""
     
     override public static func indexedProperties() -> [String] {
         return ["from"]

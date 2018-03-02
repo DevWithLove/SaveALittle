@@ -18,13 +18,13 @@ enum RealmObjectError: Error {
 
 public extension Transaction {
 
-    override func save() {
-        if self.id.isEmpty {
-            self.id = newId
-        }
-        self.saveObject()
-    }
-    
+//    func save() {
+//        if self.id.isEmpty {
+//            self.id = newId
+//        }
+//        self.saveObject()
+//    }
+  
 }
 
 public extension Object {

@@ -203,13 +203,17 @@ class TransactionViewController: UIViewController {
         
         if !self.typeTextField.hasText {
             isValid = false
-            self.typeTextField.setTitleVisible(true, animated: true, animationCompletion: self.showingTitleInAnimationComplete)
+          self.typeTextField.setTitleVisible(true, animated: true, animationCompletion: { _ in
+            self.showingTitleInAnimationComplete()
+          })
             self.typeTextField.isHighlighted = true
         }
         
         if !self.amountTextField.hasText {
             isValid = false
-            self.amountTextField.setTitleVisible(true, animated: true, animationCompletion: self.showingTitleInAnimationComplete)
+          self.amountTextField.setTitleVisible(true, animated: true, animationCompletion: {_ in
+             self.showingTitleInAnimationComplete()
+          })
             self.amountTextField.isHighlighted = true
         }
         
@@ -218,18 +222,18 @@ class TransactionViewController: UIViewController {
     
     // MARK: Actions
     
-    func dateTimeDonePressed(){
+  @objc func dateTimeDonePressed(){
         dateTimeField.text = dateToString(date: dateTimePicker.date)
         self.view.endEditing(true)
     }
     
-    func myTextFieldDidChange(_ textField: UITextField) {
+  @objc func myTextFieldDidChange(_ textField: UITextField) {
         if let amountString = textField.text?.currencyInputFormatting() {
             textField.text = amountString
         }
     }
     
-    func saveTransaction() {
+  @objc func saveTransaction() {
         
         guard isInputValid() else {
             return
@@ -291,7 +295,7 @@ class TransactionViewController: UIViewController {
         }
     }
     
-    func textFieldDidChange(){
+  @objc func textFieldDidChange(){
         guard let text = storeTextField.text else {
             return
         }
@@ -318,7 +322,7 @@ class TransactionViewController: UIViewController {
         return false
     }
     
-    func textFieldDidEndEditing() {
+  @objc func textFieldDidEndEditing() {
         autoCompleteStoreTableView.isHidden = true
     }
     
