@@ -27,6 +27,7 @@ public class Transaction: Object {
     override public static func primaryKey() -> String? {
         return "id"
     }
+  
 }
 
 public class ExpenseTransaction: Transaction {

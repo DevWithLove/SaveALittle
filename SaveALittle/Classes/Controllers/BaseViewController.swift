@@ -53,8 +53,8 @@ class BaseViewController: UIViewController {
 //        let alert = SCLAlertView()
 //        
 //        _ = alert.addButton("Add Expnese") {
-//            let transactionViewController = TransactionViewController()
-//            self.navigationController?.pushViewController(transactionViewController, animated: true)
+            let transactionViewController = TransactionViewController()
+            self.navigationController?.pushViewController(transactionViewController, animated: true)
 //        }
 //        
 //        _ = alert.addButton("Add Income") {

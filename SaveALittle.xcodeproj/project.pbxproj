@@ -640,6 +640,7 @@
 				TargetAttributes = {
 					02493FD41E2F64A3002FC473 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = QS92QDAJH6;
 						ProvisioningStyle = Automatic;
 					};
 					02493FEB1E2F64A3002FC473 = {
@@ -1253,10 +1254,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QS92QDAJH6;
 				INFOPLIST_FILE = SaveALittle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DevWithLove.com.SaveALittle;
+				PRODUCT_BUNDLE_IDENTIFIER = DevWithLove.com.SaveALittle2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};
@@ -1268,10 +1269,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = QS92QDAJH6;
 				INFOPLIST_FILE = SaveALittle/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = DevWithLove.com.SaveALittle;
+				PRODUCT_BUNDLE_IDENTIFIER = DevWithLove.com.SaveALittle2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 			};

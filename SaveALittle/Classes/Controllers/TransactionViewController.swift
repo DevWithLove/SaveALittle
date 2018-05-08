@@ -256,7 +256,7 @@ class TransactionViewController: UIViewController {
         let amountText = amountTextField.text ?? "0.0"
         transaction.amount = amountText.floatValue
         transaction.expenseType = Expense(rawValue: self.typePicker.selectedRow(inComponent: 0))!
-        transaction.save()
+        transaction.add()
         
         saveCachedFrom()
     }
